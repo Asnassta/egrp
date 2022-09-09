@@ -551,9 +551,10 @@
   padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer; }
-  .filters-radio label:hover {
-    background-color: #DAE0E9;
-    color: #151516; }
+  @media (min-width: 1025px) {
+    .filters-radio label:hover {
+      background-color: #DAE0E9;
+      color: #151516; } }
 
 .filters-radio input {
   display: none; }
@@ -592,9 +593,10 @@
   padding: 14px 22px;
   border-radius: 6px;
   cursor: pointer; }
-  .filters-checkbox label:hover {
-    background-color: #DAE0E9;
-    color: #151516; }
+  @media (min-width: 1025px) {
+    .filters-checkbox label:hover {
+      background-color: #DAE0E9;
+      color: #151516; } }
 
 .filters-checkbox input {
   display: none; }

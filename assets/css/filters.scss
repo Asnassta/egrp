@@ -66,9 +66,11 @@
 			padding: 8px 10px;
 			border-radius: 6px;
 			cursor: pointer;
-			&:hover {
-				background-color: $gray;
-				color: $bl;
+			@media(min-width: 1025px) {
+				&:hover {
+					background-color: $gray;
+					color: $bl;
+				}
 			}
 		}
 		input {
@@ -107,9 +109,11 @@
 			padding: 14px 22px;
 			border-radius: 6px;
 			cursor: pointer;
-			&:hover {
-				background-color: $gray;
-				color: $bl;
+			@media(min-width: 1025px) {
+				&:hover {
+					background-color: $gray;
+					color: $bl;
+				}
 			}
 		}
 		input {
