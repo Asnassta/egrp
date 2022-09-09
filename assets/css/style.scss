@@ -224,8 +224,10 @@ body.hidden {
 		fill: none;
 		transition: all .2s linear;
 	}
-	&:hover {
-		background: rgba(35, 35, 35, 0.3);
+	@media(min-width: 1025px) {
+		&:hover {
+			background: rgba(35, 35, 35, 0.3);
+		}
 	}
 	&.active {
 		svg {

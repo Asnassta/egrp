@@ -1024,8 +1024,9 @@ body.hidden {
     -webkit-transition: all .2s linear;
     -o-transition: all .2s linear;
     transition: all .2s linear; }
-  .favorite:hover {
-    background: rgba(35, 35, 35, 0.3); }
+  @media (min-width: 1025px) {
+    .favorite:hover {
+      background: rgba(35, 35, 35, 0.3); } }
   .favorite.active svg {
     fill: #ffffff; }
 
