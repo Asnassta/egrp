@@ -136,6 +136,8 @@ $(document).bind('touchmove', function(e){
 
    } else if(current < last){
 
+      $(".header.show .nav").slideUp();
+      $(".burger").removeClass('active');
       $(".header").removeClass('show');
       $(".system-bar").removeClass('hide');
 
