@@ -1,0 +1,25 @@
+$ff: 'SF Pro Display', sans-serif;
+$ffm: 'Museo Cyrl', sans-serif;
+$lh: 1.2;
+$wh: #ffffff;
+$bl: #151516;
+$gray: #DAE0E9;
+$gray2: #C2C7CC;
+$lgray: #F2F4F7;
+$yellow: #FFDB5D;
+$d-blue: #6C7F9C;
+$blue: #7A86EC;
+$red: #FE0B37;
+$d-red: #E00029;
+$purple: #6A56E8;
+$d-purple: #4C3DAA;
+$lblue: #A4B5EF;
+$green: #3BB965;;
+
+
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
