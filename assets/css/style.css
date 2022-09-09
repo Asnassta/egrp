@@ -89,17 +89,6 @@
     .header-menu__link:hover span {
       color: #FFDB5D; }
 
-.system-bar {
-  background-color: #DAE0E9;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  padding: 7px;
-  text-align: right;
-  display: none; }
-
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,12 +369,6 @@
       display: none; }
     .header .logo svg {
       fill: #4C3DAA; }
-  .system-bar {
-    display: block; }
-    .system-bar.show {
-      display: block; }
-    .system-bar.hide {
-      display: none; }
   .burger {
     display: block; }
   .nav {

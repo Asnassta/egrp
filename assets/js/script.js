@@ -111,15 +111,12 @@ $(document).on('wheel', function(e){
   if (e.originalEvent.wheelDelta >= 0) {
 
     $(".header").addClass('show');
-     $(".system-bar").addClass('hide');
-
 
   } else {
 
       $(".header.show .nav").slideUp();
       $(".burger").removeClass('active');
       $(".header").removeClass('show');
-      $(".system-bar").removeClass('hide');
   }
 });
 
@@ -132,14 +129,12 @@ $(document).bind('touchmove', function(e){
    if(current > last){
 
      $(".header").addClass('show');
-     $(".system-bar").addClass('hide');
 
    } else if(current < last){
 
       $(".header.show .nav").slideUp();
       $(".burger").removeClass('active');
       $(".header").removeClass('show');
-      $(".system-bar").removeClass('hide');
 
    }
 
