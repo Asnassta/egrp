@@ -1053,7 +1053,8 @@
     transform: translate(-50%, -50%); }
   .popup-location .popup__box {
     max-height: calc(100vh - 124px);
-    min-height: 52vh; }
+    min-height: 52vh;
+    padding-bottom: 50px; }
   .popup-location .popup__content {
     max-height: calc(100vh - 160px);
     min-height: 52vh;
@@ -2108,7 +2109,7 @@ body.hidden {
     display: none; }
   .location-list {
     height: auto;
-    max-height: calc(100vh - 300px); } }
+    max-height: calc(100vh - 320px); } }
 
 @media (max-width: 546px) {
   .title-small {
