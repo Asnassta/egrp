@@ -11,6 +11,12 @@
 <body>
 	<!--Sprite-->
 	<svg style="display: none;">
+		<symbol id="close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M17 7L12 12L7 17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M17 17L12 12L7 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
 		<symbol id="notify-icon" viewBox="0 0 25 24">
 			<g>
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M18.4997 7.88315C18.4494 7.88563 18.3987 7.88688 18.3477 7.88688C16.6669 7.88688 15.3043 6.52427 15.3043 4.8434C15.3043 4.6771 15.3176 4.51392 15.3433 4.35486C15.1042 4.23832 14.8576 4.13691 14.6049 4.05141C14.3146 3.94921 14.0169 3.86896 13.7143 3.81141C13.5603 3.39839 13.1622 3.10425 12.6955 3.10425C12.6255 3.10425 12.557 3.11088 12.4906 3.12354C12.3523 3.13901 12.2208 3.19151 12.11 3.27527C11.9198 3.39712 11.77 3.57659 11.6854 3.78906C11.3399 3.8474 11.0003 3.93522 10.6703 4.05141C9.62088 4.40637 8.67727 5.03572 7.94261 5.88334C6.95169 7.02663 6.40784 8.48983 6.41147 10.0028V12.8666C6.33887 13.8389 6.07279 14.7869 5.62886 15.655C5.22937 16.2824 4.74782 16.8537 4.19698 17.3535L3.99988 17.5274L3.99991 18.1622H21.2753L21.2752 17.5274L21.0782 17.3535C20.5273 16.8537 20.0458 16.2824 19.6463 15.655C19.2024 14.7869 18.9363 13.8389 18.8637 12.8666V10.0028C18.8654 9.27468 18.7404 8.5581 18.4997 7.88315Z"/>
@@ -144,7 +150,7 @@
 							</a>
 							<h1 class="title-main">
 								<span class="title-main__sub">Недвижимость</span>
-								<a href="#">в Санкт–Петербурге</a>
+								<a href="#" class="open-popup" data-popup="popup-location">в Санкт–Петербурге</a>
 							</h1>
 						</div>
 						<div class="intro__filters filters">
@@ -230,7 +236,7 @@
 										</div>
 									</div><!--/filters__item-->
 									<div class="filters-buttons">
-										<a href="#" class="filters-link d-blue">Больше параметров</a>
+										<a href="#" class="filters-link d-blue open-popup" data-popup="popup-filters">Больше параметров</a>
 										<button class="filters-reset" type="reset">Сбросить-<span>1</span></button>
 										<div class="filters-buttons__row">
 											<a href="#" class="btn btn_light">На карте</a>
@@ -238,10 +244,599 @@
 										</div>
 									</div>
 								</form>
+								<div class="popup popup-filters">
+									<div class="closex"></div>
+									<div class="popup__inner">
+										<div class="popup__box">
+											<span class="popup__close">
+												<svg>
+													<use xlink:href="#close-icon"></use>
+												</svg>
+											</span>
+											<div class="popup__content">
+												<form action="#" class="filters">
+													<div class="filters__blocks">
+														<div class="filters-block">
+															<div class="filters-block__title">Удобства</div>
+															<div class="filters-block__content">
+																<div class="filters-checkboxes-ellipse">
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="convenience-checkbox-1" name="convenience-checkbox">
+																		<label for="convenience-checkbox-1">
+																			<span></span>
+																			Холодильник
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="convenience-checkbox-2" name="convenience-checkbox" checked>
+																		<label for="convenience-checkbox-2">
+																			<span></span>
+																			Стиральная машина
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="convenience-checkbox-3" name="convenience-checkbox" checked>
+																		<label for="convenience-checkbox-3">
+																			<span></span>
+																			Можно с животными
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="convenience-checkbox-4" name="convenience-checkbox" checked>
+																		<label for="convenience-checkbox-4">
+																			<span></span>
+																			Кондиционер
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="convenience-checkbox-5" name="convenience-checkbox">
+																		<label for="convenience-checkbox-5">
+																			<span></span>
+																			Телевизор
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="convenience-checkbox-6" name="convenience-checkbox" checked>
+																		<label for="convenience-checkbox-6">
+																			<span></span>
+																			Посудомойка
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="convenience-checkbox-7" name="convenience-checkbox">
+																		<label for="convenience-checkbox-7">
+																			<span></span>
+																			Wi Fi
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="convenience-checkbox-8" name="convenience-checkbox">
+																		<label for="convenience-checkbox-8">
+																			<span></span>
+																			Можно с детьми
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="convenience-checkbox-9" name="convenience-checkbox" checked>
+																		<label for="convenience-checkbox-9">
+																			<span></span>
+																			Можно с животными
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																</div>
+															</div>
+														</div><!--/filters-block-->
+														<div class="filters-block">
+															<div class="filters-block__title">Площадь</div>
+															<div class="filters-block__content">
+																<div class="filters-block__row">
+																	<div class="filters-rangebox">
+																		<div class="filters-description">Общая</div>
+																		<div class="filters-input filters-input_range">
+																			<input type="text" value="40">
+																			<label>от</label>
+																		</div>
+																		<div class="filters-input filters-input_range">
+																			<input type="text" value="50">
+																			<label>до</label>
+																		</div>
+																	</div><!--/filters-rangebox-->
+																	<div class="filters-rangebox">
+																		<div class="filters-description">Кухня</div>
+																		<div class="filters-input filters-input_range">
+																			<input type="text" value="40">
+																			<label>от</label>
+																		</div>
+																		<div class="filters-input filters-input_range">
+																			<input type="text" value="50">
+																			<label>до</label>
+																		</div>
+																	</div><!--/filters-rangebox-->
+																	<div class="filters-rangebox">
+																		<div class="filters-description">Жилая</div>
+																		<div class="filters-input filters-input_range">
+																			<input type="text" value="40">
+																			<label>от</label>
+																		</div>
+																		<div class="filters-input filters-input_range">
+																			<input type="text" value="50">
+																			<label>до</label>
+																		</div>
+																	</div><!--/filters-rangebox-->
+																</div>
+															</div>
+														</div><!--/filters-block-->
+														<div class="filters-block">
+															<div class="filters-block__title">Расстояние<br> до метро</div>
+															<div class="filters-block__content">
+																<div class="filters-radiobox">
+																	<div class="filters-radio">
+																		<input type="radio" id="move-radio-foot" name="move-radio" checked>
+																		<label for="move-radio-foot">Пешком</label>
+																	</div><!--/filters-radio-->
+																	<div class="filters-radio">
+																		<input type="radio" id="move-radio-transport" name="move-radio">
+																		<label for="move-radio-transport">Транспортом</label>
+																	</div><!--/filters-radio-->
+																</div>
+																<div class="filters-checkboxes-ellipse">
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="time-checkbox-1" name="time-checkbox">
+																		<label for="time-checkbox-1">
+																			<span></span>
+																			до 5 минут
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="time-checkbox-2" name="time-checkbox">
+																		<label for="time-checkbox-2">
+																			<span></span>
+																			до 10 минут
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="time-checkbox-3" name="time-checkbox" checked>
+																		<label for="time-checkbox-3">
+																			<span></span>
+																			до 15 минут
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="time-checkbox-4" name="time-checkbox">
+																		<label for="time-checkbox-4">
+																			<span></span>
+																			до 20 минут
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																</div>
+															</div>
+														</div><!--/filters-block-->
+														<div class="filters-block">
+															<div class="filters-block__title">Планировка</div>
+															<div class="filters-block__content">
+																<div class="filters-block__item">
+																	<div class="filters-description">Тип комнат</div>
+																	<div class="filters-checkboxes-ellipse">
+																		<div class="filters-checkbox-ellipse">
+																			<input type="checkbox" id="type-room-checkbox-1" name="type-room-checkbox" checked>
+																			<label for="type-room-checkbox-1">Смежные</label>
+																		</div><!--/filters-checkbox-ellipse-->
+																		<div class="filters-checkbox-ellipse">
+																			<input type="checkbox" id="type-room-checkbox-2" name="type-room-checkbox">
+																			<label for="type-room-checkbox-2">Изолированные</label>
+																		</div><!--/filters-checkbox-ellipse-->
+																	</div>
+																</div>
+															</div>
+														</div><!--/filters-block-->
+														<div class="filters-block">
+															<div class="filters-block__title">Этаж</div>
+															<div class="filters-block__content">
+																<div class="filters-rangebox">
+																	<div class="filters-input filters-input_range">
+																		<input type="text" value="1">
+																		<label>от</label>
+																	</div>
+																	<div class="filters-input filters-input_range">
+																		<input type="text" value="3">
+																		<label>до</label>
+																	</div>
+																</div><!--/filters-rangebox-->
+																<div class="filters-checkboxes-ellipse">
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="floor-checkbox-1" name="floor-checkbox" checked>
+																		<label for="floor-checkbox-1">
+																			<span></span>
+																			Не первый
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="floor-checkbox-2" name="floor-checkbox">
+																		<label for="floor-checkbox-2">
+																			<span></span>
+																			Не последний
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																</div>
+															</div>
+														</div><!--/filters-block-->
+														<div class="filters-block">
+															<div class="filters-block__title">Высота потолков</div>
+															<div class="filters-block__content">
+																<div class="filters-checkboxes-ellipse">
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="ceiling-checkbox-1" name="ceiling-checkbox">
+																		<label for="ceiling-checkbox-1">
+																			<span></span>
+																			2,5 м
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="ceiling-checkbox-2" name="ceiling-checkbox">
+																		<label for="ceiling-checkbox-2">
+																			<span></span>
+																			2,7 м
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="ceiling-checkbox-3" name="ceiling-checkbox">
+																		<label for="ceiling-checkbox-3">
+																			<span></span>
+																			3 м
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="ceiling-checkbox-4" name="ceiling-checkbox">
+																		<label for="ceiling-checkbox-4">
+																			<span></span>
+																			>3 м
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																</div>
+															</div>
+														</div><!--/filters-block-->
+														<div class="filters-block">
+															<div class="filters-block__title">Год постройки</div>
+															<div class="filters-block__content">
+																<div class="filters-rangebox">
+																	<div class="filters-input filters-input_range">
+																		<input type="text" value="2010">
+																		<label>от</label>
+																	</div>
+																	<div class="filters-input filters-input_range">
+																		<input type="text" value="2022">
+																		<label>до</label>
+																	</div>
+																</div><!--/filters-rangebox-->
+																<div class="filters-checkboxes-ellipse">
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="year-checkbox-60" name="year-checkbox" checked>
+																		<label for="year-checkbox-60">
+																			<span></span>
+																			60е
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="year-checkbox-70" name="year-checkbox">
+																		<label for="year-checkbox-70">
+																			<span></span>
+																			70е
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="year-checkbox-80" name="year-checkbox">
+																		<label for="year-checkbox-80">
+																			<span></span>
+																			80е
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="year-checkbox-90" name="year-checkbox">
+																		<label for="year-checkbox-90">
+																			<span></span>
+																			90е
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="year-checkbox-00" name="year-checkbox">
+																		<label for="year-checkbox-00">
+																			<span></span>
+																			00е
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="year-checkbox-10" name="year-checkbox">
+																		<label for="year-checkbox-10">
+																			<span></span>
+																			2010
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="year-checkbox-20" name="year-checkbox">
+																		<label for="year-checkbox-20">
+																			<span></span>
+																			2020
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																</div>
+															</div>
+														</div><!--/filters-block-->
+														<div class="filters-block">
+															<div class="filters-block__title">Прочее</div>
+															<div class="filters-block__content">
+																<div class="filters-block__row">
+																	<div class="filters-block__item">
+																		<div class="filters-description">Балкон/ Лоджия</div>
+																		<div class="filters-checkboxes-ellipse">
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="balcony-checkbox-1" name="balcony-checkbox" checked>
+																				<label for="balcony-checkbox-1">
+																					<span></span>
+																					Есть балкон
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="balcony-checkbox-2" name="balcony-checkbox">
+																				<label for="balcony-checkbox-2">
+																					<span></span>
+																					Есть лоджия
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																		</div>
+																	</div>
+																	<div class="filters-block__item">
+																		<div class="filters-description">Санузел</div>
+																		<div class="filters-checkboxes-ellipse">
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="bathroom-checkbox-1" name="bathroom-checkbox" checked>
+																				<label for="bathroom-checkbox-1">
+																					<span></span>
+																					Совмещенный
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="bathroom-checkbox-2" name="bathroom-checkbox">
+																				<label for="bathroom-checkbox-2">
+																					<span></span>
+																					Раздельный
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="bathroom-checkbox-3" name="bathroom-checkbox">
+																				<label for="bathroom-checkbox-3">
+																					<span></span>
+																					Несколько
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																		</div>
+																	</div>
+																</div>
+																<div class="filters-block__row">
+																	<div class="filters-block__item">
+																		<div class="filters-description">Лифт</div>
+																		<div class="filters-checkboxes-ellipse">
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="lift-checkbox-1" name="lift-checkbox" checked>
+																				<label for="lift-checkbox-1">
+																					<span></span>
+																					Есть любой
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="lift-checkbox-2" name="lift-checkbox">
+																				<label for="lift-checkbox-2">
+																					<span></span>
+																					Есть грузовой
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																		</div>
+																	</div>
+																	<div class="filters-block__item">
+																		<div class="filters-description">Парковка</div>
+																		<div class="filters-checkboxes-ellipse">
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="parking-checkbox-1" name="parking-checkbox" checked>
+																				<label for="parking-checkbox-1">
+																					<span></span>
+																					Наземная
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="parking-checkbox-2" name="parking-checkbox">
+																				<label for="parking-checkbox-2">
+																					<span></span>
+																					Подземная
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="parking-checkbox-3" name="parking-checkbox">
+																				<label for="parking-checkbox-3">
+																					<span></span>
+																					Многоуровневая
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div><!--/filters-block-->
+														<div class="filters-block">
+															<div class="filters-block__title">Условия сделки</div>
+															<div class="filters-block__content">
+																<div class="filters-block__row">
+																	<div class="filters-block__item">
+																		<div class="filters-checkboxes-ellipse">
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="deposit-checkbox-1" name="deposit-checkbox" checked>
+																				<label for="deposit-checkbox-1">
+																					<span></span>
+																					Без залога
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="deposit-checkbox-2" name="deposit-checkbox">
+																				<label for="deposit-checkbox-2">
+																					<span></span>
+																					Без комиссии
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																		</div>
+																	</div>
+																</div>
+																<div class="filters-block__row">
+																	<div class="filters-block__item">
+																		<div class="filters-description">Предоплата</div>
+																		<div class="filters-checkboxes-ellipse">
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="prepayment-checkbox-1" name="prepayment-checkbox" checked>
+																				<label for="prepayment-checkbox-1">
+																					<span></span>
+																					Не более 1 мес.
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="prepayment-checkbox-2" name="prepayment-checkbox">
+																				<label for="prepayment-checkbox-2">
+																					<span></span>
+																					Не более 2 мес.
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="prepayment-checkbox-3" name="prepayment-checkbox">
+																				<label for="prepayment-checkbox-3">
+																					<span></span>
+																					Не более 3 мес.
+																				</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																		</div>
+																	</div>
+																	<div class="filters-block__item">
+																		<div class="filters-description">Срок аренды аренды</div>
+																		<div class="filters-checkboxes-ellipse">
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="rental-period-checkbox-1" name="rental-period-checkbox" checked>
+																				<label for="rental-period-checkbox-1">Длительная аренда</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																			<div class="filters-checkbox-ellipse">
+																				<input type="checkbox" id="rental-period-checkbox-2" name="rental-period-checkbox">
+																				<label for="rental-period-checkbox-2">Несколько месяцев</label>
+																			</div><!--/filters-checkbox-ellipse-->
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div><!--/filters-block-->
+														<div class="filters-block">
+															<div class="filters-block__title">Время публикации</div>
+															<div class="filters-block__content">
+																<div class="filters-select">
+																	<select>
+																		<option value="0">За месяц</option>
+																		<option value="1">За неделю</option>
+																	</select>
+																</div>
+																<div class="filters-checkboxes-ellipse">
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="preview-checkbox-1" name="preview-checkbox" checked>
+																		<label for="preview-checkbox-1">
+																			<span></span>
+																			Только с фото
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																	<div class="filters-checkbox-ellipse">
+																		<input type="checkbox" id="preview-checkbox-2" name="preview-checkbox">
+																		<label for="preview-checkbox-2">
+																			<span></span>
+																			Только с видео
+																		</label>
+																	</div><!--/filters-checkbox-ellipse-->
+																</div>
+															</div>
+														</div><!--/filters-block-->
+													</div>
+													<div class="filters-block__btn">
+														<button class="btn" type="submit">Сохранить и продолжить</button>
+														<a href="#" class="btn btn_black">Сохранить поиск</a>
+														<div>
+															<button class="filters-reset" type="reset">Сбросить- <span>13</span></button>
+														</div>
+													</div>
+												</form>
+											</div>
+    								    </div>
+									</div>
+								</div><!--/popup-filters-->
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="popup popup-location">
+					<div class="closex"></div>
+					<div class="popup__inner">
+						<div class="popup__box">
+							<span class="popup__close">
+								<svg>
+									<use xlink:href="#close-icon"></use>
+								</svg>
+							</span>
+							<div class="popup__content">
+								<div class="h3 title-small">Выбор локации</div>
+								<div class="location">
+									<form action="#" class="location__choice">
+										<div class="location-search">
+											<input type="text" placeholder="Поиск города, края, района">
+											<button class="location-icon">
+												<img src="assets/images/location-icon.svg" alt="">
+											</button>
+										</div>
+										<div class="location-list">
+											<div class="location-list__row">
+												<a href="#" class="location-btn">Москва и МО</a>
+												<a href="#" class="location-btn">Санкт-Петербург</a>
+											</div>
+											<ul>
+												<li>
+													<a href="#">Адыгея</a>
+												</li>
+												<li>
+													<a href="#">Алтай</a>
+												</li>
+												<li>
+													<a href="#">Алтайский край</a>
+												</li>
+												<li>
+													<a href="#">Амурская область</a>
+												</li>
+												<li>
+													<a href="#">Архангельская область</a>
+												</li>
+												<li>
+													<a href="#">Астраханская область</a>
+												</li>
+												<li>
+													<a href="#">Башкортостан</a>
+												</li>
+												<li>
+													<a href="#">Белгородская область</a>
+												</li>
+											</ul>
+										</div>
+									</form>
+									<div class="location__promo">
+										<div class="preview-card">
+											<div class="preview-card__photo">
+												<img src="assets/images/building_1.jpg" alt="">
+											</div>
+											<h4 class="preview-card__title">ЖК “Звезда”</h4>
+											<div class="text">Ипотека 5,5%</div>
+											<a href="#" class="btn">Подробнее</a>
+										</div><!--/preview-card-->
+									</div>
+								</div>
+							</div>
+    				    </div>
+					</div>
+				</div><!--/popup-location-->
 			</section><!--/intro-->
 			<div class="card card-roll section">
 				<div class="container">

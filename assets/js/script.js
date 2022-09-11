@@ -21,6 +21,22 @@ $(document).ready(function() {
   });
   /*==========/favorite=========*/
 
+  /*===============Popup=================*/
+    $(".open-popup").on("click", function (event) {
+        name_pop = $(this).attr('data-popup');
+        event.preventDefault();
+        $(".popup."+name_pop).fadeIn(333);
+        $(".popup."+name_pop+" .popup__inner").fadeIn(333);
+        $('body').addClass("hidden");
+    });
+    $(".popup__close,  .closex").on("click", function (event) {
+        event.preventDefault();
+        $(".popup").fadeOut('333');
+        $(".popup__inner").fadeOut(333);
+        $('body').removeClass("hidden");
+    });
+  /*==============/popup=================*/
+
   /*=================Sliders==========================*/
   /*===========Slider-product============*/
   $('.buy .product-new .product__inner').slick({
