@@ -145,9 +145,19 @@ body.hidden {
 	transition: all .2s linear;
 	&:hover {
 		background-color: $d-purple;
+		svg {
+			fill: $d-purple;
+		}
 	}
 	img {
 		margin-right: 6px;
+	}
+	svg {
+		margin-right: 6px;
+		width: 24px;
+		height: 24px;
+		fill: $purple;
+		transition: all .2s linear;
 	}
 	&_light {
 		background-color: $lblue;
@@ -163,6 +173,12 @@ body.hidden {
 			background-color: transparent; 
 			color: $purple;
 			border-color: $purple;
+			svg {
+				fill: $purple;
+			}
+		}
+		svg {
+			fill: $bl;
 		}
 	}
 }

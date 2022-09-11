@@ -37,6 +37,21 @@ $(document).ready(function() {
     });
   /*==============/popup=================*/
 
+  /*===========Filter-version=======*/
+    $('select[name="type_filters"]').change(function() {
+      $('.filters-version').hide();
+      $('.filters-version.'+$(this).val()).show();
+    });
+  /*===========/filter-version=======*/
+
+  /*======Filters-selectcheck=============*/
+  $(".filters-selectcheck__select").on("click", function() {
+    $(this).parent().toggleClass('drop');
+    $(this).next().slideToggle(333);
+  });
+  /*==========/filters-selectcheck=========*/
+
+
   /*=================Sliders==========================*/
   /*===========Slider-product============*/
   $('.buy .product-new .product__inner').slick({
@@ -136,3 +151,36 @@ $(window).scroll(function() {
   scrollPos = st;
 });
 /*=========/scrollpage (header show)=====*/
+
+/*===========Range=============*/
+  function progress(e, p)
+{
+  p.innerText = e.value;
+  prg = (( e.value/e.max ) * 100)
+  if(prg > 0)
+  {
+    p.style.left = prg-10+"%";
+    //p.style.width = 20+(5 / prg * 100)+"%"
+ }
+}
+ 
+ 
+  for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+  e.style.setProperty('--value', e.value);
+  e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+  e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+  e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+ 
+ 
+  for(let p of e.parentNode.querySelectorAll('.filters-range__val_progress')) {
+    progress(e, p);
+    e.addEventListener('input', function (evt) {
+      progress(e, p);
+    });
+ 
+ 
+ 
+  }
+
+}
+  /*===========range=============*/
