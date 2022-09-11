@@ -969,8 +969,9 @@ body.hidden {
 			display: none;
 		}
 		&-list {
+			padding-bottom: 30px;
 			height: auto;
-			max-height: calc(100vh - 320px);
+			max-height: calc(100vh - 300px);
 		}
 	}
 }
