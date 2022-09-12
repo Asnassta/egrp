@@ -226,18 +226,20 @@
 									</div><!--/filters__item-->
 									<div class="filters__item flex-center">
 										<div class="filters-description">Цена</div>
-										<div class="filters-input filters-input_range">
-											<input type="text" value="35 000">
+										<div class="filters-input filters-input_range ">
+											<input type="text" id="range_1" value="30000">
 											<label>от</label>
 										</div>
 										<div class="filters-input filters-input_range">
-											<input type="text" value="35 000">
+											<input type="text" id="range_2" value="70000">
 											<label>до</label>
 										</div>
 									</div><!--/filters__item-->
 									<div class="filters__item">
 										<div class="filters-range">
-											<input type="range" class="styled-slider slider-progress" min="1000" max="100000">
+											<div class="range-wrapper multirange">
+												<div id="slider-range_price"></div>
+											</div>
 										</div>
 									</div><!--/filters__item-->
 									<div class="filters__item">
@@ -986,9 +988,9 @@
 																<div class="filters-block__row">
 																	<div class="filter-block__item">
 																		<div class="filters-range">
-																			<input type="range" class="styled-slider slider-progress" min="0" max="120">
-																			<span class="filters-range__val">0</span>
-																			<span class="filters-range__val filters-range__val_progress">30</span>
+																			<div class="range-wrapper multirange">
+																				<div id="slider-range_distance"></div>
+																			</div>
 																		</div>
 																	</div>
 																	<div class="filters-block__item">
@@ -2259,6 +2261,8 @@
 	</div>
 
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
+	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
 	<script src="assets/js/script.js"></script>
 </body>

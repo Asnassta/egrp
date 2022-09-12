@@ -7,7 +7,7 @@
 	&__inner {
 		.filters-range {
 			@media(min-width: 766px) {
-				display: none;
+				//display: none;
 			}
 		}
 	}
@@ -292,7 +292,7 @@
 	&-range {
 		position: relative;
 		width: 100%;
-		&:before {
+		/*&:before {
 			content: "";
 			width: 16px;
 			height: 16px;
@@ -303,7 +303,7 @@
 			left: 0;
 			z-index: 1;
 			pointer-events: none;
-		}
+		}*/
 		&__val {
 			display: inline-block;
 			margin-top: 10px;
@@ -887,3 +887,54 @@
 	}
 }
 /*=============/adaptive===========*/
+
+.range-wrapper {
+  background: #fff;
+  padding-right: 7.5px;
+  margin-bottom: 4px;
+  border-radius: 33px;
+  position: relative;
+  z-index: 3;
+  
+}
+
+.range-wrapper.multirange {
+  padding-left:7.5px;
+}
+
+.range-wrapper.multirange  .ui-slider .ui-slider-handle{
+  margin-left: -7.5px;
+}
+
+.ui-widget.ui-widget-content {
+  position: relative;
+  height: 4px;
+}
+
+
+.ui-slider .ui-slider-handle {
+  height: 15px;
+  width: 15px;
+	border-radius: 33333px;;
+	background: $yellow;
+	position: absolute;
+	margin-left: -2px;
+	top: -5.5px;
+}
+
+.ui-slider .ui-slider-handle span {
+  width: 50px;
+  text-align: center;
+  bottom: -23px;
+  left: 50%;
+  margin-left: -25px;
+  position: absolute;
+}
+
+.ui-widget-header,
+.ui-slider-range {
+  height: 100%;
+  border-radius: 33333px;
+  background: $yellow;
+  position: absolute;
+}

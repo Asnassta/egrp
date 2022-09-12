@@ -153,34 +153,54 @@ $(window).scroll(function() {
 /*=========/scrollpage (header show)=====*/
 
 /*===========Range=============*/
-  function progress(e, p)
-{
-  p.innerText = e.value;
-  prg = (( e.value/e.max ) * 100)
-  if(prg > 0)
-  {
-    p.style.left = prg-10+"%";
-    //p.style.width = 20+(5 / prg * 100)+"%"
- }
-}
+    $( "#slider-range_price" ).slider({
+      range: true,
+      min: 10000,
+      max: 100000,
+      values: [ 30000, 70000 ],
+      slide: function( event, ui ) {
+        $('#range_1').val(ui.values[ 0 ]);
+        $('#range_2').val(ui.values[ 1 ]);
  
- 
-  for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
-  e.style.setProperty('--value', e.value);
-  e.style.setProperty('--min', e.min == '' ? '0' : e.min);
-  e.style.setProperty('--max', e.max == '' ? '100' : e.max);
-  e.addEventListener('input', () => e.style.setProperty('--value', e.value));
- 
- 
-  for(let p of e.parentNode.querySelectorAll('.filters-range__val_progress')) {
-    progress(e, p);
-    e.addEventListener('input', function (evt) {
-      progress(e, p);
+      }
     });
- 
- 
- 
-  }
 
-}
+
+    $( "#slider-range_value_center" ).slider({
+      range:'min',
+      min: 0,
+      max: 120,
+      value: 20,
+      create: function() {
+        $('#slider-range_value_center .ui-slider-handle').html('<span>'+$( this ).slider( "value" )+'</span>');
+
+     
+      },
+      slide: function( event, ui ) {
+        $('#slider-range_value_center .ui-slider-handle').html('<span>'+ui.value+'</span>');
+      }
+    });
+    
+    $( "#slider-range_distance").slider({
+      range: true,
+      min: 0,
+      max: 120,
+      values: [ 0, 30 ],
+      create: function(event, ui) {
+
+       values = $( this ).slider( "values" );
+
+    
+        $("#slider-range_distance .ui-slider-handle").html('<span>'+values[0]+'</span>');
+        $("#slider-range_distance .ui-slider-handle:last-child").html('<span>'+values[1]+'</span>');
+ 
+     
+      },
+      slide: function( event, ui ) {
+        $(ui.handle).html('<span>'+ui.value+'</span>');
+      }
+    });
+
+
+ 
   /*===========range=============*/
