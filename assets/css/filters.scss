@@ -5,9 +5,32 @@
 		background-color: $lgray;
 	}
 	&__inner {
+		&.flex-end {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+			margin-bottom: -20px;
+			margin-left: -10px;
+			.filters__item {
+				margin-bottom: 20px;
+				margin-left: 10px;
+			}
+			.filters-checkbox  {
+				label {
+					padding: 14px 15px;
+					min-width: 44px;
+				}
+			}
+			.filters-link {
+				font-size: 14px;
+				&.open-popup {
+					margin-right: 125px;
+				}
+			}
+		}
 		.filters-range {
 			@media(min-width: 766px) {
-				//display: none;
+				display: none;
 			}
 		}
 	}
@@ -37,6 +60,14 @@
 				font-size: 16px;
 			}
 		}
+		&.auto {
+			flex: 1 1 auto;
+			min-width: 17%;
+		}
+		&.full {
+			flex: 1 1 100%;
+		}
+
 	}
 	&-version {
 		&.home {
@@ -49,6 +80,27 @@
 		font-weight: 400;
 		color: $d-blue;
 		line-height: $lh;
+	}
+	&-location {
+		display: inline-block;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+		border-bottom: 1px dashed $bl;
+		padding-bottom: 1px;
+		margin-bottom: 10px;
+		transition: all .2s linear;
+		&:hover {
+			color: $purple;
+			border-color: $purple;
+		}
+	}
+	&-variant {
+		&.buy {
+			display: none;
+		}
 	}
 	&-radioblock {
 		display: flex;
@@ -225,6 +277,8 @@
 			font-weight: 400;
 			color: $bl;
 			line-height: $lh;
+			overflow: hidden;
+			text-overflow: ellipsis;
 			&::placeholder {
 				opacity: 1;
 				color: $gray2;
@@ -269,6 +323,26 @@
 			margin-right: 10px;
 			&:last-child {
 				margin-right: 0;
+			}
+		}
+	}
+	&-rangeprice {
+		display: flex;
+		width: 255px;
+		.filters-input {
+			input {
+				font-weight: 500;
+			}
+			&:first-child {
+				input {
+					border-radius: 6px 0 0 6px;
+					padding-left: 80px;
+				}
+			}
+			&:nth-child(2) {
+				input {
+					border-radius: 0 6px 6px 0;
+				}
 			}
 		}
 	}

@@ -6,6 +6,36 @@
 	z-index: 1;
 	width: 100%;
 	padding: 20px 0;
+	&-color {
+		.logo {
+			svg {
+				fill: $purple;
+			}
+		}
+		.nav {
+			&__item {
+				color: $bl;
+				&:hover {
+					color: $purple;
+					&:after {
+						background-color: $purple;
+					}
+				}
+			}
+		}
+		.header {
+			&-menu {
+				&__link {
+					span {
+						color: $purple;
+					}
+					svg {
+						fill: $purple;
+					}
+				}
+			}
+		}
+	}
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -308,12 +338,12 @@
 @media(max-width: 992px) {
 	.header {
 		position: fixed;
-		z-index: 100;
 		background-color: $wh;
 		transform: translateY(-100%);
 		transition: all .3s linear;
 		&.show {
 			transform: translateY(0);
+			z-index: 500;
 		}
 		&-menu {
 			display: none;
@@ -331,7 +361,7 @@
 		position: absolute;
 		top: 100%;
 		left: 0;
-		z-index: 100;
+		z-index: 500;
 		width: 100%;
 		background-color: $wh;
 		display: none;

@@ -18,6 +18,16 @@
   url('../fonts/SFProDisplay-Regular.ttf') format('truetype'),
  }
 
+ @font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:   url('../fonts/SFProDisplay-Medium.woff2') format('woff2'),
+  url('../fonts/SFProDisplay-Medium.woff') format('woff'),
+  url('../fonts/SFProDisplay-Medium.ttf') format('truetype'),
+ }
+
 @font-face {
   font-family: 'SF Pro Display';
   font-style: normal;

@@ -51,6 +51,84 @@ $(document).ready(function() {
   });
   /*==========/filters-selectcheck=========*/
 
+  /*===========Filters-variant=======*/
+    $('input[name="action-radio"]').change(function() {
+      $('.filters-variant').hide();
+      $('.filters-variant.'+$(this).val()).show();
+    });
+  /*===========/filters-variant=======*/
+
+  /*======Sorting-select=============*/
+  $(".sorting-select").on("click", function(event) {
+    event.preventDefault();
+    $(this).find('.sorting-select__dropdown').slideToggle(222);
+    $(this).find('.sorting-select__select').toggleClass('active');
+  });
+
+
+  $(".sorting-select__option").on("click", function(event) {
+    event.preventDefault();
+    $('.sorting-select__select').html($(this).html());
+    $(this).addClass('selected');
+    $(".sorting-select__option").not(this).removeClass('selected');
+  });
+  /*==========/sorting-select=========*/
+
+  /*======Estimation=============*/
+  $(".estimation-btn").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+  });
+  /*==========/estimation=========*/
+
+  /*======Btn-contact=============*/
+  $(".btn-contact-show").on("click", function(event) {
+    event.preventDefault();
+    $(this).hide();
+    $(this).next().addClass('show');
+  });
+  /*==========/btn-contact=========*/
+
+  /*======Poll=============*/
+  $(".poll__card.clickable").on("click", function() {
+    $(this).addClass('checked');
+    $(".poll__card").removeClass('clickable');
+    $(".poll__result").addClass('show');
+  });
+  /*==========/poll=========*/
+
+  /*======Search=============*/
+  $(".search-show").on("click", function() {
+    $(".search").addClass('show');
+  });
+
+  $(".search__close").on("click", function() {
+    $(".search").removeClass('show');
+  });
+  /*==========/search=========*/
+
+
+/*===========Fixed-search======*/
+  let search = $("#search");
+  let searchH = $("#search").innerHeight();
+  let scrollOffset = $(window).scrollTop();
+
+  checkScroll(scrollOffset);
+
+  $(window).on("scroll", function() {
+    scrollOffset = $(this).scrollTop();
+
+    checkScroll(scrollOffset);
+  })
+
+  function checkScroll(scrollOffset) {
+    if( scrollOffset >= searchH + 50 ) {
+      search.addClass("fixed");
+    } else {
+      search.removeClass("fixed");
+    }
+  }
+/*===========/fixed-search======*/
 
   /*=================Sliders==========================*/
   /*===========Slider-product============*/
@@ -112,6 +190,25 @@ $(document).ready(function() {
   });
 
   $('.rent .product-secondary .product__inner').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+     {
+       breakpoint: 1230,
+        settings: {
+            infinite: true,
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+        }
+      },
+    ]
+  });
+
+  $('.watched .product-watched .product__inner').slick({
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,

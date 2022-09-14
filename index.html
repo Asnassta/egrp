@@ -165,15 +165,15 @@
 									<div class="filters__item">
 										<div class="filters-radioblock">
 											<div class="filters-radio">
-												<input type="radio" id="action-radio-buy" name="action-radio">
+												<input type="radio" id="action-radio-buy" name="action-radio" value="buy">
 												<label for="action-radio-buy">Купить</label>
 											</div><!--/filters-radio-->
 											<div class="filters-radio">
-												<input type="radio" id="action-radio-rent" name="action-radio" checked>
+												<input type="radio" id="action-radio-rent" name="action-radio" value="rent" checked>
 												<label for="action-radio-rent">Снять</label>
 											</div><!--/filters-radio-->
 											<div class="filters-radio">
-												<input type="radio" id="action-radio-daily" name="action-radio">
+												<input type="radio" id="action-radio-daily" name="action-radio" value="rent">
 												<label for="action-radio-daily">Посуточно</label>
 											</div><!--/filters-radio-->
 										</div>
@@ -185,19 +185,37 @@
 										</div>
 									</div><!--/filters__item-->
 									<div class="filters__item">
-										<div class="filters-radiobox">
-											<div class="filters-radio">
-												<input type="radio" id="period-radio-long" name="period-radio" checked>
-												<label for="period-radio-long">Долгосрочно</label>
-											</div><!--/filters-radio-->
-											<div class="filters-radio">
-												<input type="radio" id="period-radio-season" name="period-radio">
-												<label for="period-radio-season">На сезон</label>
-											</div><!--/filters-radio-->
-											<div class="filters-radio">
-												<input type="radio" id="period-radio-daily" name="period-radio">
-												<label for="period-radio-daily">Посуточно</label>
-											</div><!--/filters-radio-->
+										<div class="filters-variant rent">
+											<div class="filters-radiobox">
+												<div class="filters-radio">
+													<input type="radio" id="period-radio-long" name="period-radio" checked>
+													<label for="period-radio-long">Долгосрочно</label>
+												</div><!--/filters-radio-->
+												<div class="filters-radio">
+													<input type="radio" id="period-radio-season" name="period-radio">
+													<label for="period-radio-season">На сезон</label>
+												</div><!--/filters-radio-->
+												<div class="filters-radio">
+													<input type="radio" id="period-radio-daily" name="period-radio">
+													<label for="period-radio-daily">Посуточно</label>
+												</div><!--/filters-radio-->
+											</div>
+										</div>
+										<div class="filters-variant buy">
+											<div class="filters-radiobox">
+												<div class="filters-radio">
+													<input type="radio" id="age-radio-all" name="age-radio" checked>
+													<label for="age-radio-all">Все</label>
+												</div><!--/filters-radio-->
+												<div class="filters-radio">
+													<input type="radio" id="age-radio-old" name="age-radio">
+													<label for="age-radio-old">Вторичка</label>
+												</div><!--/filters-radio-->
+												<div class="filters-radio">
+													<input type="radio" id="age-radio-new" name="age-radio">
+													<label for="age-radio-new">Новостройки</label>
+												</div><!--/filters-radio-->
+											</div>
 										</div>
 									</div><!--/filters__item-->
 									<div class="filters__item">
