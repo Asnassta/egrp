@@ -1363,6 +1363,9 @@ body.hidden {
 	.mb-30 {
 		margin-bottom: 20px;
 	}
+	.links-btn {
+		display: block;
+	}
 	.section {
 		margin-bottom: 60px;
 	}
@@ -1605,9 +1608,6 @@ body.hidden {
 	}
 	.text {
 		font-size: 14px;
-	}
-	.links-btn {
-		display: block;
 	}
 	.card {
 		&-box {

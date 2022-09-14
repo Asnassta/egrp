@@ -5,7 +5,7 @@
 		top: 20px;
 		left: 0;
 		width: 	100%;
-		display: flex;
+		display: none;
 		align-items: center;
 		justify-content: space-between;
 		max-width: 1230px;
@@ -45,7 +45,7 @@
 		}
 	}
 	&.fixed {
-		@media(min-width: 1200px) {
+		@media(min-width: 992px) {
 			width: 100%;
 			position: fixed;
 			top: 0;
@@ -214,9 +214,12 @@
 }
 
 /*===========Adaptive===========*/
-@media(max-width: 546px) {
+@media(max-width: 992px) {
 	.page {
 		padding-top: 65px;
+		&__header {
+			display: flex;
+		}
 	}
 	.search {
 		&__close {
@@ -258,6 +261,8 @@
 			margin-right: 30px;
 		}
 	}
+}
+@media(max-width: 546px) {
 	.sorting {
 		justify-content: space-between;
 		&__buttons {
