@@ -107,6 +107,37 @@ $(document).ready(function() {
   });
   /*==========/search=========*/
 
+  /*======Info (accordeon)=============*/
+  $(".info__title").on("click", function() {
+    $(this).toggleClass('active');
+    $(this).next().slideToggle();
+  });
+  /*==========/info (accordeon)=========*/
+
+  /*======Comments=============*/
+  $(".comments__btn-all").on("click", function(event) {
+    event.preventDefault();
+    $(this).prev().slideToggle();
+    $(this).find('.comments__btn-all__show').toggleClass('hide');
+    $(this).find(".comments__btn-all__hide").toggleClass('show');
+  });
+  /*==========/comments=========*/
+
+  /*======Compare-menu=============*/
+  $(".compare-menu__icon").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+    $(this).next().slideToggle();
+  });
+  /*==========/compare-menu=========*/
+
+  /*=======Compare__content (number)======*/
+  $('.compare__content').removeClass('one').addClass(function(){
+    return ["none", "one", "two", "three", "four"]
+       [$(this).children('.compare__col').length];
+  });
+/*=======/compare__content (number)======*/
+
 
 /*===========Fixed-search======*/
   let search = $("#search");
@@ -129,6 +160,55 @@ $(document).ready(function() {
     }
   }
 /*===========/fixed-search======*/
+
+/*===============Popup-photo=================*/
+    $(".open-popup-photo").on("click", function (event) {
+        name_pop = $(this).attr('data-popup');
+        event.preventDefault();
+        $(".popup."+name_pop).fadeIn(333);
+        $(".popup."+name_pop+" .popup__inner").fadeIn(333);
+        $('body').addClass("hidden");
+
+        /*===photo-slider===*/
+        $('.photo-slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+          //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+          var i = (currentSlide ? currentSlide : 0) + 1;
+          $('.photo-slider__pagin').html(i + '/' + slick.slideCount);
+        });
+
+        $('.photo-slider').slick({
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          vertical: true,
+          verticalSwiping: true,
+          /*responsive: [
+           {
+             breakpoint: 415,
+              settings: {
+                  infinite: true,
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  arrows: false,
+                  vertical: true,
+                  verticalSwiping: true,
+              }
+            },
+          ]*/
+        });
+        /*===/photo-slider===*/
+
+    });
+    $(".popup__close,  .closex").on("click", function (event) {
+        event.preventDefault();
+        $(".popup").fadeOut('333');
+        $(".popup__inner").fadeOut(333);
+        $('body').removeClass("hidden");
+
+        $('.photo-slider').slick('unslick');
+    });
+  /*==============/popup=================*/
 
   /*=================Sliders==========================*/
   /*===========Slider-product============*/
@@ -226,7 +306,85 @@ $(document).ready(function() {
       },
     ]
   });
+
+  $('.watched .product-other .product__inner').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+     {
+       breakpoint: 1230,
+        settings: {
+            infinite: true,
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+        }
+      },
+    ]
+  });
+
+  $('.watched .product-similar .product__inner').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+     {
+       breakpoint: 1230,
+        settings: {
+            infinite: true,
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+        }
+      },
+    ]
+  });
   /*===========/slider-product============*/
+
+ 
+  /*==================Slider-nav==========*/
+  $('.product__photo .slider-for').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $('.product__photo .qt-pagin').html(i + '/' + slick.slideCount);
+  });
+
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  prevArrow: $('.product__photo .slider-arrow_prev'),
+  nextArrow: $('.product__photo .slider-arrow_next'),
+  //fade: true,
+  responsive: [
+        {
+          breakpoint: 415,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            centerMode: false,
+            focusOnSelect: true,
+          }
+        }
+      ]
+});
 
   /*=========/sliders==========*/
 
@@ -301,3 +459,61 @@ $(window).scroll(function() {
 
  
   /*===========range=============*/
+
+  /*=========Scroll=========*/
+  window.onload = function () {
+          var scr = $(".compare__content");
+          scr.mousedown(function () {
+              var startX = this.scrollLeft + event.pageX;
+              var startY = this.scrollTop + event.pageY;
+
+              scr.mousemove(function () {
+
+                  this.scrollLeft = startX - event.pageX;
+
+                  this.scrollTop = startY - event.pageY;
+
+                  return false;
+
+              });
+
+          });
+
+          $(window).mouseup(function () {
+              scr.off("mousemove");
+          });
+
+
+
+     
+
+          container_size();
+
+      }
+
+
+
+
+      function container_size()
+      {
+        if(document.querySelectorAll('.compare__content .compare__col').length > 2)
+        {
+        
+          w = window.innerWidth;
+          if(w > 960)
+          {
+            box = document.querySelector('.container');
+            width = box.offsetWidth
+            wp = (w-width)/2+15;
+            document.querySelector('.compare__content').style.marginRight = -wp+'px';
+        }
+       }
+      }
+
+
+      window.onresize = function(event) {
+         container_size();
+    };
+
+
+  /*=========/Scroll=========*/
