@@ -131,6 +131,21 @@ $(document).ready(function() {
   });
   /*==========/compare-menu=========*/
 
+  /*======Product-menu=============*/
+  $(".product-menu__btn").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+    $(this).next().slideToggle();
+  });
+  /*==========/product-menu=========*/
+
+  /*======Calc-early-add=============*/
+  $(".calc-early-add").on("click", function(event) {
+    event.preventDefault();
+    $(".calc-early").slideToggle();
+  });
+  /*==========/calc-early-add=========*/
+
   /*=======Compare__content (number)======*/
   $('.compare__content').removeClass('one').addClass(function(){
     return ["none", "one", "two", "three", "four"]
@@ -183,19 +198,6 @@ $(document).ready(function() {
           arrows: false,
           vertical: true,
           verticalSwiping: true,
-          /*responsive: [
-           {
-             breakpoint: 415,
-              settings: {
-                  infinite: true,
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  arrows: false,
-                  vertical: true,
-                  verticalSwiping: true,
-              }
-            },
-          ]*/
         });
         /*===/photo-slider===*/
 
@@ -421,18 +423,25 @@ $(window).scroll(function() {
     });
 
 
-    $( "#slider-range_value_center" ).slider({
+    $( "#slider-range_calc-price" ).slider({
       range:'min',
-      min: 0,
-      max: 120,
-      value: 20,
-      create: function() {
-        $('#slider-range_value_center .ui-slider-handle').html('<span>'+$( this ).slider( "value" )+'</span>');
-
-     
-      },
+      min: 720000,
+      max: 35000000,
+      value: 5600000,
       slide: function( event, ui ) {
-        $('#slider-range_value_center .ui-slider-handle').html('<span>'+ui.value+'</span>');
+        $('#calc-price').val(ui.value);
+ 
+      }
+    });
+
+    $( "#slider-range_calc-period" ).slider({
+      range:'min',
+      min: 1,
+      max: 30,
+      value: 12,
+      slide: function( event, ui ) {
+        $('#calc-period').val(ui.value);
+ 
       }
     });
     

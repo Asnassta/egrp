@@ -11,6 +11,21 @@
 <body>
 	<!--Sprite-->
 	<svg style="display: none;">
+		<symbol id="doc-in-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M16 17H8" stroke="#4C2A9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M16 13H8" stroke="#4C2A9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 9H9H8" stroke="#4C2A9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12M13 2L20 9H13V2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="doc-plus-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M12 18V12" stroke="#4C2A9F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9 15H15" stroke="#4C2A9F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12M13 2L20 9H13V2Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
 		<symbol id="download-icon" viewBox="0 0 24 24">
 			<g>
 				<path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -158,7 +173,7 @@
 			<stop offset="1" stop-color="#993D8E"/>
   		</linearGradient>
 	</svg>
-	<div class="wrapper page page-rent">
+	<div class="wrapper page page-buy">
 		<header class="header header-color" id="header">
 			<div class="container">
 				<div class="header__inner">
@@ -234,7 +249,7 @@
 					<div class="burger__item"></div>
 				</div>
 			</div>
-			<section class="product section">
+			<section class="product block">
 				<div class="container">
 					<div class="product__page">
 						<div class="product__about">
@@ -304,6 +319,7 @@
 								<div class="product__photo_all">
 									<span>+10</span>
 								</div>
+								<div class="term-box">Сдача IV квартал  в 2025г.</div>
 								<div class="time">12 ч. назад</div>
 								<div class="qt-pagin">1/4</div>
 								<div class="stat-box">
@@ -324,7 +340,7 @@
 							<div class="product__info">
 								<div class="product__header">
 									<a href="#" class="product__name">
-										<h1 class="product__price">35 000 ₽/мес</h1>
+										<h1 class="product__price">4,5 млн ₽</h1>
 										<div class="product__data">2-комн.,33м²</div>
 									</a>
 									<div class="product__favorite">
@@ -335,7 +351,13 @@
 										</a>
 									</div>
 								</div>
-								<div class="product__description">ул.Технологическая 26/1</div>
+								<div class="product__flex">
+									<div class="product__build">
+										<img src="assets/images/home-icon.svg" alt="">
+										<span>ЖК “Суббота” </span>
+									</div>
+									<div class="product__description">ул.Троицкая 83/1</div>
+								</div>
 								<div class="product__row">
 									<div class="product__place">
 										<img src="assets/images/m-icon.svg" alt="">
@@ -388,7 +410,7 @@
 										<svg>
 											<use xlink:href="#doc-icon_2"></use>
 										</svg>
-										<span>Получите выписку из ЕГРН</span>
+										<span>Оцените недвижимость</span>
 										<svg>
 											<use xlink:href="#arrow-icon"></use>
 										</svg>
@@ -398,6 +420,24 @@
 											<use xlink:href="#download-icon"></use>
 										</svg>
 										<span>Скачайте образцы документов</span>
+										<svg>
+											<use xlink:href="#arrow-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="product__link">
+										<svg>
+											<use xlink:href="#doc-in-icon"></use>
+										</svg>
+										<span>Проверьте недвижимость</span>
+										<svg>
+											<use xlink:href="#arrow-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="product__link">
+										<svg>
+											<use xlink:href="#doc-plus-icon"></use>
+										</svg>
+										<span>Получите выписку из ЕГРН</span>
 										<svg>
 											<use xlink:href="#arrow-icon"></use>
 										</svg>
@@ -549,10 +589,6 @@
 												<div class="info-item__data">На крыше</div>
 											</div><!--/info-item-->
 											<div class="info-item">
-												<div class="info-item__description">Лифт</div>
-												<div class="info-item__data">Есть</div>
-											</div><!--/info-item-->
-											<div class="info-item">
 												<div class="info-item__description">Год постройки</div>
 												<div class="info-item__data">1988</div>
 											</div><!--/info-item-->
@@ -647,7 +683,507 @@
 					</div>
 				</div>
 			</section><!--/product-->
-			<section class="watched section">
+			<section class="calc block">
+				<div class="container">
+					<h2 class="title-small title-small_mus">Ипотечный калькулятор</h2>
+					<div class="calc__inner">
+						<form action="#" class="calc-filters filters">
+							<div class="calc-filters__item">
+								<div class="filters-radiobox">
+									<div class="filters-radio">
+										<input type="radio" id="calc-radio-price" name="calc-radio" checked>
+										<label for="calc-radio-price">По стоимости недвижимости</label>
+									</div><!--/filters-radio-->
+									<div class="filters-radio">
+										<input type="radio" id="calc-radio-payment" name="calc-radio">
+										<label for="calc-radio-payment">По размеру платежа</label>
+									</div><!--/filters-radio-->
+								</div>
+							</div><!--/calc-filters__item-->
+							<div class="calc-filters__variant">
+								<div class="calc-filters__item">
+									<div class="filters-inputbox">
+										<label for="" class="filters-description">Стоимость недвижимости</label>
+										<div class="filters-inputbox__row">
+											<input type="text" value="5 600 000">
+											<span  class="filters-inputbox__supp">₽</span>
+										</div>
+									</div>
+								</div><!--/calc-filters__item-->
+								<div class="calc-filters__item mb-50">
+									<div class="filters-inputbox">
+										<label for="calc-price" class="filters-description">Стоимость недвижимости</label>
+										<div class="filters-inputbox__row">
+											<input type="text" value="5 600 000" id="calc-price">
+											<span  class="filters-inputbox__supp">30%</span>
+										</div>
+									</div>
+									<div class="filters-range blue">
+										<div class="range-wrapper">
+											<div id="slider-range_calc-price"></div>
+										</div>
+										<div class="filters-range__description">
+											<span>720 тыс. ₽</span>
+											<span>35 млн ₽</span>
+										</div>
+									</div>
+								</div><!--/calc-filters__item-->
+								<div class="calc-filters__item mb-50">
+									<div class="filters-inputbox filters-inputbox_small">
+										<label for="calc-period" class="filters-description">Срок</label>
+										<div class="filters-inputbox__row">
+											<input type="text" value="12" id="calc-period">
+											<div class="filters-inputbox__unit">лет</div>
+											<span  class="filters-inputbox__supp">30%</span>
+										</div>
+									</div>
+									<div class="filters-range blue">
+										<div class="range-wrapper">
+											<div id="slider-range_calc-period"></div>
+										</div>
+										<div class="filters-range__description">
+											<span>1 год</span>
+											<span>30 лет</span>
+										</div>
+									</div>
+								</div><!--/calc-filters__item-->
+								<div class="calc-filters__block">
+									<div class="filters-description">Быстрый выбор процентной ставки</div>
+									<div class="filters-radiotags">
+										<div class="filters-radiotag">
+											<input type="radio" name="calc-rate" id="calc-rate_5" checked>
+											<label for="calc-rate_5">Для семей с детьми 5.6%</label>
+										</div><!--/filters-radiotag-->
+										<div class="filters-radiotag">
+											<input type="radio" name="calc-rate" id="calc-rate_9">
+											<label for="calc-rate_9">Льготная  новостройки 9%</label>
+										</div><!--/filters-radiotag-->
+										<div class="filters-radiotag">
+											<input type="radio" name="calc-rate" id="calc-rate_12">
+											<label for="calc-rate_12">Новостройки 12%</label>
+										</div><!--/filters-radiotag-->
+										<div class="filters-radiotag">
+											<input type="radio" name="calc-rate" id="calc-rate_15">
+											<label for="calc-rate_15">Вторичка 15%</label>
+										</div><!--/filters-radiotag-->
+									</div>
+								</div><!--/calc-filters__block-->
+								<div class="calc-filters__btn">
+									<a href="#" class="btn">Смотреть предложения от банков</a>
+								</div>
+							</div>
+						</form><!--/calc-filters-->
+						<div class="calc-result">
+							<div class="calc-result__inner">
+								<div class="calc-result__box">
+									<h3 class="title-small">Ваша ипотека</h3>
+									<div class="calc-result__header">
+										<div class="calc-result__col">
+											<div class="calc-result__description">Ежемесячный платеж</div>
+											<div class="calc-result__data">48 800 ₽/мес </div>
+										</div>
+										<div class="calc-result__col">
+											<div class="calc-result__description">Ставка</div>
+											<div class="calc-result__data">8,85%</div>
+										</div>
+									</div>
+									<div class="calc-result__item">
+										<div class="calc-result__description">Кредит</div>
+										<div class="calc-result__data">
+											<span>98 377 389 ₽</span>
+										</div>
+									</div><!--/calc-result__item-->
+									<div class="calc-result__item">
+										<div class="calc-result__description">Проценты</div>
+										<div class="calc-result__data">
+											<span>221 377 389 ₽</span>
+											<span>-699 938 ₽</span>
+										</div>
+									</div><!--/calc-result__item-->
+									<div class="calc-result__item">
+										<div class="calc-result__description">Проценты + Кредит</div>
+										<div class="calc-result__data">
+											<span>786 377 389 ₽</span>
+										</div>
+									</div><!--/calc-result__item-->
+									<div class="calc-result__item calc-result__income">
+										<div class="calc-result__description">Необходимый доход</div>
+										<div class="calc-result__data">
+											<span>90 389 ₽</span>
+										</div>
+									</div><!--/calc-result__item-->
+								</div><!--/calc-result__box-->
+								<div class="calc-result__box calc-early">
+									<h3 class="title-small">Досрочный платеж 1</h3>
+									<form action="#" class="calc-result__form filters">
+										<div class="calc-result__itembox">
+											<div class="calc-result__description">Дата платежа</div>
+											<div class="filters-input filters-input-icon">
+												<input type="text" value="22.12.1999">
+												<img src="assets/images/calendar-icon.svg" alt="">
+											</div>
+										</div><!--/calc-result__itembox-->
+										<div class="calc-result__itembox">
+											<div class="calc-result__description">Периодичность платежей</div>
+											<div class="filters-select">
+												<select>
+													<option value="0" selected>Единовременно </option>
+													<option value="1">Единовременно </option>
+												</select>
+											</div>
+										</div><!--/calc-result__itembox-->
+										<div class="calc-result__itembox">
+											<div class="calc-result__description">Что уменьшить</div>
+											<div class="filters-select">
+												<select>
+													<option value="0" selected>Платеж </option>
+													<option value="1">Срок</option>
+												</select>
+											</div>
+										</div><!--/calc-result__itembox-->
+										<div class="calc-result__itembox">
+											<div class="calc-result__description">Сумма</div>
+											<div class="filters-input">
+												<input type="text" value="10 000 ₽">
+											</div>
+										</div><!--/calc-result__itembox-->
+									</form>
+								</div><!--/calc-result__box-->
+								<div class="calc-result__buttons">
+									<a href="#" class="btn-dashed calc-early-add">+ Погашение досрочно</a>
+									<a href="#" class="calc-result__link open-popup" data-popup="popup-payment">Смотреть график платежей</a>
+								</div>
+							</div>
+						</div><!--/calc-result-->
+					</div>
+				</div>
+				<div class="popup popup-payment">
+					<div class="closex"></div>
+					<div class="popup__inner">
+						<div class="popup__box">
+							<span class="popup__close">
+								<svg>
+									<use xlink:href="#close-icon"></use>
+								</svg>
+							</span>
+							<div class="popup__content">
+								<h3 class="title-small title-small_mus">График платежей</h3>
+								<div class="payment-schedule">
+									<div class="payment-schedule__header payment-schedule__row">
+										<div class="payment-schedule__item">№</div>
+										<div class="payment-schedule__item">Дата платежа</div>
+										<div class="payment-schedule__item">Задолжность</div>
+										<div class="payment-schedule__item">Погашение процентов</div>
+										<div class="payment-schedule__item">Погашение основного долга</div>
+										<div class="payment-schedule__item">Сумма платежа</div>
+									</div><!--/payment-schedule__row-->
+									<div class="payment-schedule__content">
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">1</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">2</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">3</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">4</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">5</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">6</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">7</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">8</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">9</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">10</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">11</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">12</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">13</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">14</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">15</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+
+										<div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row--><div class="payment-schedule__row">
+											<div class="payment-schedule__item">16</div>
+											<div class="payment-schedule__item">01.05.22</div>
+											<div class="payment-schedule__item">З12 603 851 ₽</div>
+											<div class="payment-schedule__item">73 851 ₽</div>
+											<div class="payment-schedule__item">23 851 ₽</div>
+											<div class="payment-schedule__item">100 851 ₽</div>
+										</div><!--/payment-schedule__row-->
+									</div>
+								</div><!--/payment-schedule-->
+							</div>
+    				    </div>
+					</div>
+				</div><!--/popup-payment-->
+			</section><!--/calc-->
+			<section class="watched bg-wh">
 				<div class="container">
 					<div class="block">
 						<div class="block__header">

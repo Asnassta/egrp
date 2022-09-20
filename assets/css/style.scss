@@ -97,6 +97,11 @@ body.hidden {
 	margin-bottom: 30px;
 }
 
+.bg-wh {
+	background-color: $wh;
+	padding: 60px 0 40px;
+}
+
 .title-main {
 	font-family: $ffm;
 	font-size: 40px;
@@ -148,6 +153,9 @@ body.hidden {
 	line-height: $lh;
 	a {
 		color: $bl;
+	}
+	&_mus {
+		font-family: $ffm;
 	}
 }
 
@@ -213,6 +221,22 @@ body.hidden {
 	}
 }
 
+.btn-dashed {
+	display: inline-block;
+	border: 2px dashed $purple;
+	border-radius: 10px;
+	padding: 16.5px 80px;
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 700;
+	color: $purple;
+	line-height: $lh;
+	transition: all .2s linear;
+	&:hover {
+		background-color: $wh;
+	}
+}
+
 .btn-contact {
 	min-width: 208px;
 	position: relative;
@@ -231,9 +255,14 @@ body.hidden {
 		transition: all .2s linear;
 		opacity: 0;
 		pointer-events: none;
+		flex-direction: column;
+		height: 50px;
 		&.show {
 			opacity: 1;
 			pointer-events: auto;
+		}
+		span {
+			display: block;
 		}
 	}
 }
@@ -486,6 +515,20 @@ body.hidden {
 			margin-right: 0;
 		}
 	}
+}
+
+.term-box {
+	display: inline-block;
+	background: linear-gradient(91.09deg, #734AD7 2.36%, #B72EA6 113.94%);
+	backdrop-filter: blur(1.5px);
+	padding: 10px;
+	border-radius: 53px;
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 400;
+	color: $wh;
+	line-height: $lh;
+	text-align: center;
 }
 
 .estimation {
@@ -747,6 +790,21 @@ body.hidden {
 		.product-card {
 			width: 285px;
 		}
+		.slick-list {
+			padding-bottom: 15px;
+			margin-bottom: -15px;
+		}
+	}
+	&__reason {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 500;
+		color: $purple;
+		line-height: $lh;
+		width: 208px;
+		margin-left: auto;
+		text-align: center;
+		margin-top: -30px;
 	}
 	&-autor {
 		text-align: center;
@@ -841,6 +899,26 @@ body.hidden {
 		display: flex;
 		justify-content: space-between;
 	}
+	&__flex {
+		display: flex;
+		align-items: center;
+	}
+	&__build {
+		display: inline-flex;
+		align-items: center;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		span {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $purple;
+			line-height: $lh;
+		}
+		img {
+			margin-right: 5px;
+		}
+	}
 	&__place {
 		display: flex;
 		align-items: flex-start;
@@ -901,14 +979,62 @@ body.hidden {
 		}
 	}
 	&-menu {
+		position: relative;
 		&__btn {
 			width: 50px;
 			height: 50px;
 			border-radius: 50%;
-			background-color: $wh;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			background-color: $wh;
+			transition: all .2s linear;
+			cursor: pointer;
+			img {
+				width: 25px;
+				&:nth-child(2) {
+					display: none;
+				}
+			}
+			&.active {
+				img {
+					&:first-child {
+						display: none;
+					}
+					&:nth-child(2) {
+						display: block;
+					}
+				}
+			}
+		}
+		&__dropdown {
+			display: none;
+			width: 200px;
+			padding: 10px;
+			background-color: $wh;
+			filter: drop-shadow(0px 0px 8px rgba(27, 27, 44, 0.4));
+			border-radius: 10px;
+			position: absolute;
+			top: calc(100% + 5px);
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+			a {
+				display: block;
+				font-family: $ff;
+				font-size: 16px;
+				font-weight: 400;
+				color: $d-blue;
+				line-height: $lh;
+				margin-bottom: 10px;
+				transition: all .2s linear;
+				&:hover {
+					color: $purple;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 	&__links {
@@ -980,6 +1106,25 @@ body.hidden {
 		}
 		.tags {
 			margin-top: 20px;
+		}
+		.info {
+			margin-top: 20px;
+			&__flex {
+				padding-right: 0;
+				>* {
+					width: calc(50% - 15px);
+					margin-right: 30px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+			&-item {
+				&__description, &__data {
+					font-size: 14px;
+					font-weight: 400;
+				}
+			}
 		}
 		&__name {
 			display: block;
@@ -1063,6 +1208,20 @@ body.hidden {
 		}
 		&__info {
 			padding: 20px 10px;
+			&.wrap {
+				flex-wrap: wrap;
+				.tags {
+					margin-top: 10px;
+					margin-left: -325px;
+					margin-bottom: 0;
+					@media(min-width: 992px) {
+						padding-right: 30%;
+					}
+				}
+				.product-card__name {
+					margin-right: auto;
+				}
+			}
 		}
 		&__price {
 			display: block;
@@ -1211,6 +1370,12 @@ body.hidden {
 			position: absolute;
 			top: 465px;
 			right: 10px;
+			z-index: 1;
+		}
+		.term-box {
+			position: absolute;
+			top: 10px;
+			left: 10px;
 			z-index: 1;
 		}
 		&_all {
@@ -1550,6 +1715,14 @@ body.hidden {
 		margin-bottom: 30px;
 		display: none;
 	}
+	&.archive {
+		.product-card__col,
+		.product-card__photo,
+		.tags {
+			opacity: 0.7;
+			//pointer-events: none;
+		}
+	}
 	&__inner {
 		&.line {
 			.product-card {
@@ -1678,6 +1851,17 @@ body.hidden {
 
 
 /*=============Adaptive============*/
+@media(max-width: 1400px) {
+	.product {
+		&-menu {
+			&__dropdown {
+				left: auto;
+				right: 0;
+				transform: translateX(0);
+			}
+		}
+	}
+}
 @media(max-width: 1200px) {
 	.product {
 		.info {
@@ -1734,6 +1918,9 @@ body.hidden {
 	.mb-30 {
 		margin-bottom: 20px;
 	}
+	.bg-wh {
+		padding: 40px 0 20px;
+	}
 	.links-btn {
 		display: block;
 	}
@@ -1780,6 +1967,33 @@ body.hidden {
 					}
 					&__col {
 						margin-right: 0;
+					}
+					.product__reason {
+						order: 1;
+						margin-top: 20px;
+						margin-left: 0;
+						width: 100%;
+					}
+					&__info {
+						&.wrap {
+							.tags {
+								margin-left: -15px;
+							}
+							.product-autor {
+								margin-top: 30px;
+								display: flex;
+								width: 100%;
+								order: 1;
+								&__name {
+									display: none;
+								}
+								&__date {
+									order: 1;
+									margin-bottom: 0;
+									margin-top: 20px;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -1957,6 +2171,19 @@ body.hidden {
 			}
 		}
 	}
+
+	.product {
+		&-card {
+			.info {
+				&__flex {
+					>* {
+						width: 100%;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media(max-width: 650px) {
@@ -2021,6 +2248,17 @@ body.hidden {
 			}
 		}
 	}
+	.product {
+		&-card {
+			&__info {
+				&.wrap {
+					.tags {
+						margin-left: -15px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media(max-width: 546px) {
@@ -2029,6 +2267,9 @@ body.hidden {
 	}
 	.text {
 		font-size: 14px;
+	}
+	.term-box {
+		padding: 4px 10px;
 	}
 	.card {
 		&-box {
@@ -2192,12 +2433,18 @@ body.hidden {
 	}
 }
 
-@media(max-width: 355px) {
+@media(max-width: 365px) {
 	.product {
 		&__inner {
 			.product-card {
 				width: 280px!important;
 			}
+		}
+		&__contact {
+			padding-right: 0;
+		}
+		&__favorite {
+			position: static;
 		}
 	}
 
