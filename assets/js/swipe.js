@@ -78,6 +78,7 @@ class Swipe {
     if($(window).width() <= 860)
     {
       $('.swipe-content').slideDown(555);
+      $('.swipe-hide').hide();
       $('body').addClass("hidden");
     }
   });
@@ -85,6 +86,7 @@ class Swipe {
     if($(window).width() <= 860)
     {
       $('.swipe-content').slideUp(555);
+      $('.swipe-hide').slideDown(555);
       $('body').removeClass("hidden");
     }
   });

@@ -902,6 +902,21 @@
 		&__selectblock {
 			display: none;
 		}
+		&__flexblock {
+			display: flex;
+			flex-wrap: wrap;	
+			margin-left: -20px;
+			>* {
+				width: calc(50% - 20px);
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+			.calc-filters__select {
+				&:last-child {
+					margin-bottom: 20px;
+				}
+			}
+		}
 		&__select {
 			margin-bottom: 10px;
 			&:last-child {
@@ -958,6 +973,13 @@
 			color: $wh;
 			line-height: $lh;
 			margin-bottom: 10px;
+			&.swipe-hide {
+				position: absolute;
+				bottom: 8px;
+				left: 15px;
+				z-index: 1;
+				display: none;
+			}
 		}
 		&__data {
 			font-family: $ff;
@@ -1048,6 +1070,9 @@
 				&:last-child {
 					margin-bottom: 0;
 				}
+			}
+			.btn {
+				min-width: 50%;
 			}
 		}
 	}/*===/calc-result===*/
@@ -1345,6 +1370,10 @@
 			margin-bottom: 3px;
 			flex: 1 1 100%;
 		}
+		.btn {
+			margin-top: 20px;
+			min-width: 70%;
+		}
 	}/*===/offers-box===*/
 }
 /*=========/offers=============*/
@@ -1494,6 +1523,11 @@
 			&__buttons {
 				margin-top: 20px;
 			}
+			&__description {
+				&.swipe-hide {
+					display: block;
+				}
+			}
 			&.fixed {
 				padding: 0 15px 30px;
 				position: fixed;
@@ -1559,6 +1593,9 @@
 						text-align: center;
 						width: 100%;
 						margin-bottom: 5px;
+						span {
+							color: $wh;
+						}
 						&:last-child {
 							margin-bottom: 0;
 						}
@@ -1580,6 +1617,10 @@
 					&:hover {
 						background-color: $purple;
 					}
+				}
+				.btn {
+					width: 100%;
+					border: 1px dashed $wh;
 				}
 			}
 		}
@@ -1655,6 +1696,18 @@
 		}
 	}
 
+	.calc {
+		&-filters {
+			&__flexblock {
+				margin-left: 0;
+				>* {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
 	.offers {
 		padding-top: 30px;
 		&__inner {
@@ -1712,6 +1765,13 @@
 			.btn-dashed {
 				width: 100%;
 				padding: 16.5px;
+			}
+			&.fixed {
+				.calc-result__header {
+					>* {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}

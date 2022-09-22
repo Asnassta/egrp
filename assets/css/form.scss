@@ -81,6 +81,38 @@
 			}
 		}
 	}
+	&-select {
+		position: relative;
+		z-index: 1;
+		&:after {
+			content: "";
+			width: 24px;
+			height: 24px;
+			background: url("../images/arrow-down.svg") center no-repeat;
+			position: absolute;
+			top: 50%;
+			right: 7px;
+			z-index: 1;
+			transform: translateY(-50%);
+		}
+		select {
+			appearance: none;
+			width: 100%;
+			background-color: $lgray;
+			padding: 12.5px 40px 12.5px 12.5px;
+			border-radius: 6px;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $gray2;
+			line-height: $lh;
+		}
+		option {
+			&:disabled {
+				display: none;
+			}
+		}
+	}
 	&-selectcheck {
 		min-width: 170px;
 		position: relative;
