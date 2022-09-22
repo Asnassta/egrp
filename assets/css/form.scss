@@ -1,0 +1,209 @@
+.form {
+	&-item {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.flex {
+			display: flex;
+			margin-left: -20px;
+			>* {
+				width: calc(50% - 20px);
+				margin-left: 20px;
+			}
+		}
+	}
+	&-input {
+		input {
+			width: 100%;
+			border-radius: 6px;
+			background-color: $lgray;
+			padding: 12.5px 10px;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: $lh;
+			color: $bl;
+			&::placeholder {
+				opacity: 1;
+				color: $gray2;
+			}
+		}
+	}
+	&-checkbox {
+		label {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			span {
+				display: inline-block;
+				flex: 0  0 16px;
+				width: 16px;
+				height: 16px;
+				border: 1px solid $d-blue;
+				border-radius: 2px;
+				margin-right: 9px;
+				background-color: $wh;
+				position: relative;
+				&:after {
+					content: "";
+					width: 10px;
+					height: 8px;
+					background: url("../images/check.svg") center no-repeat;
+					background-size: contain;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					z-index: 1;
+					transform: translate(-50%, -50%);
+					opacity: 0;
+				}
+			}
+			i {
+				font-family: $ff;
+				font-size: 16px;
+				font-weight: 400;
+				font-style: normal;
+				color: $d-blue;
+				line-height: $lh;
+			}
+		}
+		input {
+			display: none;
+			&:checked + label {
+				span {
+					background-color: $yellow;
+					border-color: $yellow;
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	&-selectcheck {
+		min-width: 170px;
+		position: relative;
+		&__select {
+			width: 100%;
+			background-color: $lgray;
+			padding: 12.5px 40px 12.5px 12.5px;
+			border-radius: 6px;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $gray2;
+			line-height: $lh;
+			transition: all .2s linear;
+			position: relative;
+			z-index: 1;
+			&:after {
+				content: "";
+				width: 24px;
+				height: 24px;
+				background: url("../images/arrow-down.svg") center no-repeat;
+				position: absolute;
+				top: 50%;
+				right: 7px;
+				z-index: 1;
+				transform: translateY(-50%);
+				transition: all .2s linear;
+			}
+		}
+		&__dropdown {
+			display: none;
+			padding: 3px 0;
+			background-color: $lgray;
+			position: absolute;
+			top: calc(100% - 3px);
+			left: 0;
+			z-index: 10;
+			width: 100%;
+			border-radius: 0 0 6px 6px;
+		}
+		&__checkbox {
+			padding: 7px 10px;
+			transition: all .2s linear;
+			&:hover {
+				background-color: $lgray;
+			}
+			label {
+				cursor: pointer;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				transition: all .2s linear;
+				i {
+					font-family: $ff;
+					font-size: 16px;
+					font-weight: 400;
+					font-style: normal;
+					line-height: $lh;
+					color: $gray2;
+					transition: all .2s linear;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin-right: 20px;
+					transition: all .2s linear;
+				}
+				span {
+					display: inline-block;
+					width: 16px;
+					height: 16px;
+					flex: 0 0 16px;
+					border: 1px solid $gray2;
+					border-radius: 2px;
+					position: relative;
+					transition: all .2s linear;
+					&:after {
+						content: "";
+						width: 10px;
+						height: 8px;
+						background: url("../images/check.svg") center no-repeat;
+						background-size: contain;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						z-index: 1;
+						opacity: 0;
+						transition: all .2s linear;
+					}
+				}
+			}
+			input {
+				display: none;
+				&:checked + label {
+					i {
+						color: $bl;
+					}
+					span {
+						background-color: $yellow;
+						border-color: $yellow;
+						&:after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+		&.drop {
+			.form-selectcheck__select {
+				color: $bl;
+				&:after {
+					transform: translateY(-50%) rotate(180deg);
+				}
+			}
+		}
+	}
+	.btn {
+		width: 100%;
+		margin-top: 50px;
+	}
+}
+
+.application-form {
+	padding: 20px 0;
+}

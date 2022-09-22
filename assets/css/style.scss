@@ -2,6 +2,7 @@
 @import 'variables.scss';
 @import 'page.scss';
 @import 'filters.scss';
+@import 'form.scss';
 @import 'popup.scss';
 @import 'pages.scss';
 
@@ -223,6 +224,7 @@ body.hidden {
 
 .btn-dashed {
 	display: inline-block;
+	text-align: center;
 	border: 2px dashed $purple;
 	border-radius: 10px;
 	padding: 16.5px 80px;

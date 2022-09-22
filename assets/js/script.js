@@ -48,6 +48,8 @@ $(document).ready(function() {
   $(".filters-selectcheck__select").on("click", function() {
     $(this).parent().toggleClass('drop');
     $(this).next().slideToggle(333);
+    $(".filters-selectcheck__select").not(this).parent().removeClass('drop');
+    $(".filters-selectcheck__select").not(this).next().slideUp(333);
   });
   /*==========/filters-selectcheck=========*/
 
@@ -152,6 +154,15 @@ $(document).ready(function() {
        [$(this).children('.compare__col').length];
   });
 /*=======/compare__content (number)======*/
+
+/*======Form-selectcheck=============*/
+  $(".form-selectcheck__select").on("click", function() {
+    $(this).parent().toggleClass('drop');
+    $(this).next().slideToggle(333);
+    $(".form-selectcheck__select").not(this).parent().removeClass('drop');
+    $(".form-selectcheck__select").not(this).next().slideUp(333);
+  });
+  /*==========/form-selectcheck=========*/
 
 
 /*===========Fixed-search======*/

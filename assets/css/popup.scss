@@ -48,7 +48,7 @@
 	}
 	&__box {
 		background-color: $wh; 
-		padding: 22px 50px  50px 24px;
+		padding: 22px 50px 50px 24px;
 		position: relative;
 		overflow: auto;
 	}
@@ -137,6 +137,7 @@
 		}
 	}
 	&-payment {
+		z-index: 700;
 		.title-small {
 			margin-bottom: 30px;
 		}
@@ -144,6 +145,15 @@
 			overflow: visible;
 			max-height: calc(100vh - 200px);
 			padding: 22px 25px 50px;
+		}
+	}
+	&-application {
+		z-index: 600;
+		.popup__inner {
+			max-width: 500px;
+		}
+		.popup__box {
+			padding: 22px 30px 30px;
 		}
 	}
 }
@@ -224,6 +234,22 @@
 			}
 			.popup__box {
 				border-radius: 20px 20px 0 0;
+			}
+		}
+	}
+}
+
+@media(max-width: 546px) {
+	.popup {
+		&-application {
+			.popup__inner {
+				top: 0;
+				width: 100vw;
+				max-width: 100vw;
+			}
+			.popup__box {
+				height: 100vh;
+				padding: 22px 15px 30px;
 			}
 		}
 	}
