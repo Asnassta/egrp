@@ -2788,11 +2788,13 @@
         margin-right: 30px; }
       .calc-result__item .calc-result__data {
         color: #BFC3E2; }
-        .calc-result__item .calc-result__data span:nth-child(2) {
-          margin-top: 5px;
-          display: block;
-          font-weight: 500;
-          color: #ffffff; }
+        .calc-result__item .calc-result__data span {
+          color: #BFC3E2; }
+          .calc-result__item .calc-result__data span:nth-child(2) {
+            margin-top: 5px;
+            display: block;
+            font-weight: 500;
+            color: #ffffff; }
     .calc-result .filters-select select {
       padding: 14px 40px 14px 14px; }
     .calc-result__income .calc-result__description,
