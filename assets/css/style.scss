@@ -5,6 +5,7 @@
 @import 'form.scss';
 @import 'popup.scss';
 @import 'pages.scss';
+@import 'account.scss';
 
 
 /*Reset
@@ -92,6 +93,13 @@ body.hidden {
 	left: 0;
 	pointer-events: none;
 	visibility: hidden;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+.mt-20 {
+	margin-top: 20px;
 }
 
 .mb-30 {
@@ -182,6 +190,9 @@ body.hidden {
 	}
 	img {
 		margin-right: 6px;
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 	svg {
 		margin-right: 6px;
@@ -189,6 +200,9 @@ body.hidden {
 		height: 24px;
 		fill: $purple;
 		transition: all .2s linear;
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 	&_light {
 		background-color: $lblue;
@@ -219,6 +233,30 @@ body.hidden {
 			background-color: #BFC3E2;
 			color: $blue;
 		}
+	}
+	&.inactive {
+		background-color: $gray2;
+	}
+}
+
+.btn-transparent {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: transparent;
+	border-radius: 6px;
+	padding: 16px 10px;
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 700;
+	color: $purple;
+	border: 1px solid $purple;
+	line-height: $lh;
+	transition: all .2s linear;
+	&:hover {
+		background-color: $purple;
+		color: $wh;
 	}
 }
 

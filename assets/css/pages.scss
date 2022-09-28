@@ -13,6 +13,11 @@
 		.burger {
 			z-index: 200;
 		}
+		&_wh {
+			background-color: $wh;
+			top: 0;
+			padding: 20px 15px;
+		}
 	}
 	&-compare {
 		background-color: $wh;
@@ -79,6 +84,124 @@
 			padding: 10px 0;
 			background-color: #F7F8FA;
 			box-shadow: 0px 4px 11px rgba(49, 63, 112, 0.05);
+		}
+	}
+}
+
+.view-change {
+	position: relative;
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: none;
+		stroke: $bl;
+		transition: all .2s linear;
+		margin-right: 5px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__desc {
+		display: none;
+		padding-right: 9px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(-100%, -50%);
+		z-index: 10;
+		>* {
+			width: 190px;
+			padding: 10px 20px 10px 15px;
+			background-color: $purple;
+			box-shadow: 0px 0px 15px #6163F9;
+			font-family: $ff;
+			font-size: 13px;
+			font-weight: 500;
+			color: $wh;
+			line-height: $lh;
+			&:after {
+				content: "";
+				width: 8.5px;
+				height: 8.5px;
+				background-color: $purple;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				z-index: 1;
+				transform: rotate(45deg) translateY(-50%);
+			}
+		}
+	}
+}
+
+.selectbox {
+	cursor: pointer;
+	display: inline-flex;
+	position: relative;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	&__select {
+		padding-right: 30px;
+		width: 100%;
+		justify-content: center;
+		transition: all .2s linear;
+		position: relative;
+		&:after {
+			content: "";
+			width: 24px;
+			height: 24px;
+			background: url("../images/arrow-down-dblue.svg") center no-repeat;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			z-index: 1;
+			transform: translateY(-50%);
+			transition: all .3s linear;
+		}
+		&.active {
+			&:after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+	&__select, &__option {
+		display: flex;
+		align-items: center;
+		span {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $d-blue;
+			line-height: $lh;
+		}
+	}
+	&__dropdown {
+		display: none;
+		position: absolute;
+		top: calc(100% + 1px);
+		right: 0;
+		z-index: 50;
+		background-color: $wh;
+		padding: 3.5px 5px;
+		min-width: 230px;
+		border-radius: 6px;
+		filter: drop-shadow(0px 0px 8px rgba(27, 27, 44, 0.4));
+	}
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+	&__option {
+		padding: 10px 40px 10px 5px;
+		transition: all .2s linear;
+		&:hover {
+			background-color: $lgray;
+		}
+		&.selected {
+			order: -1;
+			background-color: $wh;
+			span {
+				color: $gray2;
+			}
 		}
 	}
 }
@@ -1392,6 +1515,9 @@
 @media(max-width: 992px) {
 	.page {
 		padding-top: 65px;
+		&.pt-80 {
+			padding-top: 80px;
+		}
 		&__header {
 			display: flex;
 		}
@@ -1772,6 +1898,14 @@
 						width: 100%;
 					}
 				}
+			}
+		}
+	}
+
+	.selectbox {
+		&__select, &__option {
+			span {
+				font-size: 14px;
 			}
 		}
 	}

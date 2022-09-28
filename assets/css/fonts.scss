@@ -39,6 +39,16 @@
 }
 
 @font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:   url('../fonts/SFProDisplay-Bold.woff2') format('woff2'),
+  url('../fonts/SFProDisplay-Bold.woff') format('woff'),
+  url('../fonts/SFProDisplay-Bold.ttf') format('truetype'),
+}
+
+@font-face {
   font-family: 'Museo Cyrl';
   font-style: normal;
   font-weight: 700;

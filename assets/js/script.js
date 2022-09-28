@@ -148,6 +148,12 @@ $(document).ready(function() {
   });
   /*==========/calc-early-add=========*/
 
+  /*======View-change=============*/
+  $(".view-change").hover(function() {
+    $(".view-change__desc").fadeToggle();
+  });
+  /*==========/view-change=========*/
+
   /*=======Compare__content (number)======*/
   $('.compare__content').removeClass('one').addClass(function(){
     return ["none", "one", "two", "three", "four"]
@@ -186,6 +192,22 @@ $(document).ready(function() {
     }
   }
 /*===========/fixed-search======*/
+
+/*======Selectbox=============*/
+  $(".selectbox").on("click", function(event) {
+    event.preventDefault();
+    $(this).find('.selectbox__dropdown').slideToggle(222);
+    $(this).find('.selectbox__select').toggleClass('active');
+  });
+
+
+  $(".selectbox__option").on("click", function(event) {
+    event.preventDefault();
+    $('.selectbox__select').html($(this).html());
+    $(this).addClass('selected');
+    $(".selectbox__option").not(this).removeClass('selected');
+  });
+  /*==========/selectbox=========*/
 
 /*===============Popup-photo=================*/
     $(".open-popup-photo").on("click", function (event) {
