@@ -209,6 +209,12 @@ $(document).ready(function() {
   });
   /*==========/selectbox=========*/
 
+  /*=========Textarea-qt==========*/
+  $('.form-textarea textarea').bind('input', function() {
+    $(this).parent().find('.form-textarea-result').html($(this).val().length);
+  });
+  /*=========/textarea-qt==========*/
+
 /*===============Popup-photo=================*/
     $(".open-popup-photo").on("click", function (event) {
         name_pop = $(this).attr('data-popup');
