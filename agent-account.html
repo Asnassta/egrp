@@ -207,7 +207,7 @@
 			<stop offset="1" stop-color="#993D8E"/>
   		</linearGradient>
 	</svg>
-	<div class="wrapper page page-personal-account pt-80">
+	<div class="wrapper page page-agent-account pt-80">
 		<header class="header header-color" id="header">
 			<div class="container">
 				<div class="header__inner">
@@ -279,7 +279,7 @@
 				<a href="#" class="back">
 					<img src="assets/images/arrow-down.svg" alt="">
 				</a>
-				<h2 class="page__title title-small">Редактирование профиля</h2>
+				<h1 class="page__title title-small">Агент</h1>
 				<div class="burger">
 					<div class="burger__item"></div>
 				</div>
@@ -294,7 +294,7 @@
 								</svg>
 								<span>Проверенный</span>
 							</div>
-							<a href="personal-account-viewing.html" class="view-change">
+							<a href="agent-account-viewing.html" class="view-change">
 								<svg>
 									<use xlink:href="#eye-icon"></use>
 								</svg>
@@ -340,7 +340,7 @@
 								</svg>
 								<span>Настройки профиля</span>
 							</a>
-							<a href="personal-account-viewing.html" class="account-nav__link view-change">
+							<a href="agent-account-viewing.html" class="account-nav__link view-change">
 								<svg>
 									<use xlink:href="#eye-icon"></use>
 								</svg>
@@ -364,132 +364,208 @@
 									<div class="account-box__icon">КК</div>
 									<div class="account-box__info">
 										<div class="account-box__name">Константин Константинов</div>
-										<div class="account-box__stat">Частный аккаунт</div>
+										<a href="#" class="account-box__link">Редактировать профиль</a>
+										<div class="account-box__stat">Агент</div>
 									</div>
 								</div>
 							</div><!--/account-box-->
-							<a href="#" class="account-btn account-btn_wh">Выйти из профиля</a>
+							<a href="#" class="account-btn open-popup" data-popup="popup-confirm">
+								<img src="assets/images/mail.svg" alt="">
+								<span>Подтвердить почту</span>
+							</a>
+							<a href="#" class="account-btn-stat">
+								<span>Мои объявления</span>
+								<span>2</span>
+							</a>
+							<a href="#" class="account-btn-stat">
+								<span>Мои клиенты</span>
+								<span>2</span>
+							</a>
+							<a href="#" class="account-btn-stat">
+								<span>Мои сообщения</span>
+							</a>
+							<div class="account__linksbox">
+								<a href="#" class="account-link">Пакеты размещений</a>
+								<a href="#" class="account-link">Страхование недвижимости</a>
+								<a href="#" class="account-link">Оценка недвижимости</a>
+								<a href="#" class="account-link">Рассчитайте ипотеку</a>
+								<a href="#" class="account-link">Риэлторы, Застройщики</a>
+							</div>
+							<a href="#" class="account-link">Отключить рекламу</a>
+							<a href="#" class="account-link">Защита сделки</a>
 						</div><!--/account__sidebar-->
 						<div class="account__content">
-							<div class="account-editing">
-								<a href="#" class="btn-back">
-									<img src="assets/images/arrow-gray.svg" alt="">
-									<span>Назад</span>
-								</a>
-								<h1 class="account-editing__title">Редактирование профиля</h1>
-								<div class="account-progressbar">
-									<div class="account-progressbar__item active">
-										<div class="account-progressbar__icon">
-											<img src="assets/images/user.svg" alt="">
+							<div class="account__row">
+								<div class="account-infobox">
+									<div class="account-infobox__header">
+										<div class="account-infobox__row">
+											<div class="account-infobox__title">Мои активные промо:</div>
+										</div>
+										<div class="account-infobox__row right">
+											<div class="account-infobox__description">Срок действия</div>
 										</div>
 									</div>
-									<div class="account-progressbar__item">
-										<div class="account-progressbar__icon">
-											<img src="assets/images/calc.svg" alt="">
+									<div class="account-infobox__content">
+										<div class="account-infobox__item">
+											<div class="account-infobox__data">
+												<img src="assets/images/smile.svg" alt="">
+												<span>Топ 43 шт.</span>
+											</div>
+											<div class="account-infobox__data">15 дн.</div>
+										</div>
+										<div class="account-infobox__item">
+											<div class="account-infobox__data">
+												<img src="assets/images/star.svg" alt="">
+												<span>Премиум 4 шт.</span>
+											</div>
+											<div class="account-infobox__data">22 дн.</div>
+										</div>
+										<div class="account-infobox__item">
+											<div class="account-infobox__data">
+												<img src="assets/images/paintbrush.svg" alt="">
+												<span>Цвет 7 шт.</span>
+											</div>
+											<div class="account-infobox__data">17 дн.</div>
 										</div>
 									</div>
-									<div class="account-progressbar__item">
-										<div class="account-progressbar__icon">
-											<img src="assets/images/ok.svg" alt="">
+								</div><!--/account-infobox-->
+								<div class="account-infobox wallet-infobox">
+									<div class="account-infobox__header">
+										<div class="account-infobox__row">
+											<div class="account-infobox__title">Кошелек</div>
+											<div class="account-balance">Баланс: <span>0</span>₽ </div>
+										</div>
+										<div class="account-infobox__row">
+											<div class="account-infobox__description">Последние операции:</div>
 										</div>
 									</div>
-									<div class="account-progressbar__item">
-										<div class="account-progressbar__icon">
-											<img src="assets/images/good.svg" alt="">
+									<div class="account-infobox__content">
+										<div class="account-infobox__item">
+											<div class="account-infobox__data">Отключение рекламы</div>
+											<div class="account-infobox__data">15 дн.</div>
+										</div>
+										<div class="account-infobox__item">
+											<div class="account-infobox__data">Пополнение кошелька</div>
+											<div class="account-infobox__data">+61 020₽</div>
+										</div>
+										<div class="account-infobox__up">
+											<a href="#">+ Пополнить</a>
 										</div>
 									</div>
-								</div><!--/account-progressbar-->
-								<form action="#" class="account-editing__form form">
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Фамилия">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+								</div><!--/account-infobox-->
+							</div>
+							<div class="promote-box">
+								<div class="promote-box__inner">
+									<h2 class="promote-box__title">Продвигайте!</h2>
+									<div class="promote-box__text">Продвигай выгодно!<br>Если вы компания или у вас больше, чем 1 объявление выберите пакет - сэкономьте</div>
+									<a href="#" class="btn">Отправить заявку сразу</a>
+								</div>
+							</div><!--/promote-box-->
+							<div class="account-block">
+								<div class="account-block__header">
+									<h2 class="account-block__title title-small">Мои объявления</h2>
+									<a href="#" class="account-block__link">Посмотреть  все</a>
+								</div>
+								<div class="account-block__content">
+									<div class="ad-box">
+										<div class="ad-box__photo">
+											<img src="assets/images/city_1.jpg" alt="">
 										</div>
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Имя">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+										<div class="ad-box__info">
+											<div class="ad-box__title">Продажа</div>
+											<div class="ad-box__data">2-комн.,33м², 4,7 млн ₽</div>
+											<div class="ad-box__geo">Технологический институт 2,  ул. Калинина 33</div>
 										</div>
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Отчество">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+									</div><!--/ad-box-->
+									<div class="ad-box">
+										<div class="ad-box__photo">
+											<img src="assets/images/city_2.jpg" alt="">
 										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-description">Пол</div>
-												<div class="form-radiobtns">
-													<div class="form-radio">
-														<input type="radio" name="gender-radio" id="gender-radio-female" checked>
-														<label for="gender-radio-female">
-															<span></span>
-															<i>Женский</i>
-														</label>
-													</div>
-													<div class="form-radio">
-														<input type="radio" name="gender-radio" id="gender-radiomale">
-														<label for="gender-radiomale">
-															<span></span>
-															<i>Мужской</i>
-														</label>
-													</div>
-												</div><!--/form-radiobtns-->
-											</div><!--/form-item-->
+										<div class="ad-box__info">
+											<div class="ad-box__title">Аренда</div>
+											<div class="ad-box__data">2-комн.,33м², 30 тыс ₽</div>
+											<div class="ad-box__geo">Технологический институт 2,  ул. Калинина 33</div>
 										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-description">Дата рождения</div>
-												<div class="form-input form-input-icon">
-													<input type="text" placeholder="дд.мм.гггг">
-													<img src="assets/images/calendar.svg" alt="">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+									</div><!--/ad-box-->
+								</div>
+							</div><!--/account-block-->
+							<div class="account-block">
+								<div class="account-block__header">
+									<h2 class="account-block__title title-small">Избранное</h2>
+									<a href="#" class="account-block__link">Посмотреть  все</a>
+								</div>
+								<div class="account-block__content">
+									<div class="ad-box">
+										<div class="ad-box__photo">
+											<img src="assets/images/city_3.jpg" alt="">
 										</div>
-										<div class="account-editing__col big">
-											<div class="form-item">
-												<div class="form-description">Адрес проживания</div>
-												<div class="form-input">
-													<input type="text" placeholder="Город,улица, дом, квартира">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+										<div class="ad-box__info">
+											<div class="ad-box__title">Продажа</div>
+											<div class="ad-box__data">2-комн.,33м², 4,7 млн ₽</div>
+											<div class="ad-box__geo">Технологический институт 2,  ул. Калинина 33</div>
 										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col full">
-											<div class="form-item">
-												<div class="form-input form-textarea">
-													<textarea maxlength="450" placeholder="О себе"></textarea>
-													<div class="form-textarea-qt">
-														<span class="form-textarea-result">0</span>
-														<span>из 450</span>
-													</div>
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+									</div><!--/ad-box-->
+									<div class="ad-box">
+										<div class="ad-box__photo">
+											<img src="assets/images/city_1.jpg" alt="">
 										</div>
-									</div>
-									<div class="account-editing__buttons">
-										<a href="#" class="btn inactive">Сохранить и продолжить</a>
-										<a href="#" class="account-editing-view">
-											<svg>
-												<use xlink:href="#eye-icon"></use>
-											</svg>
-											<span>Посмотрите как видят ваш профиль другие пользователи</span>
-										</a>
-									</div>
-								</form>
-							</div><!--/account-editing-->
-						</div><!--/account__content-->
+										<div class="ad-box__info">
+											<div class="ad-box__title">Аренда</div>
+											<div class="ad-box__data">2-комн.,33м², 30 тыс ₽</div>
+											<div class="ad-box__geo">Технологический институт 2,  ул. Калинина 33</div>
+										</div>
+									</div><!--/ad-box-->
+								</div>
+							</div><!--/account-block-->
+							<div class="account-block">
+								<div class="account-block__header">
+									<h2 class="account-block__title title-small">Статистика просмотров</h2>
+									<div class="selectbox">
+										<div class="selectbox__select">
+											<span>За 30 дней</span>
+										</div>
+										<div class="selectbox__dropdown">
+											<div class="selectbox__inner">
+												<div class="selectbox__option selected">
+													<span>За 30 дней</span>
+												</div>
+												<div class="selectbox__option">
+													<span>За 1 день</span>
+												</div>
+												<div class="selectbox__option">
+													<span>За все время</span>
+												</div>
+												<div class="selectbox__option">
+													<span>Без календаря</span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectbox-->
+								</div>
+								<div class="account-block__content">
+									<div class="account-itemstat">
+										<div class="account-itemstat__title">Просмотры объектов</div>
+										<div class="account-itemstat__data grow">
+											<span>6473</span>
+											<span>+ 28,3%</span>
+										</div>
+									</div><!--/account-itemstat-->
+									<div class="account-itemstat">
+										<div class="account-itemstat__title">Добавили в избранное</div>
+										<div class="account-itemstat__data falling">
+											<span>473</span>
+											<span>- 23,3%</span>
+										</div>
+									</div><!--/account-itemstat-->
+								</div>
+							</div><!--/account-block-->
+							<div class="account-block__link">
+								<a href="#">Посмотреть  всю статистику</a>
+							</div>
+							<div class="account-block__link mt-10">
+								<a href="#">Выйти из профиля</a>
+							</div>	
+						</div>
 					</div>
 				</div>
 			</div><!--/account-->
@@ -541,6 +617,31 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="popup popup-confirm">
+			<div class="closex"></div>
+			<div class="popup__inner">
+				<div class="popup__box">
+					<span class="popup__close">
+						<svg>
+							<use xlink:href="#close-icon"></use>
+						</svg>
+					</span>
+					<div class="popup__content">
+						<h3 class="title-small">Подтвердить почту</h3>
+						<div class="subtitle">Чтобы пользоваться всеми услугами личного кабинета подтвердите почту</div>
+						<form action="#" class="confirm-form form">
+							<div class="form-item">
+								<div class="form-input">
+									<input type="email" placeholder="Email" value="Mail@mail.com">
+								</div><!--/form-input-->
+							</div><!--/form-item-->
+							<button type="submit" class="btn">Отправить </button>
+						</form>
+					</div>
+    		    </div>
+			</div>
+		</div><!--/popup-confirm-->
 	</div>
 
 	<script src="assets/js/jquery-3.6.0.min.js"></script>

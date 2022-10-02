@@ -207,7 +207,7 @@
 			<stop offset="1" stop-color="#993D8E"/>
   		</linearGradient>
 	</svg>
-	<div class="wrapper page page-personal-account pt-80">
+	<div class="wrapper page page-agent-account pt-80">
 		<header class="header header-color" id="header">
 			<div class="container">
 				<div class="header__inner">
@@ -294,7 +294,7 @@
 								</svg>
 								<span>Проверенный</span>
 							</div>
-							<a href="personal-account-viewing.html" class="view-change">
+							<a href="agent-account-viewing.html" class="view-change">
 								<svg>
 									<use xlink:href="#eye-icon"></use>
 								</svg>
@@ -340,7 +340,7 @@
 								</svg>
 								<span>Настройки профиля</span>
 							</a>
-							<a href="personal-account-viewing.html" class="account-nav__link view-change">
+							<a href="agent-account-viewing.html" class="account-nav__link view-change">
 								<svg>
 									<use xlink:href="#eye-icon"></use>
 								</svg>
@@ -364,7 +364,7 @@
 									<div class="account-box__icon">КК</div>
 									<div class="account-box__info">
 										<div class="account-box__name">Константин Константинов</div>
-										<div class="account-box__stat">Частный аккаунт</div>
+										<div class="account-box__stat">Агент</div>
 									</div>
 								</div>
 							</div><!--/account-box-->
@@ -378,17 +378,17 @@
 								</a>
 								<h1 class="account-editing__title">Редактирование профиля</h1>
 								<div class="account-progressbar">
-									<div class="account-progressbar__item active">
+									<div class="account-progressbar__item active filled">
 										<div class="account-progressbar__icon">
 											<img src="assets/images/user.svg" alt="">
 										</div>
 									</div>
-									<div class="account-progressbar__item">
+									<div class="account-progressbar__item active filled">
 										<div class="account-progressbar__icon">
 											<img src="assets/images/calc.svg" alt="">
 										</div>
 									</div>
-									<div class="account-progressbar__item">
+									<div class="account-progressbar__item active">
 										<div class="account-progressbar__icon">
 											<img src="assets/images/ok.svg" alt="">
 										</div>
@@ -400,93 +400,34 @@
 									</div>
 								</div><!--/account-progressbar-->
 								<form action="#" class="account-editing__form form">
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Фамилия">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+									<div class="account-editing__block">
+										<h2 class="title-small">Идентификация аккаунта</h2>
+										<div class="account-editing-infobox">После прохождения идентификации ваш аккаунт получит статус. Проверенный.</div>
+									</div><!--/account-editing__block-->
+									<div class="account-editing__block">
+										<h2 class="title-small">Физическое лицо</h2>
+										<div class="account-editing__row">
+											<div class="account-editing__col">
+												<a href="#" class="btn-transparent">Подтвердить через Гос Услуги</a>
+											</div>
 										</div>
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Имя">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+									</div><!--/account-editing__block-->
+									<div class="account-editing__block">
+										<h2 class="title-small">Юридическое лицо</h2>
+										<div class="account-editing__row">
+											<div class="account-editing__col">
+												<a href="#" class="btn-transparent">Верификация по карте</a>
+											</div>
+											<div class="account-editing__description">Мы спишем с карты 1₽ и сразу его вернем.</div>
 										</div>
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Отчество">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+									</div><!--/account-editing__block-->
+									<div class="account-editing__block">
+										<div class="account-editing__row">
+											<div class="account-editing__col">
+												<a href="#" class="btn">Дальше без идентификации</a>
+											</div>
 										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-description">Пол</div>
-												<div class="form-radiobtns">
-													<div class="form-radio">
-														<input type="radio" name="gender-radio" id="gender-radio-female" checked>
-														<label for="gender-radio-female">
-															<span></span>
-															<i>Женский</i>
-														</label>
-													</div>
-													<div class="form-radio">
-														<input type="radio" name="gender-radio" id="gender-radiomale">
-														<label for="gender-radiomale">
-															<span></span>
-															<i>Мужской</i>
-														</label>
-													</div>
-												</div><!--/form-radiobtns-->
-											</div><!--/form-item-->
-										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-description">Дата рождения</div>
-												<div class="form-input form-input-icon">
-													<input type="text" placeholder="дд.мм.гггг">
-													<img src="assets/images/calendar.svg" alt="">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-										<div class="account-editing__col big">
-											<div class="form-item">
-												<div class="form-description">Адрес проживания</div>
-												<div class="form-input">
-													<input type="text" placeholder="Город,улица, дом, квартира">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col full">
-											<div class="form-item">
-												<div class="form-input form-textarea">
-													<textarea maxlength="450" placeholder="О себе"></textarea>
-													<div class="form-textarea-qt">
-														<span class="form-textarea-result">0</span>
-														<span>из 450</span>
-													</div>
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-									</div>
-									<div class="account-editing__buttons">
-										<a href="#" class="btn inactive">Сохранить и продолжить</a>
-										<a href="#" class="account-editing-view">
-											<svg>
-												<use xlink:href="#eye-icon"></use>
-											</svg>
-											<span>Посмотрите как видят ваш профиль другие пользователи</span>
-										</a>
-									</div>
+									</div><!--/account-editing__block-->
 								</form>
 							</div><!--/account-editing-->
 						</div><!--/account__content-->

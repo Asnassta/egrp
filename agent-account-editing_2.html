@@ -207,7 +207,7 @@
 			<stop offset="1" stop-color="#993D8E"/>
   		</linearGradient>
 	</svg>
-	<div class="wrapper page page-personal-account pt-80">
+	<div class="wrapper page page-agent-account pt-80">
 		<header class="header header-color" id="header">
 			<div class="container">
 				<div class="header__inner">
@@ -294,7 +294,7 @@
 								</svg>
 								<span>Проверенный</span>
 							</div>
-							<a href="personal-account-viewing.html" class="view-change">
+							<a href="agent-account-viewing.html" class="view-change">
 								<svg>
 									<use xlink:href="#eye-icon"></use>
 								</svg>
@@ -340,7 +340,7 @@
 								</svg>
 								<span>Настройки профиля</span>
 							</a>
-							<a href="personal-account-viewing.html" class="account-nav__link view-change">
+							<a href="agent-account-viewing.html" class="account-nav__link view-change">
 								<svg>
 									<use xlink:href="#eye-icon"></use>
 								</svg>
@@ -364,7 +364,7 @@
 									<div class="account-box__icon">КК</div>
 									<div class="account-box__info">
 										<div class="account-box__name">Константин Константинов</div>
-										<div class="account-box__stat">Частный аккаунт</div>
+										<div class="account-box__stat">Агент</div>
 									</div>
 								</div>
 							</div><!--/account-box-->
@@ -378,12 +378,12 @@
 								</a>
 								<h1 class="account-editing__title">Редактирование профиля</h1>
 								<div class="account-progressbar">
-									<div class="account-progressbar__item active">
+									<div class="account-progressbar__item active filled">
 										<div class="account-progressbar__icon">
 											<img src="assets/images/user.svg" alt="">
 										</div>
 									</div>
-									<div class="account-progressbar__item">
+									<div class="account-progressbar__item active">
 										<div class="account-progressbar__icon">
 											<img src="assets/images/calc.svg" alt="">
 										</div>
@@ -400,93 +400,210 @@
 									</div>
 								</div><!--/account-progressbar-->
 								<form action="#" class="account-editing__form form">
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Фамилия">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Имя">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Отчество">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-description">Пол</div>
-												<div class="form-radiobtns">
-													<div class="form-radio">
-														<input type="radio" name="gender-radio" id="gender-radio-female" checked>
-														<label for="gender-radio-female">
+									<div class="account-editing__block">
+										<h2 class="title-small">Специализация</h2>
+										<div class="account-editing__row">
+											<div class="account-editing__col">
+												<div class="account-editing__subtitle">Аренда недвижимости</div>
+												<div class="form-tags">
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-estate_1" name="checkbox-estate" checked>
+														<label for="checkbox-estate_1">
 															<span></span>
-															<i>Женский</i>
+															Жилая
 														</label>
-													</div>
-													<div class="form-radio">
-														<input type="radio" name="gender-radio" id="gender-radiomale">
-														<label for="gender-radiomale">
+													</div><!--/form-tag-->
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-estate_2" name="checkbox-estate">
+														<label for="checkbox-estate_2">
 															<span></span>
-															<i>Мужской</i>
+															Коммерческая
 														</label>
-													</div>
-												</div><!--/form-radiobtns-->
-											</div><!--/form-item-->
+													</div><!--/form-tag-->
+												</div>
+											</div>
+											<div class="account-editing__col">
+												<div class="account-editing__subtitle">Продажа недвижимости</div>
+												<div class="form-tags">
+													<div class="form-tag">
+														<input type="checkbox" id="buy-estate_1" name="buy-estate" checked>
+														<label for="buy-estate_1">
+															<span></span>
+															Жилая
+														</label>
+													</div><!--/form-tag-->
+													<div class="form-tag">
+														<input type="checkbox" id="buy-estate_2" name="buy-estate">
+														<label for="buy-estate_2">
+															<span></span>
+															Коммерческая
+														</label>
+													</div><!--/form-tag-->
+												</div>
+											</div>
+											<div class="account-editing__col">
+												<div class="account-editing__subtitle">Ипотечное кредитование</div>
+												<div class="form-tags">
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-mortgage" name="checkbox-mortgage" checked>
+														<label for="checkbox-mortgage">
+															<span></span>
+															Ипотека
+														</label>
+													</div><!--/form-tag-->
+												</div>
+											</div>
+											<div class="account-editing__col full">
+												<div class="account-editing__subtitle">Другие услуги</div>
+												<div class="form-tags">
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-services_1" name="checkbox-services" checked>
+														<label for="checkbox-services_1">
+															<span></span>
+															Консультация
+														</label>
+													</div><!--/form-tag-->
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-services_2" name="checkbox-services">
+														<label for="checkbox-services_2">
+															<span></span>
+															Нотариат
+														</label>
+													</div><!--/form-tag-->
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-services_3" name="checkbox-services">
+														<label for="checkbox-services_3">
+															<span></span>
+															Ремонт
+														</label>
+													</div><!--/form-tag-->
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-services_4" name="checkbox-services">
+														<label for="checkbox-services_4">
+															<span></span>
+															Дизайн интерьера
+														</label>
+													</div><!--/form-tag-->
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-services_5" name="checkbox-services">
+														<label for="checkbox-services_5">
+															<span></span>
+															Подбор объектов
+														</label>
+													</div><!--/form-tag-->
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-services_6" name="checkbox-services" checked>
+														<label for="checkbox-services_6">
+															<span></span>
+															Сопровождение на сделке
+														</label>
+													</div><!--/form-tag-->
+													<div class="form-tag">
+														<input type="checkbox" id="checkbox-services_7" name="checkbox-services">
+														<label for="checkbox-services_7">
+															<span></span>
+															Проверка документов
+														</label>
+													</div><!--/form-tag-->
+												</div>
+											</div>
 										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-description">Дата рождения</div>
-												<div class="form-input form-input-icon">
-													<input type="text" placeholder="дд.мм.гггг">
-													<img src="assets/images/calendar.svg" alt="">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+									</div><!--/account-editing__block-->
+									<div class="account-editing__block">
+										<h2 class="title-small">Опыт работы</h2>
+										<div class="account-editing__row">
+											<div class="account-editing__col big">
+												<div class="form-item">
+													<div class="form-input">
+														<input type="text" placeholder="Название компании или ИП">
+													</div><!--/form-input-->
+												</div><!--/form-item-->
+											</div>
 										</div>
-										<div class="account-editing__col big">
-											<div class="form-item">
-												<div class="form-description">Адрес проживания</div>
-												<div class="form-input">
-													<input type="text" placeholder="Город,улица, дом, квартира">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+										<div class="account-editing__row top">
+											<div class="account-editing__col">
+												<div class="form-item">
+													<div class="form-description">Дата начала работы</div>
+													<div class="form-input form-input-icon">
+														<input type="text" placeholder="дд.мм.гггг" value="22.12.1999">
+														<img src="assets/images/calendar.svg" alt="">
+													</div><!--/form-input-->
+												</div><!--/form-item-->
+											</div>
+											<div class="account-editing__col">
+												<div class="form-item">
+													<div class="form-description">Дата окончания</div>
+													<div class="form-input form-input-icon">
+														<input type="text" placeholder="дд.мм.гггг" value="22.12.1999">
+														<img src="assets/images/calendar.svg" alt="">
+													</div><!--/form-input-->
+												</div><!--/form-item-->
+												<div class="form-item">
+													<div class="form-checkbox">
+														<input type="checkbox" id="checkbox-time">
+														<label for="checkbox-time">
+															<span></span>
+															<i>По настоящее время</i>
+														</label>
+													</div><!--/form-input-->
+												</div><!--/form-item-->
+											</div>
+											<div class="account-editing__col big">
+												<a href="#" class="btn-transparent">+ Добавить еще</a>
+											</div>
 										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col full">
-											<div class="form-item">
-												<div class="form-input form-textarea">
-													<textarea maxlength="450" placeholder="О себе"></textarea>
-													<div class="form-textarea-qt">
-														<span class="form-textarea-result">0</span>
-														<span>из 450</span>
-													</div>
-												</div><!--/form-input-->
-											</div><!--/form-item-->
+									</div><!--/account-editing__block-->
+									<div class="account-editing__block">
+										<h2 class="title-small">Работа</h2>
+										<div class="account-editing__row">
+											<div class="account-editing__col">
+												<div class="form-item">
+													<div class="form-checkblock">
+														<input type="checkbox" name="work-checkbox" id="work-checkbox_1" checked>
+														<label for="work-checkbox_1">
+															<span></span>
+															<i>Официально по найму</i>
+														</label>
+													</div><!--/form-input-->
+												</div><!--/form-item-->
+											</div>
+											<div class="account-editing__col">
+												<div class="form-item">
+													<div class="form-checkblock">
+														<input type="checkbox" name="work-checkbox" id="work-checkbox_2">
+														<label for="work-checkbox_2">
+															<span></span>
+															<i>ИП или собственный бизнес</i>
+														</label>
+													</div><!--/form-input-->
+												</div><!--/form-item-->
+											</div>
+											<div class="account-editing__col">
+												<div class="form-item">
+													<div class="form-checkblock">
+														<input type="checkbox" name="work-checkbox" id="work-checkbox_3">
+														<label for="work-checkbox_3">
+															<span></span>
+															<i>Неофициально/ не трудоустроен</i>
+														</label>
+													</div><!--/form-input-->
+												</div><!--/form-item-->
+											</div>
 										</div>
-									</div>
-									<div class="account-editing__buttons">
-										<a href="#" class="btn inactive">Сохранить и продолжить</a>
-										<a href="#" class="account-editing-view">
-											<svg>
-												<use xlink:href="#eye-icon"></use>
-											</svg>
-											<span>Посмотрите как видят ваш профиль другие пользователи</span>
-										</a>
-									</div>
+									</div><!--/account-editing__block-->
+									<div class="account-editing__block">
+										<div class="account-editing__row center">
+											<div class="account-editing__col">
+												<a href="#" class="btn">Сохранить и продолжить</a>
+											</div>
+											<a href="#" class="account-editing-view">
+												<svg>
+													<use xlink:href="#eye-icon"></use>
+												</svg>
+												<span>Посмотрите как видят ваш профиль другие пользователи</span>
+											</a>
+										</div>
+									</div><!--/account-editing__block-->
 								</form>
 							</div><!--/account-editing-->
 						</div><!--/account__content-->

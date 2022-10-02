@@ -11,6 +11,15 @@
 <body>
 	<!--Sprite-->
 	<svg style="display: none;">
+		<symbol id="delete-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M10 12V17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M14 12V17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M4 7H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M6 10V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
 		<symbol id="out-icon" viewBox="0 0 24 24">
 			<g>
 				<path d="M20.75 5C20.75 4.58579 20.4142 4.25 20 4.25C19.5858 4.25 19.25 4.58579 19.25 5H20.75ZM19.25 19C19.25 19.4142 19.5858 19.75 20 19.75C20.4142 19.75 20.75 19.4142 20.75 19H19.25ZM16 12.75C16.4142 12.75 16.75 12.4142 16.75 12C16.75 11.5858 16.4142 11.25 16 11.25V12.75ZM4 12L3.46967 11.4697C3.17678 11.7626 3.17678 12.2374 3.46967 12.5303L4 12ZM6.46967 15.5303C6.76256 15.8232 7.23744 15.8232 7.53033 15.5303C7.82322 15.2374 7.82322 14.7626 7.53033 14.4697L6.46967 15.5303ZM7.53033 9.53033C7.82322 9.23744 7.82322 8.76256 7.53033 8.46967C7.23744 8.17678 6.76256 8.17678 6.46967 8.46967L7.53033 9.53033ZM19.25 5V19H20.75V5H19.25ZM16 11.25H4V12.75H16V11.25ZM3.46967 12.5303L6.46967 15.5303L7.53033 14.4697L4.53033 11.4697L3.46967 12.5303ZM4.53033 12.5303L7.53033 9.53033L6.46967 8.46967L3.46967 11.4697L4.53033 12.5303Z"/>
@@ -207,7 +216,7 @@
 			<stop offset="1" stop-color="#993D8E"/>
   		</linearGradient>
 	</svg>
-	<div class="wrapper page page-personal-account pt-80">
+	<div class="wrapper page page-account-ad pt-80">
 		<header class="header header-color" id="header">
 			<div class="container">
 				<div class="header__inner">
@@ -279,31 +288,15 @@
 				<a href="#" class="back">
 					<img src="assets/images/arrow-down.svg" alt="">
 				</a>
-				<h2 class="page__title title-small">Редактирование профиля</h2>
+				<h2 class="page__title title-small">Объявление - Аренда</h2>
 				<div class="burger">
 					<div class="burger__item"></div>
 				</div>
 			</div>
-			<div class="account section">
+			<div class="account">
 				<div class="container">
 					<div class="account__inner">
-						<div class="account-menu none">
-							<div class="account-status">
-								<svg>
-									<use xlink:href="#profile-icon"></use>
-								</svg>
-								<span>Проверенный</span>
-							</div>
-							<a href="personal-account-viewing.html" class="view-change">
-								<svg>
-									<use xlink:href="#eye-icon"></use>
-								</svg>
-								<div class="view-change__desc">
-									<div>Как видят мой профиль другие пользователи?</div>
-								</div>
-							</a>
-						</div>
-						<nav class="account-nav">
+						<nav class="account-nav mobile-none">
 							<a href="#" class="account-nav__link active">
 								<svg>
 									<use xlink:href="#transpose-icon"></use>
@@ -340,7 +333,7 @@
 								</svg>
 								<span>Настройки профиля</span>
 							</a>
-							<a href="personal-account-viewing.html" class="account-nav__link view-change">
+							<a href="agent-account-viewing.html" class="account-nav__link view-change">
 								<svg>
 									<use xlink:href="#eye-icon"></use>
 								</svg>
@@ -349,150 +342,541 @@
 								</div>
 							</a>
 						</nav><!--/account-nav-->
-						<div class="account__sidebar">
-							<div class="account-box">
-								<div class="account-box__header">
-									<div class="account-status">
-										<svg>
-											<use xlink:href="#profile-icon"></use>
-										</svg>
-										<span>Проверенный</span>
-									</div>
-									<div class="account-online">online</div>
-								</div>
-								<div class="account-box__profile">
-									<div class="account-box__icon">КК</div>
-									<div class="account-box__info">
-										<div class="account-box__name">Константин Константинов</div>
-										<div class="account-box__stat">Частный аккаунт</div>
-									</div>
-								</div>
-							</div><!--/account-box-->
-							<a href="#" class="account-btn account-btn_wh">Выйти из профиля</a>
-						</div><!--/account__sidebar-->
-						<div class="account__content">
-							<div class="account-editing">
+						<div class="account__block">
+							<div class="account__section">
 								<a href="#" class="btn-back">
 									<img src="assets/images/arrow-gray.svg" alt="">
 									<span>Назад</span>
 								</a>
-								<h1 class="account-editing__title">Редактирование профиля</h1>
-								<div class="account-progressbar">
-									<div class="account-progressbar__item active">
-										<div class="account-progressbar__icon">
-											<img src="assets/images/user.svg" alt="">
-										</div>
-									</div>
-									<div class="account-progressbar__item">
-										<div class="account-progressbar__icon">
-											<img src="assets/images/calc.svg" alt="">
-										</div>
-									</div>
-									<div class="account-progressbar__item">
-										<div class="account-progressbar__icon">
-											<img src="assets/images/ok.svg" alt="">
-										</div>
-									</div>
-									<div class="account-progressbar__item">
-										<div class="account-progressbar__icon">
-											<img src="assets/images/good.svg" alt="">
-										</div>
-									</div>
-								</div><!--/account-progressbar-->
-								<form action="#" class="account-editing__form form">
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Фамилия">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Имя">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-input">
-													<input type="text" placeholder="Отчество">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-description">Пол</div>
-												<div class="form-radiobtns">
-													<div class="form-radio">
-														<input type="radio" name="gender-radio" id="gender-radio-female" checked>
-														<label for="gender-radio-female">
-															<span></span>
-															<i>Женский</i>
-														</label>
+								<div class="account__header">
+									<h1 class="title-medium">Объявление - Аренда</h1>
+									<div class="account__description">опубликовано: 26.06.2021</div>
+								</div>
+								<div class="account-block account-block-gray">
+									<div class="account-block__header">
+										<h2 class="account-block__title title-small">Статистика просмотров</h2>
+										<div class="selectbox">
+											<div class="selectbox__select">
+												<span>За 30 дней</span>
+											</div>
+											<div class="selectbox__dropdown">
+												<div class="selectbox__inner">
+													<div class="selectbox__option selected">
+														<span>За 30 дней</span>
 													</div>
-													<div class="form-radio">
-														<input type="radio" name="gender-radio" id="gender-radiomale">
-														<label for="gender-radiomale">
-															<span></span>
-															<i>Мужской</i>
-														</label>
+													<div class="selectbox__option">
+														<span>За 1 день</span>
 													</div>
-												</div><!--/form-radiobtns-->
-											</div><!--/form-item-->
-										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col">
-											<div class="form-item">
-												<div class="form-description">Дата рождения</div>
-												<div class="form-input form-input-icon">
-													<input type="text" placeholder="дд.мм.гггг">
-													<img src="assets/images/calendar.svg" alt="">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-										<div class="account-editing__col big">
-											<div class="form-item">
-												<div class="form-description">Адрес проживания</div>
-												<div class="form-input">
-													<input type="text" placeholder="Город,улица, дом, квартира">
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
-									</div>
-									<div class="account-editing__row">
-										<div class="account-editing__col full">
-											<div class="form-item">
-												<div class="form-input form-textarea">
-													<textarea maxlength="450" placeholder="О себе"></textarea>
-													<div class="form-textarea-qt">
-														<span class="form-textarea-result">0</span>
-														<span>из 450</span>
+													<div class="selectbox__option">
+														<span>За все время</span>
 													</div>
-												</div><!--/form-input-->
-											</div><!--/form-item-->
-										</div>
+													<div class="selectbox__option">
+														<span>Без календаря</span>
+													</div>
+												</div>
+											</div>
+										</div><!--/selectbox-->
 									</div>
-									<div class="account-editing__buttons">
-										<a href="#" class="btn inactive">Сохранить и продолжить</a>
-										<a href="#" class="account-editing-view">
-											<svg>
-												<use xlink:href="#eye-icon"></use>
-											</svg>
-											<span>Посмотрите как видят ваш профиль другие пользователи</span>
-										</a>
+									<div class="account-block__content">
+										<div class="account-itemstat">
+											<div class="account-itemstat__title">Просмотры объектов</div>
+											<div class="account-itemstat__data grow">
+												<span>6473</span>
+												<span>+ 28,3%</span>
+											</div>
+										</div><!--/account-itemstat-->
+										<div class="account-itemstat">
+											<div class="account-itemstat__title">Добавили в избранное</div>
+											<div class="account-itemstat__data falling">
+												<span>473</span>
+												<span>- 23,3%</span>
+											</div>
+										</div><!--/account-itemstat-->
 									</div>
-								</form>
-							</div><!--/account-editing-->
-						</div><!--/account__content-->
+								</div><!--/account-block-->
+							</div>
+						</div>
+						<div class="ad-buttons">
+							<a href="#" class="btn-gradient">Продвинуть объявление</a>
+							<a href="#" class="btn-white">
+								<img src="assets/images/edit-icon.svg" alt="">
+								<span>Редактировать объявление</span>
+							</a>
+							<a href="#" class="btn-white">
+								<img src="assets/images/close-icon-blue.svg" alt="">
+								<span>Снять с публикации</span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div><!--/account-->
+			<section class="product section">
+				<div class="container">
+					<div class="product__page">
+						<div class="product__about">
+							<div class="product__photo">
+								<div class="wrap_slider">
+									<div class="slider slider-for">
+										<div>
+										 	<img src="assets/images/apartment_6.jpg" alt=""> 
+										</div>
+										<div>
+											<img src="assets/images/apartment_5.jpg" alt="">  
+										</div>
+										<div>
+											<img src="assets/images/apartment_7.jpg" alt="">  
+										</div>
+										<div>
+											<img src="assets/images/apartment_5.jpg" alt="">  
+										</div>
+										<div>
+											<img src="assets/images/apartment_8.jpg" alt="">  
+										</div>
+										<div>
+											<img src="assets/images/apartment_6.jpg" alt="">  
+										</div>
+										<div>
+											<img src="assets/images/apartment_7.jpg" alt="">  
+										</div>
+									</div>
+									<div class="slider_nav">
+										<div class="slider slider-nav">
+											<div>
+											 	<img src="assets/images/apartment_6.jpg" alt="">  
+											</div>
+											<div>
+												<img src="assets/images/apartment_5.jpg" alt="">  
+											</div>
+											<div>
+												<img src="assets/images/apartment_7.jpg" alt="">  
+											</div>
+											<div>
+												<img src="assets/images/apartment_5.jpg" alt="">  
+											</div>
+											<div>
+												<img src="assets/images/apartment_8.jpg" alt="">  
+											</div>
+											<div>
+												<img src="assets/images/apartment_6.jpg" alt="">  
+											</div>
+											<div>
+												<img src="assets/images/apartment_7.jpg" alt="">  
+											</div>
+										</div>
+										<div class="slider-arrows">
+											<span class="slider-arrow slider-arrow_prev">
+												<svg>
+													<use xlink:href="#arrow-icon"></use>
+												</svg>
+											</span>
+											<span class="slider-arrow slider-arrow_next">
+												<svg>
+													<use xlink:href="#arrow-icon"></use>
+												</svg>
+											</span>
+										</div>
+									</div>			
+								</div>
+								<div class="product__photo_all">
+									<span>+10</span>
+								</div>
+								<div class="time">12 ч. назад</div>
+								<div class="qt-pagin">1/4</div>
+								<div class="stat-box">
+									<div class="stat-box__item">
+										<svg>
+											<use xlink:href="#eye-icon"></use>
+										</svg>
+										<span>233</span>
+									</div>
+									<div class="stat-box__item">
+										<svg>
+											<use xlink:href="#favorite-icon"></use>
+										</svg>
+										<span>233</span>
+									</div>
+								</div><!--/stat-box-->
+							</div>
+							<div class="product__info">
+								<div class="product__header">
+									<a href="#" class="product__name">
+										<h1 class="product__price">35 000 ₽/мес</h1>
+										<div class="product__data">2-комн.,33м²</div>
+									</a>
+									<div class="product__favorite">
+										<a href="#" class="favorite">
+											<svg>
+												<use xlink:href="#favorite-icon"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<div class="product__description">ул.Технологическая 26/1</div>
+								<div class="product__row">
+									<div class="product__place">
+										<img src="assets/images/m-icon.svg" alt="">
+										<span>Технологический институт 2</span>
+									</div>
+									<div class="product__distance">
+										<img src="assets/images/man-icon.svg" alt="">
+										<span>5 мин</span>
+									</div>
+								</div>
+								<div class="product__buttons">
+									<div class="product__contact">
+										<div class="btn-contact">
+											<span class="btn btn-contact-show">Показать контакты</span>
+											<a href="tel:+79258378218" class="btn btn-lblue btn-contact-phone">+7 925 837-82-18</a>
+										</div>
+										<a href="#" class="btn-chat">
+											<svg>
+												<use xlink:href="#mail-icon"></use>
+											</svg>
+											<span>Предложи цену - чат</span>
+										</a>
+									</div>
+									<div class="product-menu">
+										<a href="#" class="product-menu__btn">
+											<img src="assets/images/dots-icon.svg" alt="">
+											<img src="assets/images/close-icon.svg" alt="">
+										</a>
+										<div class="product-menu__dropdown">
+											<a href="#" class="compare-menu__item">Скрыть объявление</a>
+											<a href="#" class="compare-menu__item">Пожаловаться</a>
+										</div>
+									</div>
+								</div>
+								<div class="autor">
+									<a href="#" class="autor-icon">
+										<img src="assets/images/user-icon.svg" alt="">
+									</a>
+									<div class="autor-info">
+										<a href="#" class="autor-name">Елена</a>
+										<div class="autor-status">
+											<span>Частное лицо</span>
+											<img src="assets/images/check-green.svg" alt="">
+										</div>
+										<a href="#" class="autor-reviews">23 отзыва</a>
+									</div>
+								</div>
+								<div class="product__links">
+									<a href="#" class="product__link">
+										<svg>
+											<use xlink:href="#doc-icon_2"></use>
+										</svg>
+										<span>Получите выписку из ЕГРН</span>
+										<svg>
+											<use xlink:href="#arrow-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="product__link">
+										<svg>
+											<use xlink:href="#download-icon"></use>
+										</svg>
+										<span>Скачайте образцы документов</span>
+										<svg>
+											<use xlink:href="#arrow-icon"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div><!--/product__about-->
+						<div class="info">
+							<div class="info__block">
+								<h2 class="info__title">Условия аренды</h2>
+								<div class="info__content">
+									<div class="info__flex">
+										<div class="info__items">
+											<div class="info-item info-item_main">
+												<div class="info-item__description">Арендная плата, ₽ </div>
+												<div class="info-item__data">30 000</div>
+											</div><!--/info-item-->
+											<div class="info-item info-item_main">
+												<div class="info-item__description">Залог, ₽</div>
+												<div class="info-item__data">17 000</div>
+											</div><!--/info-item-->
+											<div class="info-item info-item_main">
+												<div class="info-item__description">Комиссия, ₽</div>
+												<div class="info-item__data">0</div>
+											</div><!--/info-item-->
+										</div>
+										<div class="tags">
+											<div class="tag red">Нельзя с животными</div>
+											<div class="tag red">Славяне</div>
+											<div class="tag green">Можно с детьми</div>
+											<div class="tag">Договор от 1 года</div>
+											<div class="tag">Временная регистрация</div>
+											<div class="tag">Договор 11 месяцев</div>
+										</div>
+									</div>
+								</div>
+							</div><!--/info__block-->
+							<div class="info__block">
+								<h2 class="info__title">Описание</h2>
+								<div class="info__content">
+									<div class="info__text">
+										<p>Сдается новая светлая квартира в недавно построенном районе на Саввинском поле. Уютная квартира, оборудованная всем необходимым для жизни (холодильник, варочная панель, духовой шкаф, стиральная машинка и диван). Рядом с домом находится шикарный парк для прогулок с озером. В шаговой доступности есть все необходимое для комфортной жизни (сетевые магазины, школа, детский сад и многое другое). Так же рядом с домом находится остановка общественного транспорта. До станции Железнодорожная 15 минут на автобусе, либо кто любит прогулки 30 минут пешком. Условие собственника: 1 человек или семейная пара, можно с детьми, животные по договоренности. Организую показ в день обращения, звоните все расскажу и покажу. Квартира проверена и рекомендована МИЭЛЬ</p>
+									</div>
+								</div>
+							</div><!--/info__block-->
+							<div class="info__block">
+								<h2 class="info__title">Общая информация</h2>
+								<div class="info__content">
+									<div class="info__flex">
+										<div class="info__items">
+											<div class="info-item">
+												<div class="info-item__description">Общая площадь</div>
+												<div class="info-item__data">56м2</div>
+											</div><!--/info-item-->
+											<div class="info-item">
+												<div class="info-item__description">Жилая площадь</div>
+												<div class="info-item__data">17 000</div>
+											</div><!--/info-item-->
+											<div class="info-item">
+												<div class="info-item__description">Кухня</div>
+												<div class="info-item__data">15м2</div>
+											</div><!--/info-item-->
+										</div>
+										<div class="info__items">
+											<div class="info-item">
+												<div class="info-item__description">Этаж</div>
+												<div class="info-item__data">5/5</div>
+											</div><!--/info-item-->
+											<div class="info-item">
+												<div class="info-item__description">Санузел</div>
+												<div class="info-item__data">раздельный</div>
+											</div><!--/info-item-->
+											<div class="info-item">
+												<div class="info-item__description">Балкон</div>
+												<div class="info-item__data">есть</div>
+											</div><!--/info-item-->
+										</div>
+									</div>
+								</div>
+							</div><!--/info__block-->
+							<div class="info__block">
+								<h2 class="info__title">Удобства</h2>
+								<div class="info__content">
+									<div class="tags blue">
+										<div class="tag">Холодильник</div>
+										<div class="tag">Интернет</div>
+										<div class="tag">Мебель</div>
+										<div class="tag">Стиральная машина</div>
+										<div class="tag">Раздельный санузел</div>
+										<div class="tag">Посудомоечная машина</div>
+										<div class="tag">Кондиционер</div>
+									</div>
+								</div>
+							</div><!--/info__block-->
+							<div class="info__block">
+								<h2 class="info__title">Местоположение</h2>
+								<div class="info__content">
+									<div class="info__map">
+										<img src="assets/images/map-placeholder.png" alt="">
+									</div>
+									<div class="info-address">
+										<div class="info-address__description">
+											<a href="#">ул. Технологическая 26/1</a>
+										</div>
+										<div class="info-address__row">
+											<div class="info-address__place">
+												<img src="assets/images/m-icon.svg" alt="">
+												<span>Технологический институт 2</span>
+											</div>
+											<div class="info-address__distance">
+												<img src="assets/images/man-icon.svg" alt="">
+												<span>5 мин</span>
+											</div>
+										</div>
+										<div class="info-address__row">
+											<div class="info-address__place">
+												<img src="assets/images/m-icon.svg" alt="">
+												<span>Технологический институт 2</span>
+											</div>
+											<div class="info-address__distance">
+												<img src="assets/images/man-icon.svg" alt="">
+												<span>5 мин</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!--/info__block-->
+							<div class="info__block">
+								<h2 class="info__title">О здании</h2>
+								<div class="info__content">
+									<div class="info__flex">
+										<div class="info__items">
+											<div class="info-item">
+												<div class="info-item__description">Тип дома</div>
+												<div class="info-item__data">Монолитный</div>
+											</div><!--/info-item-->
+											<div class="info-item">
+												<div class="info-item__description">Количество этажей/этаж</div>
+												<div class="info-item__data">5/9</div>
+											</div><!--/info-item-->
+											<div class="info-item">
+												<div class="info-item__description">Высота потолков</div>
+												<div class="info-item__data">2,7 м</div>
+											</div><!--/info-item-->
+										</div>
+										<div class="info__items">
+											<div class="info-item">
+												<div class="info-item__description">Парковка</div>
+												<div class="info-item__data">На крыше</div>
+											</div><!--/info-item-->
+											<div class="info-item">
+												<div class="info-item__description">Лифт</div>
+												<div class="info-item__data">Есть</div>
+											</div><!--/info-item-->
+											<div class="info-item">
+												<div class="info-item__description">Год постройки</div>
+												<div class="info-item__data">1988</div>
+											</div><!--/info-item-->
+										</div>
+									</div>
+								</div>
+							</div><!--/info__block-->
+							<div class="info__block">
+								<h2 class="info__title">Диапазон изменения цены</h2>
+								<div class="info__content">
+									<div class="info-chart">
+										<div id="graph1"></div>
+									</div>
+								</div>
+							</div><!--/info__block-->
+							<div class="info__block">
+								<h2 class="info__title">Комментарии (5)</h2>
+								<div class="info__content">
+									<div class="comments">
+										<div class="comments__item">
+											<div class="comments__icon">
+												<span>И</span>
+											</div>
+											<div class="comments__info">
+												<div class="comments__row">
+													<div>
+														<div class="comments__autor">Иван </div>
+														<div class="comments__date">13.04.2022</div>
+													</div>
+													<a href="#" class="delete-btn">
+														<svg>
+															<use xlink:href="#delete-icon"></use>
+														</svg>
+													</a>
+												</div>
+												<div class="comments__text">Договорились о сделке. Все прошло успешно. Снимал квартиру на месяц, никаких минусов. Доволен, рекомендую.</div>
+											</div>
+										</div>
+										<div class="comments__item">
+											<div class="comments__icon">
+												<span>И</span>
+											</div>
+											<div class="comments__info">
+												<div class="comments__row">
+													<div>
+														<div class="comments__autor">Иван </div>
+														<div class="comments__date">13.04.2022</div>
+													</div>
+													<a href="#" class="delete-btn">
+														<svg>
+															<use xlink:href="#delete-icon"></use>
+														</svg>
+													</a>
+												</div>
+												<div class="comments__text">Договорились о сделке. Все прошло успешно. Снимал квартиру на месяц, никаких минусов. Доволен, рекомендую.</div>
+											</div>
+										</div>
+										<div class="comments__item">
+											<div class="comments__icon">
+												<span>И</span>
+											</div>
+											<div class="comments__info">
+												<div class="comments__row">
+													<div>
+														<div class="comments__autor">Иван </div>
+														<div class="comments__date">13.04.2022</div>
+													</div>
+													<a href="#" class="delete-btn">
+														<svg>
+															<use xlink:href="#delete-icon"></use>
+														</svg>
+													</a>
+												</div>
+												<div class="comments__text">Договорились о сделке. Все прошло успешно. Снимал квартиру на месяц, никаких минусов. Доволен, рекомендую.</div>
+											</div>
+										</div>
+										<div class="comments__all">
+											<div class="comments__item">
+												<div class="comments__icon">
+													<span>И</span>
+												</div>
+												<div class="comments__info">
+													<div class="comments__row">
+														<div>
+															<div class="comments__autor">Иван </div>
+															<div class="comments__date">13.04.2022</div>
+														</div>
+														<a href="#" class="delete-btn">
+															<svg>
+																<use xlink:href="#delete-icon"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="comments__text">Договорились о сделке. Все прошло успешно. Снимал квартиру на месяц, никаких минусов. Доволен, рекомендую.</div>
+												</div>
+											</div>
+											<div class="comments__item">
+												<div class="comments__icon">
+													<span>И</span>
+												</div>
+												<div class="comments__info">
+													<div class="comments__row">
+														<div>
+															<div class="comments__autor">Иван </div>
+															<div class="comments__date">13.04.2022</div>
+														</div>
+														<a href="#" class="delete-btn">
+															<svg>
+																<use xlink:href="#delete-icon"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="comments__text">Договорились о сделке. Все прошло успешно. Снимал квартиру на месяц, никаких минусов. Доволен, рекомендую.</div>
+												</div>
+											</div>
+											<div class="comments__item">
+												<div class="comments__icon">
+													<span>И</span>
+												</div>
+												<div class="comments__info">
+													<div class="comments__row">
+														<div>
+															<div class="comments__autor">Иван </div>
+															<div class="comments__date">13.04.2022</div>
+														</div>
+														<a href="#" class="delete-btn">
+															<svg>
+																<use xlink:href="#delete-icon"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="comments__text">Договорились о сделке. Все прошло успешно. Снимал квартиру на месяц, никаких минусов. Доволен, рекомендую.</div>
+												</div>
+											</div>
+										</div>	
+										<div class="comments__btn-all">
+											<a href="#">
+												<span class="comments__btn-all__show">Смотеть все (15)</span>
+												<span class="comments__btn-all__hide">Скрыть</span>
+											</a>
+										</div>
+									</div><!--/comments-->
+								</div>
+							</div><!--/info__block-->
+						</div><!--info-->
+					</div>
+				</div>
+			</section><!--/product-->
 		</main>
 		<footer class="footer">
 			<div class="container">
@@ -541,13 +925,136 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="popup popup-confirm">
+			<div class="closex"></div>
+			<div class="popup__inner">
+				<div class="popup__box">
+					<span class="popup__close">
+						<svg>
+							<use xlink:href="#close-icon"></use>
+						</svg>
+					</span>
+					<div class="popup__content">
+						<h3 class="title-small">Подтвердить почту</h3>
+						<div class="subtitle">Чтобы пользоваться всеми услугами личного кабинета подтвердите почту</div>
+						<form action="#" class="confirm-form form">
+							<div class="form-item">
+								<div class="form-input">
+									<input type="email" placeholder="Email" value="Mail@mail.com">
+								</div><!--/form-input-->
+							</div><!--/form-item-->
+							<button type="submit" class="btn">Отправить </button>
+						</form>
+					</div>
+    		    </div>
+			</div>
+		</div><!--/popup-confirm-->
 	</div>
 
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 	<script src="assets/js/jquery-ui.min.js"></script>
 	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<script src="assets/js/script.js"></script>
+
+	<script>
+        var options = {
+            chart: { height: 200, type: "area", stacked: !0, 
+			
+			toolbar: {
+				tools: {
+          			download: false,
+				}
+			},
+			
+			zoom: {
+          		enabled: false,
+			},
+			
+		},
+            colors: ["#F7E1FF", "#C1BEE7"],
+            dataLabels: { 
+				enabled: 1,
+				formatter: function (val, opts) {
+					return val+' млн'
+				},
+				textAnchor: 'middle',
+
+				style: {
+					fontSize: '14px',
+			 
+					fontWeight: 'normal',
+					colors: ['#151516']
+				},
+				background: {
+					enabled: false,
+			 
+				},
+				dropShadow: {
+					enabled: false,
+		 
+				},
+				offsetX: 0,
+				offsetY: -10,
+
+
+            },
+		
+            stroke: {  colors: ['#6A56E8'], curve: "straight", width: 1, dashArray: [0, 4], lineCap: "round" },
+            grid: { padding: { left: 0, right: 0 }, strokeDashArray: 0,
+		
+		
+				yaxis: {
+					lines: {
+						show: false
+					}
+				},
+				xaxis: {
+					lines: {
+						show: false
+					}
+				},  
+			},
+            markers: { size: 0, hover: { size: 0 } },
+            series: [
+
+                
+
+                { name: "", data: [1.9,  1.7,  2.5,  ] },
+
+
+
+            ],
+            xaxis: { type: "month", categories: ['1 ноя.','1 янв.','1 фев.',], axisBorder: { show: !0 }, axisTicks: { show: !0 },
+
+                labels: {
+                    style: {
+                        fontSize: "14px",
+						colors: '#6C7F9C'
+                    }
+                },
+
+            },
+
+            yaxis: {
+				show: true,
+                labels: {
+					offsetX: -99,
+          	 
+					show: true,
+				 
+                },
+
+            },
+
+            fill: { type: "gradient", gradient: { shadeIntensity: 2, opacityFrom: 1, opacityTo: 0.4, stops: [0, 100] } },
+            tooltip: { enabled: false},
+            legend: { show:false, position: "top", horizontalAlign: "right", },
+        };
+        (chart = new ApexCharts(document.querySelector("#graph1"), options)).render();
+    </script>
 
 </body>
 </html>
