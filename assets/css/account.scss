@@ -1491,6 +1491,12 @@
 	}
 
 	.ads-block {
+		&__title {
+			font-size: 16px;
+		}
+		&__header {
+			padding: 10px 50px 10px 15px;
+		}
 		&-infobox {
 			display: none;
 		}
