@@ -156,6 +156,28 @@
 			padding: 22px 30px 30px;
 		}
 	}
+	&-confirm {
+		.popup__inner {
+			max-width: 475px;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.popup__box {
+			padding: 50px 40px;
+			border-radius: 6px;
+		}
+		.popup__content {
+			max-width: 350px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.title-small {
+			margin-bottom: 10px;
+		}
+		.subtitle {
+			margin-bottom: 30px;
+		}
+	}
 }
 /*========/popup============*/
 

@@ -154,6 +154,20 @@ body.hidden {
 	}
 }
 
+.title-medium {
+	font-family: $ff;
+	font-size: 25px;
+	font-weight: 600;
+	color: $bl;
+	line-height: $lh;
+	a {
+		color: $bl;
+	}
+	&_mus {
+		font-family: $ffm;
+	}
+}
+
 .title-small {
 	font-family: $ff;
 	font-size: 20px;
@@ -166,6 +180,38 @@ body.hidden {
 	&_mus {
 		font-family: $ffm;
 	}
+}
+
+.title-stat {
+	display: inline-block;
+	position: relative;
+	padding-right: 18px;
+	span {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 16px;
+		height: 16px;
+		padding: 0 2px;
+		border-radius: 50%;
+		border: 1px solid $red;
+		font-family: $ff;
+		font-size: 9px;
+		font-weight: 500;
+		color: $red;
+		line-height: $lh;
+		position: absolute;
+		top: -5px;
+		right: 0;
+	}
+}
+
+.subtitle {
+	font-family: $ff;
+	font-size: 16px;
+	font-weight: 400;
+	color: $gray2;
+	line-height: $lh;
 }
 
 .btn {
@@ -234,6 +280,12 @@ body.hidden {
 			color: $blue;
 		}
 	}
+	&_yellow {
+		background-color: $d-yellow;
+		&:hover {
+			background-color: $yellow;
+		}
+	}
 	&.inactive {
 		background-color: $gray2;
 	}
@@ -258,6 +310,53 @@ body.hidden {
 		background-color: $purple;
 		color: $wh;
 	}
+	img {
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.btn-white {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: $wh;
+	border-radius: 6px;
+	padding: 13px 10px;
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 700;
+	color: $purple;
+	border: 1px solid $purple;
+	line-height: $lh;
+	transition: all .2s linear;
+	&:hover {
+		background-color: transparent;
+	}
+	img {
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.btn-gradient {
+	background: linear-gradient(97.31deg, #6A56E8 -9.55%, #ED4AE9 98.42%);
+	border-radius: 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 16px;
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 700;
+	color: $wh;
+	line-height: $lh;
 }
 
 .btn-dashed {
@@ -388,6 +487,22 @@ body.hidden {
 		&.active {
 			color: $bl;
 			background-color: $yellow;
+		}
+	}
+}
+
+.delete-btn {
+	display: inline-block;
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: none;
+		stroke: $red;
+		transition: all .2s linear;
+	}
+	&:hover {
+		svg {
+			stroke: $bl;
 		}
 	}
 }
@@ -640,6 +755,12 @@ body.hidden {
 	&.blue {
 		.tag {
 			background-color: $blue;
+			color: $wh;
+		}
+	}
+	&.purple {
+		.tag {
+			background-color: $purple;
 			color: $wh;
 		}
 	}
@@ -1132,6 +1253,33 @@ body.hidden {
 		border-radius: 6px;
 		box-shadow: 0px 4px 13px 4px rgba(27, 67, 47, 0.04);
 		position: relative;
+		&.product-card-big {
+				display: flex;
+				padding: 20px;
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				.product-card__photo {
+					width: 285px;
+					flex: 0 0 285px;
+					.favorite {
+						display: none;
+					}
+				}
+				.product-card__info {
+					flex: 1 1 auto;
+					display: flex;
+					padding: 0 0 0 30px;
+				}
+				.product-card__price {
+					font-size: 25px;
+					margin-bottom: 0;
+				}
+				.product-card__row {
+					justify-content: flex-start;
+				}
+			}
 		.time {
 			position: absolute;
 			top: 10px;
@@ -1350,6 +1498,9 @@ body.hidden {
 			&:first-child {
 				flex: 1 1 auto;
 				margin-right: 30px;
+			}
+			&:last-child {
+				margin-right: 0;
 			}
 		}
 		&-buttons {
@@ -2295,6 +2446,54 @@ body.hidden {
 					.tags {
 						margin-left: -15px;
 					}
+				}
+			}
+			&.product-card-big {
+				width: 100%;
+				display: block;
+				padding: 0;
+				.product-card__photo {
+					width: 100%;
+					.btn-call {
+						display: inline-flex;
+					}
+					.viewer-qt {
+						display: none;
+					}
+					.favorite {
+						display: flex;
+					}
+				}
+				.product-card__images {
+					width: 100%;
+					margin-left: 0;
+					margin-bottom: 0;
+				}
+				.product-card__image {
+					display: none;
+					margin-bottom: 0;
+					&:first-child {
+						width: 100%;
+						margin-left: 0;
+						display: block;
+						img {
+							border-radius: 6px 6px 0 0;
+							height: 200px;
+							object-fit: cover;
+						}
+					}
+				}
+				.product-card__info {
+					padding: 20px 15px;
+				}
+				.product-card__data {
+					margin-bottom: 0;
+				}
+				.product-card-buttons {
+					display: none;
+				}
+				.estimation {
+					display: none;
 				}
 			}
 		}

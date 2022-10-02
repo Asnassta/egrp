@@ -1,3 +1,11 @@
+function tabsClients(n)
+{
+  $('.clients .tabs-nav a').removeClass('active');
+  $('.clients .tabs-nav a.t'+n).addClass('active');
+  $('.clients .tabs-block').fadeOut(0);
+  $('.clients .tabs-block.tab_'+n).fadeIn(222);
+};
+
 $(document).ready(function() {
 
   /*======Nav (dropdown)=============*/
@@ -214,6 +222,14 @@ $(document).ready(function() {
     $(this).parent().find('.form-textarea-result').html($(this).val().length);
   });
   /*=========/textarea-qt==========*/
+
+  /*======Ads-block=============*/
+  $(".ads-block__header").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+    $(this).next().slideToggle();
+  });
+  /*==========/ads-block=========*/
 
 /*===============Popup-photo=================*/
     $(".open-popup-photo").on("click", function (event) {

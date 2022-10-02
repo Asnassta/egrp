@@ -19,6 +19,24 @@
 			padding: 20px 15px;
 		}
 	}
+	&__title {
+		display: flex;
+		align-items: center;
+		span {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-width: 20px;
+			height: 20px;
+			padding: 0 2px;
+			margin-left: 5px;
+			border-radius: 50%;
+			border: 1px solid $red;
+			font-size: 10px;
+			font-weight: 500;
+			color: $red;
+		}
+	}
 	&-compare {
 		background-color: $wh;
 	}
@@ -177,7 +195,7 @@
 	&__dropdown {
 		display: none;
 		position: absolute;
-		top: calc(100% + 1px);
+		top: calc(100% + 3px);
 		right: 0;
 		z-index: 50;
 		background-color: $wh;
@@ -735,6 +753,14 @@
 				opacity: 0;
 			}
 		}
+	}
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.delete-btn {
+		margin-left: 20px;
 	}
 }
 /*============/comments==========*/
@@ -1501,6 +1527,255 @@
 }
 /*=========/offers=============*/
 
+/*============Mortgage-box=========*/
+.mortgage-box {
+	margin-top: 40px;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #6A56E8 0%, #ED4AE9 100%);
+	border-radius: 6px;
+	padding: 20px 15px;
+	.title-small {
+		font-family: $ffm;
+		color: $wh;
+		margin-bottom: 20px;
+	}
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -30px;
+		margin-bottom: -20px;
+		>* {
+			width: calc(30% - 30px);
+			margin-left: 30px;
+			margin-bottom: 20px;
+		}
+	}
+	&__title {
+		font-family: $ffm;
+		font-size: 16px;
+		font-weight: 600;
+		color: $wh;
+		line-height: $lh;
+		margin-bottom: 5px;
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $wh;
+		line-height: $lh;
+	}
+}
+
+.mortgage-btn {
+	margin-top: 20px;
+	.btn {
+		min-width: 245px;
+	}
+}
+/*============/mortgage-box=========*/
+
+/*==========Promote-box===========*/
+.promote-box {
+	background: url("../images/city_5.jpg") center no-repeat;
+	background-size: cover;
+	padding: 90px;
+	&__inner {
+		max-width: 330px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	&__title {
+		font-family: $ffm;
+		font-size: 25px;
+		font-weight: 600;
+		color: $wh;
+		line-height: $lh;
+		margin-bottom: 20px;
+	}
+	&__text {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $wh;
+		line-height: $lh;
+		margin-bottom: 20px;
+	}
+	.btn {
+		width: 100%;
+	}
+}
+/*==========/promote-box===========*/
+
+/*==========Clients=======*/
+.clients {
+	max-width: 405px;
+	.title-medium {
+		margin-bottom: 30px;
+	}
+	&__header {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding: 0 15px 5px;
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $d-blue;
+		line-height: $lh;
+	}
+	&-qt {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 500;
+		color: $purple;
+		line-height: $lh;
+	}
+	&-box {
+		background-color: $wh;
+		padding: 14px 15px;
+		border-radius: 6px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&__profile {
+			display: flex;
+			align-items: center;
+			margin-right: 20px;
+		}
+		&__icon {
+			margin-right: 10px;
+			img {
+				width: 54px;
+				height: 54px;
+				object-fit: cover;
+				border-radius: 6px;
+			}
+			&.circle {
+				img {
+					border-radius: 50%;
+				}
+			}
+		}
+		&__name {
+			font-family: $ff;
+			font-size: 20px;
+			font-weight: 600;
+			color: $bl;
+			line-height: $lh;
+			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__link {
+			display: inline-block;
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $d-blue;
+			line-height: $lh;
+			position: relative;
+			padding-right: 20px;
+			&:after {
+				content: "";
+				width: 16px;
+				height: 16px;
+				background: url("../images/arrow-horizontal.svg") center no-repeat;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1;
+				transition: all .2s linear;
+			}
+			&:hover {
+				&:after {
+					right: -3px;
+				}
+			}
+		}
+	}
+	&-chat {
+		display: flex;
+		align-items: center;
+		&__description {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 500;
+			color: $purple;
+			line-height: $lh;
+		}
+		&__icon {
+			margin-right: 5px;
+			&.chat-notify {
+				position: relative;
+				&:after {
+					content: "";
+					width: 6px;
+					height: 6px;
+					border-radius: 50%;
+					background-color: $red;
+					position: absolute;
+					top: 4px;
+					right: 3px;
+					z-index: 1;
+					transform: translate(50%, -50%);
+				}
+			}
+		}
+	}
+	.tabs-nav {
+		margin-bottom: 30px;
+	}
+}
+/*==========/clients=======*/
+
+/*=========Tabs======*/
+.tabs {
+	&-nav {
+		display: flex;
+		background-color: $wh;
+		padding: 4px;
+		border-radius: 6px;
+		a {
+			flex: 1 1 auto;
+			text-align: center;
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $d-blue;
+			transition: all .2s linear;
+			position: relative;
+			margin-right: 5px;
+			padding: 9px 10px;
+			border-radius: 6px;
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover {
+				color: $yellow;
+			}
+			&.active {
+				color: $bl;
+				background-color: $yellow;
+			}
+		}
+	}
+	&-block {
+		&.tab_2, &.tab_3, &.tab_4,
+		&.tab_5, &.tab_6 {
+			display: none;
+		}
+	}
+}
+/*=========/tabs======*/
+
 /*===========Adaptive===========*/
 @media(max-width: 1200px) {
 	.compare {
@@ -1634,6 +1909,28 @@
 				margin-bottom: 5px;
 			}
 		}
+	}
+	.mortgage-box {
+		.title-small {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		&__inner {
+			margin-left: 0;
+			>* {
+				width: 100%;
+				margin-left: 0;
+				text-align: center;
+				&:first-child, &:nth-child(3) {
+					br {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.mortgage-btn {
+		text-align: center;
 	}
 	.calc {
 		&__inner {
@@ -1822,6 +2119,16 @@
 		}
 	}
 
+	.promote-box {
+		padding: 60px 15px 310px;
+	}
+
+	.mortgage-box {
+		.title-small {
+			font-size: 20px;
+		}
+	}
+
 	.calc {
 		&-filters {
 			&__flexblock {
@@ -1909,6 +2216,12 @@
 			}
 		}
 	}
+
+	.mortgage-btn {
+		.btn {
+			width: 100%;
+		}
+	}
 }
 
 @media(max-width: 410px) {
@@ -1939,6 +2252,16 @@
 			}
 			&__block {
 				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@media(max-width: 360px) {
+	.clients {
+		&-box {
+			&__name {
+				font-size: 14px;
 			}
 		}
 	}
