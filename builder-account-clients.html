@@ -216,7 +216,7 @@
 			<stop offset="1" stop-color="#993D8E"/>
   		</linearGradient>
 	</svg>
-	<div class="wrapper page page-agent-account pt-80">
+	<div class="wrapper page page-builder-account pt-80">
 		<header class="header header-color" id="header">
 			<div class="container">
 				<div class="header__inner">
@@ -288,7 +288,7 @@
 				<a href="#" class="back">
 					<img src="assets/images/arrow-down.svg" alt="">
 				</a>
-				<h2 class="page__title title-small">Мои объявления <span>2</span></h2>
+				<h2 class="page__title title-small">Риэлторы,Застройщики</h2>
 				<div class="burger">
 					<div class="burger__item"></div>
 				</div>
@@ -296,7 +296,7 @@
 			<div class="account section">
 				<div class="container">
 					<div class="account__inner">
-						<div class="account-menu none">
+						<div class="account-menu none mobile-none">
 							<div class="account-status">
 								<svg>
 									<use xlink:href="#profile-icon"></use>
@@ -358,7 +358,7 @@
 								</div>
 							</a>
 						</nav><!--/account-nav-->
-						<div class="account__sidebar">
+						<div class="account__sidebar mobile-none">
 							<div class="account-box">
 								<div class="account-box__header">
 									<div class="account-status">
@@ -370,17 +370,17 @@
 									<div class="account-online">online</div>
 								</div>
 								<div class="account-box__profile">
-									<div class="account-box__icon">КК</div>
+									<div class="account-box__icon">R</div>
 									<div class="account-box__info">
-										<div class="account-box__name">Константин Константинов</div>
+										<div class="account-box__name">RED</div>
 										<a href="#" class="account-box__link">Редактировать профиль</a>
-										<div class="account-box__stat">Агент</div>
+										<div class="account-box__stat">Застройщик</div>
 									</div>
 								</div>
 							</div><!--/account-box-->
 							<a href="#" class="account-btn open-popup" data-popup="popup-confirm">
-								<img src="assets/images/mail.svg" alt="">
-								<span>Подтвердить почту</span>
+								<img src="assets/images/flag-icon.svg" alt="">
+								<span>Подтвердить аккаунт по ОГРН</span>
 							</a>
 							<div class="account-infobox">
 								<div class="account-infobox__header">
@@ -428,7 +428,7 @@
 								<div class="account-infobox__content">
 									<div class="account-infobox__item">
 										<div class="account-infobox__data">Отключение рекламы</div>
-										<div class="account-infobox__data">15 дн.</div>
+										<div class="account-infobox__data">-61 020₽</div>
 									</div>
 									<div class="account-infobox__item">
 										<div class="account-infobox__data">Пополнение кошелька</div>
@@ -441,628 +441,252 @@
 							</div><!--/account-infobox-->
 						</div><!--/account__sidebar-->
 						<div class="account__content">
-							<div class="account__section">
-								<a href="#" class="btn-back">
-									<img src="assets/images/arrow-gray.svg" alt="">
-									<span>Назад</span>
-								</a>
-								<h1 class="title-medium">Мои объявления</h1>
-								<div class="account-block account-block-gray">
-									<div class="account-block__header">
-										<h2 class="account-block__title title-small">Статистика просмотров</h2>
-										<div class="selectbox">
-											<div class="selectbox__select">
-												<span>За 30 дней</span>
-											</div>
-											<div class="selectbox__dropdown">
-												<div class="selectbox__inner">
-													<div class="selectbox__option selected">
-														<span>За 30 дней</span>
-													</div>
-													<div class="selectbox__option">
-														<span>За 1 день</span>
-													</div>
-													<div class="selectbox__option">
-														<span>За все время</span>
-													</div>
-													<div class="selectbox__option">
-														<span>Без календаря</span>
-													</div>
-												</div>
-											</div>
-										</div><!--/selectbox-->
+							<a href="#" class="btn-back">
+								<img src="assets/images/arrow-gray.svg" alt="">
+								<span>Назад</span>
+							</a>
+							<div class="clients">
+								<h1 class="title-medium title-stat">Риэлторы,Застройщики</h1>
+								<div class="tabs-nav">
+									<a href="#" onclick="javascript:tabsClients(1);return false;" class="t1 active">Риэлторы</a>
+									<a href="#" onclick="javascript:tabsClients(2);return false;"  class="t2">Агентства</a>
+									<a href="#" onclick="javascript:tabsClients(3);return false;"  class="t3">Застройщики</a>
+								</div>
+								<div class="clients__block tabs-block tab_1">
+									<div class="clients__header">
+										<div class="clients__description">Название</div>
+										<div class="clients__description">Всего объявлений</div>
 									</div>
-									<div class="account-block__content">
-										<div class="account-itemstat">
-											<div class="account-itemstat__title">Просмотры объектов</div>
-											<div class="account-itemstat__data grow">
-												<span>6473</span>
-												<span>+ 28,3%</span>
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_7.png" alt="">
 											</div>
-										</div><!--/account-itemstat-->
-										<div class="account-itemstat">
-											<div class="account-itemstat__title">Добавили в избранное</div>
-											<div class="account-itemstat__data falling">
-												<span>473</span>
-												<span>- 23,3%</span>
+											<div class="clients-box__info">
+												<div class="clients-box__name">Этажи</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
 											</div>
-										</div><!--/account-itemstat-->
+										</div>
+										<div class="clients-qt">1736</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_8.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">RED</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">12</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_9.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">Этажи</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">1736</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_10.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">RED</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">12</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_11.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">Этажи</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">1736</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_8.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">RED</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">12</div>
+									</div><!--/clients-box-->
+								</div>
+								<div class="clients__block tabs-block tab_2">
+									<div class="clients__header">
+										<div class="clients__description">Название</div>
+										<div class="clients__description">Всего объявлений</div>
 									</div>
-								</div><!--/account-block-->
-								<div class="ads-block">
-									<div class="ads-block__header">
-										<div class="ads-block__title green">
-											<img src="assets/images/rocket.svg" alt="">
-											<span>Продвигается - </span>
-											<span>3</span>
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_7.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">Этажи</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
 										</div>
+										<div class="clients-qt">1736</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_8.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">RED</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">12</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_9.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">Этажи</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">1736</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_10.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">RED</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">12</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_11.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">Этажи</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">1736</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_8.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">RED</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">12</div>
+									</div><!--/clients-box-->
+								</div>
+								<div class="clients__block tabs-block tab_3">
+									<div class="clients__header">
+										<div class="clients__description">Название</div>
+										<div class="clients__description">Всего объявлений</div>
 									</div>
-									<div class="ads-block__content">
-										<div class="product-card product-card-big">
-											<div class="product-card__photo">
-												<div class="product-card__images">
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_4.png" alt="">
-													</a>
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_5.png" alt="">
-													</a>
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_3.png" alt="">
-													</a>
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_2.png" alt="">
-													</a>
-													<a class="product-card__image product-card__image_all" href="#">
-														<img src="assets/images/apartment_4.png" alt="">
-														<span>+10</span>
-													</a>
-												</div>
-												<a href="#" class="favorite">
-													<svg>
-														<use xlink:href="#favorite-icon"></use>
-													</svg>
-												</a>
-												<div class="viewer-qt">
-													<svg>
-														<use xlink:href="#eye-icon"></use>
-													</svg>
-													<span>12</span>
-												</div>
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_7.png" alt="">
 											</div>
-											<div class="product-card__info">
-												<div class="product-card__col">
-													<div class="product-card__header">
-														<a href="#" class="product-card__name">
-															<div class="product-card__price">от 4,7 млн ₽</div>
-															<div class="product-card__data">2-комн.,33м²</div>
-														</a>
-													</div>
-													<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
-													<div class="product-card__row">
-														<div class="product-card__place">
-															<img src="assets/images/m-icon.svg" alt="">
-															<span>Технологический институт 2</span>
-														</div>
-														<div class="product-card__distance">
-															<img src="assets/images/man-icon.svg" alt="">
-															<span>5 мин</span>
-														</div>
-													</div>
-													<div class="tags">
-														<div class="tag">Стиральная машина</div>
-														<div class="tag">Можно с животными</div>
-														<div class="tag">Посудомойка</div>
-														<div class="tag">Кондиционер</div>
-														<div class="tag">Есть лоджия</div>
-														<div class="tag">Подземная парковка</div>
-														<div class="tag">Раздельный санузел </div>
-														<div class="tag">Можно с животными</div>
-													</div>
-												</div>
-											</div>
-										</div><!--/product-card-->
-										<div class="product-card product-card-big">
-											<div class="product-card__photo">
-												<div class="product-card__images">
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_4.png" alt="">
-													</a>
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_5.png" alt="">
-													</a>
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_3.png" alt="">
-													</a>
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_2.png" alt="">
-													</a>
-													<a class="product-card__image product-card__image_all" href="#">
-														<img src="assets/images/apartment_4.png" alt="">
-														<span>+10</span>
-													</a>
-												</div>
-												<a href="#" class="favorite">
-													<svg>
-														<use xlink:href="#favorite-icon"></use>
-													</svg>
-												</a>
-												<div class="viewer-qt">
-													<svg>
-														<use xlink:href="#eye-icon"></use>
-													</svg>
-													<span>12</span>
-												</div>
-											</div>
-											<div class="product-card__info">
-												<div class="product-card__col">
-													<div class="product-card__header">
-														<a href="#" class="product-card__name">
-															<div class="product-card__price">от 4,7 млн ₽</div>
-															<div class="product-card__data">2-комн.,33м²</div>
-														</a>
-													</div>
-													<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
-													<div class="product-card__row">
-														<div class="product-card__place">
-															<img src="assets/images/m-icon.svg" alt="">
-															<span>Технологический институт 2</span>
-														</div>
-														<div class="product-card__distance">
-															<img src="assets/images/man-icon.svg" alt="">
-															<span>5 мин</span>
-														</div>
-													</div>
-													<div class="tags">
-														<div class="tag">Стиральная машина</div>
-														<div class="tag">Можно с животными</div>
-														<div class="tag">Посудомойка</div>
-														<div class="tag">Кондиционер</div>
-														<div class="tag">Есть лоджия</div>
-														<div class="tag">Подземная парковка</div>
-														<div class="tag">Раздельный санузел </div>
-														<div class="tag">Можно с животными</div>
-													</div>
-												</div>
-											</div>
-										</div><!--/product-card-->
-										<div class="product-card product-card-big">
-											<div class="product-card__photo">
-												<div class="product-card__images">
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_4.png" alt="">
-													</a>
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_5.png" alt="">
-													</a>
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_3.png" alt="">
-													</a>
-													<a class="product-card__image" href="#">
-														<img src="assets/images/apartment_2.png" alt="">
-													</a>
-													<a class="product-card__image product-card__image_all" href="#">
-														<img src="assets/images/apartment_4.png" alt="">
-														<span>+10</span>
-													</a>
-												</div>
-												<a href="#" class="favorite">
-													<svg>
-														<use xlink:href="#favorite-icon"></use>
-													</svg>
-												</a>
-												<div class="viewer-qt">
-													<svg>
-														<use xlink:href="#eye-icon"></use>
-													</svg>
-													<span>12</span>
-												</div>
-											</div>
-											<div class="product-card__info">
-												<div class="product-card__col">
-													<div class="product-card__header">
-														<a href="#" class="product-card__name">
-															<div class="product-card__price">от 4,7 млн ₽</div>
-															<div class="product-card__data">2-комн.,33м²</div>
-														</a>
-													</div>
-													<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
-													<div class="product-card__row">
-														<div class="product-card__place">
-															<img src="assets/images/m-icon.svg" alt="">
-															<span>Технологический институт 2</span>
-														</div>
-														<div class="product-card__distance">
-															<img src="assets/images/man-icon.svg" alt="">
-															<span>5 мин</span>
-														</div>
-													</div>
-													<div class="tags">
-														<div class="tag">Стиральная машина</div>
-														<div class="tag">Можно с животными</div>
-														<div class="tag">Посудомойка</div>
-														<div class="tag">Кондиционер</div>
-														<div class="tag">Есть лоджия</div>
-														<div class="tag">Подземная парковка</div>
-														<div class="tag">Раздельный санузел </div>
-														<div class="tag">Можно с животными</div>
-													</div>
-												</div>
-											</div>
-										</div><!--/product-card-->
-									</div>
-								</div><!--/ads-block-->
-								<div class="ads-block">
-									<div class="ads-block__header active">
-										<div class="ads-block__title">
-											<span>Остальные объявления-</span>
-											<span>12</span>
-										</div>
-									</div>
-									<div class="ads-block__content moving">
-										<div class="ads-block-infobox">
-											<h3 class="ads-block-infobox__title">Продвиньте свои остальные объявления</h3>
-											<div class="ads-block-infobox__text">
-												<p>Это поможет вам быстрее найти покупателя</p>
-												<p>Просто выберите нужные объявления и следуйте далее</p>
+											<div class="clients-box__info">
+												<div class="clients-box__name">Этажи</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
 											</div>
 										</div>
-										<div class="ads-block__check">
-											<div class="ads-block__checkbox">
-												<input type="checkbox" id="ads-block_1">
-												<label for="ads-block_1"></label>
+										<div class="clients-qt">1736</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_8.png" alt="">
 											</div>
-											<div class="product-card product-card-big">
-												<div class="product-card__photo">
-													<div class="product-card__images">
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_5.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_3.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_2.png" alt="">
-														</a>
-														<a class="product-card__image product-card__image_all" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-															<span>+10</span>
-														</a>
-													</div>
-													<a href="#" class="favorite">
-														<svg>
-															<use xlink:href="#favorite-icon"></use>
-														</svg>
-													</a>
-													<div class="viewer-qt">
-														<svg>
-															<use xlink:href="#eye-icon"></use>
-														</svg>
-														<span>12</span>
-													</div>
-												</div>
-												<div class="product-card__info">
-													<div class="product-card__col">
-														<div class="product-card__header">
-															<a href="#" class="product-card__name">
-																<div class="product-card__price">от 4,7 млн ₽</div>
-																<div class="product-card__data">2-комн.,33м²</div>
-															</a>
-														</div>
-														<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
-														<div class="product-card__row">
-															<div class="product-card__place">
-																<img src="assets/images/m-icon.svg" alt="">
-																<span>Технологический институт 2</span>
-															</div>
-															<div class="product-card__distance">
-																<img src="assets/images/man-icon.svg" alt="">
-																<span>5 мин</span>
-															</div>
-														</div>
-														<div class="tags">
-															<div class="tag">Стиральная машина</div>
-															<div class="tag">Можно с животными</div>
-															<div class="tag">Посудомойка</div>
-															<div class="tag">Кондиционер</div>
-															<div class="tag">Есть лоджия</div>
-															<div class="tag">Подземная парковка</div>
-															<div class="tag">Раздельный санузел </div>
-															<div class="tag">Можно с животными</div>
-														</div>
-													</div>
-												</div>
-											</div><!--/product-card-->
-										</div>
-										<div class="ads-block__check">
-											<div class="ads-block__checkbox">
-												<input type="checkbox" id="ads-block_2">
-												<label for="ads-block_2"></label>
+											<div class="clients-box__info">
+												<div class="clients-box__name">RED</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
 											</div>
-											<div class="product-card product-card-big">
-												<div class="product-card__photo">
-													<div class="product-card__images">
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_5.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_3.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_2.png" alt="">
-														</a>
-														<a class="product-card__image product-card__image_all" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-															<span>+10</span>
-														</a>
-													</div>
-													<a href="#" class="favorite">
-														<svg>
-															<use xlink:href="#favorite-icon"></use>
-														</svg>
-													</a>
-													<div class="viewer-qt">
-														<svg>
-															<use xlink:href="#eye-icon"></use>
-														</svg>
-														<span>12</span>
-													</div>
-												</div>
-												<div class="product-card__info">
-													<div class="product-card__col">
-														<div class="product-card__header">
-															<a href="#" class="product-card__name">
-																<div class="product-card__price">от 4,7 млн ₽</div>
-																<div class="product-card__data">2-комн.,33м²</div>
-															</a>
-														</div>
-														<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
-														<div class="product-card__row">
-															<div class="product-card__place">
-																<img src="assets/images/m-icon.svg" alt="">
-																<span>Технологический институт 2</span>
-															</div>
-															<div class="product-card__distance">
-																<img src="assets/images/man-icon.svg" alt="">
-																<span>5 мин</span>
-															</div>
-														</div>
-														<div class="tags">
-															<div class="tag">Стиральная машина</div>
-															<div class="tag">Можно с животными</div>
-															<div class="tag">Посудомойка</div>
-															<div class="tag">Кондиционер</div>
-															<div class="tag">Есть лоджия</div>
-															<div class="tag">Подземная парковка</div>
-															<div class="tag">Раздельный санузел </div>
-															<div class="tag">Можно с животными</div>
-														</div>
-													</div>
-												</div>
-											</div><!--/product-card-->
 										</div>
-										<div class="ads-block__check">
-											<div class="ads-block__checkbox">
-												<input type="checkbox" id="ads-block_3">
-												<label for="ads-block_3"></label>
+										<div class="clients-qt">12</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_9.png" alt="">
 											</div>
-											<div class="product-card product-card-big">
-												<div class="product-card__photo">
-													<div class="product-card__images">
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_5.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_3.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_2.png" alt="">
-														</a>
-														<a class="product-card__image product-card__image_all" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-															<span>+10</span>
-														</a>
-													</div>
-													<a href="#" class="favorite">
-														<svg>
-															<use xlink:href="#favorite-icon"></use>
-														</svg>
-													</a>
-													<div class="viewer-qt">
-														<svg>
-															<use xlink:href="#eye-icon"></use>
-														</svg>
-														<span>12</span>
-													</div>
-												</div>
-												<div class="product-card__info">
-													<div class="product-card__col">
-														<div class="product-card__header">
-															<a href="#" class="product-card__name">
-																<div class="product-card__price">от 4,7 млн ₽</div>
-																<div class="product-card__data">2-комн.,33м²</div>
-															</a>
-														</div>
-														<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
-														<div class="product-card__row">
-															<div class="product-card__place">
-																<img src="assets/images/m-icon.svg" alt="">
-																<span>Технологический институт 2</span>
-															</div>
-															<div class="product-card__distance">
-																<img src="assets/images/man-icon.svg" alt="">
-																<span>5 мин</span>
-															</div>
-														</div>
-														<div class="tags">
-															<div class="tag">Стиральная машина</div>
-															<div class="tag">Можно с животными</div>
-															<div class="tag">Посудомойка</div>
-															<div class="tag">Кондиционер</div>
-															<div class="tag">Есть лоджия</div>
-															<div class="tag">Подземная парковка</div>
-															<div class="tag">Раздельный санузел </div>
-															<div class="tag">Можно с животными</div>
-														</div>
-													</div>
-												</div>
-											</div><!--/product-card-->
-										</div>
-										<div class="ads-block__check">
-											<div class="ads-block__checkbox">
-												<input type="checkbox" id="ads-block_4">
-												<label for="ads-block_4"></label>
+											<div class="clients-box__info">
+												<div class="clients-box__name">Этажи</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
 											</div>
-											<div class="product-card product-card-big">
-												<div class="product-card__photo">
-													<div class="product-card__images">
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_5.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_3.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_2.png" alt="">
-														</a>
-														<a class="product-card__image product-card__image_all" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-															<span>+10</span>
-														</a>
-													</div>
-													<a href="#" class="favorite">
-														<svg>
-															<use xlink:href="#favorite-icon"></use>
-														</svg>
-													</a>
-													<div class="viewer-qt">
-														<svg>
-															<use xlink:href="#eye-icon"></use>
-														</svg>
-														<span>12</span>
-													</div>
-												</div>
-												<div class="product-card__info">
-													<div class="product-card__col">
-														<div class="product-card__header">
-															<a href="#" class="product-card__name">
-																<div class="product-card__price">от 4,7 млн ₽</div>
-																<div class="product-card__data">2-комн.,33м²</div>
-															</a>
-														</div>
-														<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
-														<div class="product-card__row">
-															<div class="product-card__place">
-																<img src="assets/images/m-icon.svg" alt="">
-																<span>Технологический институт 2</span>
-															</div>
-															<div class="product-card__distance">
-																<img src="assets/images/man-icon.svg" alt="">
-																<span>5 мин</span>
-															</div>
-														</div>
-														<div class="tags">
-															<div class="tag">Стиральная машина</div>
-															<div class="tag">Можно с животными</div>
-															<div class="tag">Посудомойка</div>
-															<div class="tag">Кондиционер</div>
-															<div class="tag">Есть лоджия</div>
-															<div class="tag">Подземная парковка</div>
-															<div class="tag">Раздельный санузел </div>
-															<div class="tag">Можно с животными</div>
-														</div>
-													</div>
-												</div>
-											</div><!--/product-card-->
 										</div>
-										<div class="ads-block__check">
-											<div class="ads-block__checkbox">
-												<input type="checkbox" id="ads-block_5">
-												<label for="ads-block_5"></label>
+										<div class="clients-qt">1736</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_10.png" alt="">
 											</div>
-											<div class="product-card product-card-big">
-												<div class="product-card__photo">
-													<div class="product-card__images">
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_5.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_3.png" alt="">
-														</a>
-														<a class="product-card__image" href="#">
-															<img src="assets/images/apartment_2.png" alt="">
-														</a>
-														<a class="product-card__image product-card__image_all" href="#">
-															<img src="assets/images/apartment_4.png" alt="">
-															<span>+10</span>
-														</a>
-													</div>
-													<a href="#" class="favorite">
-														<svg>
-															<use xlink:href="#favorite-icon"></use>
-														</svg>
-													</a>
-													<div class="viewer-qt">
-														<svg>
-															<use xlink:href="#eye-icon"></use>
-														</svg>
-														<span>12</span>
-													</div>
-												</div>
-												<div class="product-card__info">
-													<div class="product-card__col">
-														<div class="product-card__header">
-															<a href="#" class="product-card__name">
-																<div class="product-card__price">от 4,7 млн ₽</div>
-																<div class="product-card__data">2-комн.,33м²</div>
-															</a>
-														</div>
-														<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
-														<div class="product-card__row">
-															<div class="product-card__place">
-																<img src="assets/images/m-icon.svg" alt="">
-																<span>Технологический институт 2</span>
-															</div>
-															<div class="product-card__distance">
-																<img src="assets/images/man-icon.svg" alt="">
-																<span>5 мин</span>
-															</div>
-														</div>
-														<div class="tags">
-															<div class="tag">Стиральная машина</div>
-															<div class="tag">Можно с животными</div>
-															<div class="tag">Посудомойка</div>
-															<div class="tag">Кондиционер</div>
-															<div class="tag">Есть лоджия</div>
-															<div class="tag">Подземная парковка</div>
-															<div class="tag">Раздельный санузел </div>
-															<div class="tag">Можно с животными</div>
-														</div>
-													</div>
-												</div>
-											</div><!--/product-card-->
+											<div class="clients-box__info">
+												<div class="clients-box__name">RED</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
 										</div>
-										<div class="ads-block__btn">
-											<a href="#" class="btn btn_yellow ads-promote">Продвигать(<span>3</span>)</a>
+										<div class="clients-qt">12</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_11.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">Этажи</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
 										</div>
-									</div>
-								</div><!--/ads-block-->
-							</div>
+										<div class="clients-qt">1736</div>
+									</div><!--/clients-box-->
+									<div class="clients-box">
+										<div class="clients-box__profile">
+											<div class="clients-box__icon circle">
+												<img src="assets/images/client-photo_8.png" alt="">
+											</div>
+											<div class="clients-box__info">
+												<div class="clients-box__name">RED</div>
+												<a href="#" class="clients-box__link">Перейти в профиль</a>
+											</div>
+										</div>
+										<div class="clients-qt">12</div>
+									</div><!--/clients-box-->
+								</div>
+							</div><!--/clients-->
 						</div>
 					</div>
 				</div>
@@ -1126,12 +750,12 @@
 						</svg>
 					</span>
 					<div class="popup__content">
-						<h3 class="title-small">Подтвердить почту</h3>
+						<h3 class="title-small">Подтвердить аккаунт по ЕГРН</h3>
 						<div class="subtitle">Чтобы пользоваться всеми услугами личного кабинета подтвердите почту</div>
 						<form action="#" class="confirm-form form">
 							<div class="form-item">
 								<div class="form-input">
-									<input type="email" placeholder="Email" value="Mail@mail.com">
+									<input type="email" placeholder="Ваш ЕГРП">
 								</div><!--/form-input-->
 							</div><!--/form-item-->
 							<button type="submit" class="btn">Отправить </button>
