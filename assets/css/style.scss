@@ -1032,6 +1032,16 @@ body.hidden {
 	&__header {
 		display: flex;
 		align-items: flex-start;
+		.product-card-buttons {
+			margin-left: auto;
+			margin-top: 5px;
+		}
+		.product__name {
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 	&__price {
 		font-family: $ff;
@@ -1131,6 +1141,20 @@ body.hidden {
 		display: flex;
 		align-items: flex-start;
 		margin: 50px 0 40px;
+		&-between {
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			.btn-contact {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			.product-menu__btn {
+				width: auto;
+				height: 25px;
+				background-color: transparent;
+			}
+		}
 	}
 	&__contact {
 		flex: 1 1 auto;
@@ -1460,6 +1484,10 @@ body.hidden {
 		&__row {
 			display: flex;
 			justify-content: space-between;
+			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 		&__place {
 			display: flex;

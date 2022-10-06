@@ -231,6 +231,7 @@ $(document).ready(function() {
   });
   /*==========/ads-block=========*/
 
+
 /*===============Popup-photo=================*/
     $(".open-popup-photo").on("click", function (event) {
         name_pop = $(this).attr('data-popup');

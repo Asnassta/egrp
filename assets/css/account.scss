@@ -165,6 +165,9 @@
 		.title-medium {
 			margin-bottom: 30px;
 		}
+		&.pb-min {
+			padding-bottom: 27px;
+		}
 	}/*===/account__section===*/
 	&-status {
 		display: inline-flex;
@@ -261,6 +264,10 @@
 			&:hover {
 				color: $purple;
 			}
+			&.yellow {
+				background-color: $yellow;
+				color: $bl;
+			}
 		}
 		&__stat {
 			font-family: $ff;
@@ -340,6 +347,10 @@
 			font-size: 14px;
 			margin-bottom: 10px;
 			background-color: $lgray;
+			&.yellow {
+				background-color: $yellow;
+				color: $bl;
+			}
 		}
 	}/*===/account__linksbox===*/
 	&-link {
@@ -522,6 +533,17 @@
 			justify-content: space-between;
 			align-items: center;
 			margin-bottom: 20px;
+			.account-block__title {
+				margin-right: 15px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+		&__content {
+			&.max-w {
+				max-width: 310px;
+			}
 		}
 		&__link {
 			font-family: $ff;
@@ -778,6 +800,13 @@
 			&.top {
 				align-items: flex-start;
 			}
+			&.m-r {
+				.account-editing__col {
+					&:nth-child(even) {
+						margin-right: 5px;
+					}
+				}
+			}
 		}
 		&__col {
 			width: calc(33.33333% - 20px);
@@ -970,6 +999,55 @@
 			display: none;
 		}
 	}/*===/account-progressbar===*/
+	&-stat {
+		.title-small {
+			margin-bottom: 20px;
+		}
+		&__item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: $lgray;
+			padding: 10px;
+			margin-bottom: 5px;
+			max-width: 385px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__description {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 500;
+			color: $d-blue;
+			line-height: $lh;
+		}
+		&__data {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 500;
+			color: $d-blue;
+			line-height: $lh;
+			&.green {
+				color: $green;
+			}
+			&.red {
+				color: $red;
+			}
+		}
+	}/*===/account-stat===*/
+	&-product {
+		margin-top: 25px;
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -20px;
+		margin-bottom: -20px;
+		>* {
+			width: calc(25% - 20px);
+			margin-left: 20px;
+			margin-bottom: 20px;
+		}
+	}/*===/account-product===*/
 }
 /*===========/account==============*/
 
@@ -1223,6 +1301,11 @@
 				justify-content: flex-end;
 			}
 		}
+		&-product {
+			>* {
+				width: calc(33.33333% - 20px);
+			}
+		}
 	}
 }
 
@@ -1345,6 +1428,11 @@
 				margin-left: 0;
 			}
 		}
+		&-product {
+			>* {
+				width: calc(50% - 20px);
+			}
+		}
 	}
 
 	.ad-buttons {
@@ -1416,6 +1504,9 @@
 			&.account-block-gray {
 				padding: 15px;
 				margin: 0 0 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 			.comments {
 				&__all {
@@ -1443,6 +1534,13 @@
 				margin-left: 0;
 				.account-editing-view {
 					margin-left: 0;
+				}
+				&.m-r {
+					.account-editing__col {
+						&:nth-child(even) {
+							margin-right: 0;
+						}
+					}
 				}
 			}
 			&__col {
@@ -1488,11 +1586,21 @@
 				display: none;
 			}
 		}
+		&-product {
+			margin-left: 0;
+			>* {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
 	}
 
 	.ads-block {
 		&__title {
 			font-size: 16px;
+			img {
+				width: 20px;
+			}
 		}
 		&__header {
 			padding: 10px 50px 10px 15px;
@@ -1500,11 +1608,10 @@
 		&-infobox {
 			display: none;
 		}
-		&__checkbox {
-			display: none;
-		}
 		&__btn {
-			display: none;
+			.btn {
+				width: 100%;
+			}
 		}
 		&__check {
 			.product-card {
