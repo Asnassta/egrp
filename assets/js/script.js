@@ -141,6 +141,14 @@ $(document).ready(function() {
   });
   /*==========/compare-menu=========*/
 
+  /*======Drop-menu=============*/
+  $(".drop-menu__btn").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+    $(this).next().slideToggle();
+  });
+  /*==========/drop-menu=========*/
+
   /*======Product-menu=============*/
   $(".product-menu__btn").on("click", function(event) {
     event.preventDefault();

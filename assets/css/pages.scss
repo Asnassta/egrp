@@ -1779,7 +1779,105 @@
 }
 /*=========/tabs======*/
 
+/*========Drop-menu=======*/
+.drop-menu {
+	position: relative;
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all .2s linear;
+		cursor: pointer;
+		img {
+			width: 25px;
+			height: 25px;
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+		&.active {
+			img {
+				&:first-child {
+					display: none;
+				}
+				&:nth-child(2) {
+					display: block;
+				}
+			}
+		}
+	}
+	&__dropdown {
+		display: none;
+		width: 200px;
+		padding: 10px;
+		background-color: $wh;
+		filter: drop-shadow(0px 0px 8px rgba(27, 27, 44, 0.4));
+		border-radius: 10px;
+		position: absolute;
+		top: calc(100% + 5px);
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		a {
+			display: block;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $d-blue;
+			line-height: $lh;
+			margin-bottom: 10px;
+			transition: all .2s linear;
+			&:hover {
+				color: $purple;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+/*========/drop-menu=======*/
+
+/*=========Removed-box======*/
+.removed-box {
+	width: 300px;
+	background: $d-blue;
+	border-radius: 6px;
+	padding: 20px 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+	text-align: center;
+	&__title {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 500;
+		color: $wh;
+		line-height: $lh;
+		margin-bottom: 10px;
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $wh;
+		line-height: $lh;
+	}
+}
+/*=========/removed-box======*/
+
 /*===========Adaptive===========*/
+@media(max-width: 1400px) {
+	.drop-menu {
+		&__dropdown {
+			left: auto;
+			right: 0;
+			transform: translateX(0);
+		}
+	}
+}
 @media(max-width: 1200px) {
 	.compare {
 		&__content {
