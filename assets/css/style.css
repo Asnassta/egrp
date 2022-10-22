@@ -4752,6 +4752,9 @@
       width: 100%; }
       .chat__inner > *:nth-child(2) {
         width: 100%; }
+  .chat-box_scroll {
+    height: auto;
+    overflow: visible; }
   .chat-screen {
     display: none;
     position: fixed;

@@ -2716,6 +2716,12 @@
 				}
 			}
 		}
+		&-box {
+			&_scroll {
+				height: auto;
+				overflow: visible;
+			}
+		}
 		&-screen {
 			display: none;
 			position: fixed;
