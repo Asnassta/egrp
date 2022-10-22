@@ -343,7 +343,7 @@
 		transition: all .3s linear;
 		&.show {
 			transform: translateY(0);
-			z-index: 500;
+			z-index: 300;
 		}
 		&-menu {
 			display: none;

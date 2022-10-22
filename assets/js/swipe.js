@@ -79,6 +79,7 @@ class Swipe {
     {
       $('.swipe-content').slideDown(555);
       $('.swipe-hide').hide();
+      $('.swipe-height').addClass('swipe-full');
       $('body').addClass("hidden");
     }
   });
@@ -87,6 +88,7 @@ class Swipe {
     {
       $('.swipe-content').slideUp(555);
       $('.swipe-hide').slideDown(555);
+      $('.swipe-height').removeClass('swipe-full');
       $('body').removeClass("hidden");
     }
   });
