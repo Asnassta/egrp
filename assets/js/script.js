@@ -265,6 +265,10 @@ $(document).ready(function() {
     $(".chat-list__item").not(this).removeClass('active');
     $('.chat-screen').hide();
     $('.chat-screen.'+$(this).attr('data-chat')).fadeIn(222);
+    if($(window).width() <= 765)
+      {
+        $('body').addClass("hidden");
+      }
   });
   /*==========/chat-list=========*/
 
@@ -279,6 +283,7 @@ $(document).ready(function() {
 
   $(".chat-back.mobile").on("click", function() {
     $(".chat-screen").fadeOut();
+    $('body').removeClass("hidden");
   });
   /*==========/chat-screen-person=========*/
 

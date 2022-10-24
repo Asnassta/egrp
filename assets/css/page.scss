@@ -36,6 +36,9 @@
 			}
 		}
 	}
+	.page__title {
+		display: none;
+	}
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -348,7 +351,12 @@
 		&-menu {
 			display: none;
 		}
+		.page__title {
+			display: block;
+			margin-right: 100px;
+		}
 		.logo {
+			margin-right: 0;
 			svg {
 				fill: #4C3DAA;
 			}
@@ -468,6 +476,14 @@
 			svg {
 				fill: $gray2;
 			}
+		}
+	}
+}
+
+@media(max-width: 375px) {
+	.header {
+		.page__title {
+			margin-right: 80px;
 		}
 	}
 }

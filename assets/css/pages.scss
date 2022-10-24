@@ -2036,6 +2036,9 @@
 			.chat__content {
 				max-height: 590px;
 			}
+			.page__title {
+				display: none;
+			}
 		}
 	}
 	&__content {
@@ -2733,6 +2736,19 @@
 			&-person {
 				.chat__content {
 					max-height: calc(100vh - 125px);
+				}
+				.chat__header {
+					justify-content: center;
+				}
+				.page__title {
+					display: block;
+				}
+				.chat-back {
+					position: absolute;
+					top: 50%;
+					left: 16px;
+					z-index: 1;
+					transform: translateY(-50%);
 				}
 			}
 		}
