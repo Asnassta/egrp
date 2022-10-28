@@ -152,6 +152,10 @@ body.hidden {
 	@media(max-width: 1920px) {
 		@include adaptiv-font(32, 20);
 	}
+	&_flex {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .title-medium {
@@ -1286,6 +1290,23 @@ body.hidden {
 				opacity: 0.7;
 			}
 		}
+		&.illumination {
+			border: 2px solid #FFDB5D;
+			box-shadow: 0px 4px 4px rgba(255, 219, 93, 0.1), 3px 6px 16px 8px rgba(255, 206, 32, 0.15);
+		}
+		&.marker {
+			.product-card__price {
+				background-color: $yellow;
+				padding: 0 10px;
+				border-radius: 600px;
+				margin-bottom: 3px;
+			}
+			.product-card__description {
+				background-color: $yellow;
+				padding: 3px 10px;
+				border-radius: 600px;
+			}
+		}
 		&.product-card-big {
 				display: flex;
 				padding: 20px;
@@ -1307,10 +1328,111 @@ body.hidden {
 				}
 				.product-card__price {
 					font-size: 25px;
-					margin-bottom: 0;
+					margin-bottom: 3px;
 				}
 				.product-card__row {
 					justify-content: flex-start;
+				}
+			}
+			&-placeholder {
+				background-color: $wh;
+				border-radius: 6px;
+				box-shadow: 0px 4px 13px 4px rgba(27, 67, 47, 0.04);
+				display: flex;
+				padding: 20px;
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&__photo {
+					width: 285px;
+					flex: 0 0 285px;
+					margin-left: -15px;
+					display: flex;
+					flex-wrap: wrap;
+					div {
+						background-color: #E5E9F0;
+						margin-left: 15px;
+						width: calc(25% - 15px);
+						height: 45px;
+						&:first-child {
+							width: 100%;
+							height: 215px;
+							margin-bottom: 15px;
+						}
+					}
+				}
+				&__info {
+					flex: 1 1 auto;
+					padding: 0 30px 0 30px;
+					div {
+						background-color: #E5E9F0;
+						&:first-child {
+							width: 100%;
+							max-width: 256px;
+							height: 54px;
+							margin-bottom: 20px;
+						}
+						&:nth-child(2) {
+							width: 100%;
+							height: 25px;
+							margin-bottom: 5px;
+						}
+						&:nth-child(3) {
+							width: 100%;
+							height: 25px;
+							margin-bottom: 10px;
+						}
+						&:nth-child(4) {
+							width: 100%;
+							height: 75px;
+							margin-bottom: 10px;
+						}
+						&:nth-child(5) {
+							width: 100%;
+							height: 35px;
+							max-width: 335px;
+						}
+					}
+				}
+				&__autor {
+					flex: 0 0 200px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					div {
+						background-color: #E5E9F0;
+						&:first-child {
+							border-radius: 50%;
+							width: 70px;
+							height: 70px;
+							margin-bottom: 10px;
+						}
+						&:nth-child(2) {
+							width: 110px;
+							height: 25px;
+							margin-bottom: 5px;
+						}
+						&:nth-child(3) {
+							width: 110px;
+							height: 25px;
+							margin-bottom: 5px;
+						}
+						&:nth-child(4) {
+							width: 100%;
+							height: 25px;
+							margin-bottom: 30px;
+						}
+						&:nth-child(5) {
+							width: 100%;
+							height: 45px;
+							margin-bottom: 5px;
+						}
+						&:nth-child(6) {
+							width: 110px;
+							height: 25px;
+						}
+					}
 				}
 			}
 		.time {
@@ -2227,6 +2349,23 @@ body.hidden {
 			}
 		}
 	}
+	.product {
+		&-autor {
+			&.mobile-none {
+				display: none;
+			}
+		}
+		&-card {
+			&-placeholder {
+				&__info {
+					padding-right: 0;
+				}
+				&__autor {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 @media(max-width: 860px) {
@@ -2478,6 +2617,39 @@ body.hidden {
 	}
 	.product {
 		&-card {
+			&-placeholder {
+				display: block;
+				padding: 0;
+				overflow: hidden;
+				&__photo {
+					width: 100%;
+					flex: 1 1 auto;
+					margin-left: 0;
+					div {
+						display: none;
+						margin-left: 0;
+						margin-bottom: 0;
+						&:first-child {
+							display: block;
+							margin-bottom: 0;
+						}
+					}
+				}
+				&__info {
+					padding: 20px 15px;
+					div {
+						display: none;
+						&:first-child {
+							display: block;
+							max-width: 100%;
+						}
+						&:nth-child(2) {
+							display: block;
+							max-width: 100%;
+						}
+					}
+				}
+			}
 			&__info {
 				&.wrap {
 					.tags {

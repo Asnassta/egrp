@@ -4,6 +4,59 @@
 		padding: 50px;
 		background-color: $lgray;
 	}
+	&-infobox {
+		background-color: $d-yellow;
+		padding: 20px 15px;
+		border-radius: 6px;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 600;
+		color: $wh;
+		line-height: $lh;
+		&__title {
+			margin-bottom: 10px;
+			font-family: $ff;
+			font-size: 20px;
+			font-weight: 600;
+			color: $wh;
+			line-height: $lh;
+		}
+		&__link {
+			display: inline-block;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 600;
+			color: $wh;
+			line-height: $lh;
+			position: relative;
+			padding-right: 35px;
+			&:after {
+				content: "";
+				width: 24px;
+				height: 24px;
+				background: url("../images/arrow-white.svg") center no-repeat;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				z-index: 1;
+				transform: translateY(-50%);
+				transition: all .2s linear;
+			}
+			&:hover {
+				&:after {
+					right: -3px;
+				}
+			}
+		}
+		&__text {
+			display: inline-block;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 600;
+			color: $wh;
+			line-height: $lh;
+		}
+	}
 	&__inner {
 		&.flex-end {
 			display: flex;
@@ -78,6 +131,15 @@
 		display: block;
 		font-family: $ff;
 		font-size: 14px;
+		font-weight: 400;
+		color: $d-blue;
+		line-height: $lh;
+	}
+	&-sub_description {
+		margin-top: 5px;
+		display: block;
+		font-family: $ff;
+		font-size: 11px;
 		font-weight: 400;
 		color: $d-blue;
 		line-height: $lh;
@@ -267,7 +329,7 @@
 	}
 	&-input {
 		position: relative;
-		input {
+		input, textarea {
 			display: block;
 			width: 100%;
 			background-color: $wh;
@@ -283,6 +345,15 @@
 			&::placeholder {
 				opacity: 1;
 				color: $gray2;
+			}
+		}
+		textarea {
+			resize: none;
+			height: 200px;
+		}
+		&_blue {
+			input {
+				color: $d-blue;
 			}
 		}
 		.filters-link {
@@ -321,6 +392,31 @@
 				top: 50%;
 				right: 10px;
 				transform: translateY(-50%);
+			}
+		}
+		&_description {
+			input {
+				padding-left: 70px;
+				text-align: right;
+				font-weight: 500;
+			}
+			span {
+				pointer-events: none;
+				font-family: $ff;
+				font-size: 16px;
+				font-weight: 400;
+				color: $gray2;
+				line-height: $lh;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 10px;
+				z-index: 1;
+			}
+			&.d-blue {
+				span {
+					color: $d-blue;
+				}
 			}
 		}
 	}
@@ -624,6 +720,7 @@
 			display: none;
 			padding: 3px 0;
 			background-color: $wh;
+			border-top: 1px solid $lgray;
 			position: absolute;
 			top: calc(100% - 3px);
 			left: 0;
@@ -760,6 +857,9 @@
 				border-bottom: none;
 			}
 		}
+		&.center {
+			align-items: center;
+		}
 		&__title {
 			flex: 0 0 260px;
 			font-family: $ffm;
@@ -769,6 +869,15 @@
 			line-height: $lh;
 			text-align: right;
 			padding-right: 80px;
+			&.pt-10 {
+				padding-top: 10px;
+			}
+			&.pt-25 {
+				padding-top: 25px;
+			}
+			&.pt-35 {
+				padding-top: 35px;
+			}
 		}
 		&__content {
 			flex: 1 1 auto;
@@ -788,13 +897,45 @@
 				flex: 1 1 auto;
 				margin-left: 40px;
 			}
+			&.no-grow {
+				flex-wrap: wrap;
+				margin-bottom: -20px;
+				>* {
+					flex:  0 0 auto;
+					margin-bottom: 20px;
+				}
+			}
+			&.flex-end {
+				align-items: flex-end;
+			}
+			&.three-col {
+				>* {
+					width: calc(33.33333% - 20px);
+				}
+			}
+			&.mt-0 {
+				margin-top: 0!important;
+			}
 		}
 		&__item {
+			max-width: 100%;
 			.filters-description {
 				margin-bottom: 10px;
 			}
 			.btn_black {
 				padding: 12px 20px;
+			}
+			&.max-292 {
+				max-width: 292px;
+			}
+			&.max-330 {
+				max-width: 330px;
+			}
+			&.max-600 {
+				max-width: 600px;
+			}
+			.form-checkbox {
+				margin-top: 10px;
 			}
 		}
 		&__btn {
