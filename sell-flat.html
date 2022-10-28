@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<title>EGRP</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="delete-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M10 12V17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M14 12V17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M4 7H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M6 10V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="out-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M20.75 5C20.75 4.58579 20.4142 4.25 20 4.25C19.5858 4.25 19.25 4.58579 19.25 5H20.75ZM19.25 19C19.25 19.4142 19.5858 19.75 20 19.75C20.4142 19.75 20.75 19.4142 20.75 19H19.25ZM16 12.75C16.4142 12.75 16.75 12.4142 16.75 12C16.75 11.5858 16.4142 11.25 16 11.25V12.75ZM4 12L3.46967 11.4697C3.17678 11.7626 3.17678 12.2374 3.46967 12.5303L4 12ZM6.46967 15.5303C6.76256 15.8232 7.23744 15.8232 7.53033 15.5303C7.82322 15.2374 7.82322 14.7626 7.53033 14.4697L6.46967 15.5303ZM7.53033 9.53033C7.82322 9.23744 7.82322 8.76256 7.53033 8.46967C7.23744 8.17678 6.76256 8.17678 6.46967 8.46967L7.53033 9.53033ZM19.25 5V19H20.75V5H19.25ZM16 11.25H4V12.75H16V11.25ZM3.46967 12.5303L6.46967 15.5303L7.53033 14.4697L4.53033 11.4697L3.46967 12.5303ZM4.53033 12.5303L7.53033 9.53033L6.46967 8.46967L3.46967 11.4697L4.53033 12.5303Z"/>
+			</g>
+		</symbol>
+		<symbol id="profile-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M17 11L19 13L23 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M8.5 11C10.7091 11 12.5 9.20914 12.5 7C12.5 4.79086 10.7091 3 8.5 3C6.29086 3 4.5 4.79086 4.5 7C4.5 9.20914 6.29086 11 8.5 11Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M13.0007 21.1422C14.3887 20.8923 15.4891 20.5116 16.0007 20C16.0726 19.3531 16.0007 18.3333 16.0007 18.3333C16.0007 17.4493 15.5793 16.6014 14.8291 15.9763C12.4602 14.0022 4.54122 14.0022 2.17227 15.9763C1.42212 16.6014 1.0007 17.4493 1.0007 18.3333C1.0007 18.3333 0.928818 19.3531 1.0007 20C1.51226 20.5116 2.61267 20.8923 4.00069 21.1422" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="search-icon_2" viewBox="0 0 24 24">
+			<g>
+				<path d="M20 20L16.1412 16.1377C14.8524 17.4389 13.0872 18.2222 11.1111 18.2222C7.18375 18.2222 4 15.0385 4 11.1111C4 7.18375 7.18375 4 11.1111 4C15.0385 4 18.2222 7.18375 18.2222 11.1111C18.2222 12.0649 18.0344 12.9748 17.6938 13.8059"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="settings-icon" viewBox="0 0 32 32">
+			<g>
+				<path d="M24.0007 25.3333V23.2593C23.3224 23.2593 22.6627 23.0376 22.1221 22.6281C21.5814 22.2185 21.1894 21.6435 21.0058 20.9906C20.8221 20.3377 20.8569 19.6426 21.1047 19.0113C21.3526 18.3799 21.7999 17.8469 22.3787 17.4933C22.8688 17.1939 23.4304 17.037 24.0007 17.037C24.1039 17.037 24.2074 17.0422 24.3109 17.0525C24.9858 17.1202 25.6201 17.4065 26.1172 17.8679C26.6143 18.3294 26.947 18.9406 27.0646 19.6086C27.1822 20.2766 27.0784 20.9647 26.7688 21.5682M8.4451 25.3333V23.2593C7.76684 23.2593 7.10717 23.0376 6.56652 22.6281C6.02587 22.2185 5.63387 21.6435 5.45021 20.9906C5.26655 20.3377 5.3013 19.6426 5.54915 19.0113C5.79701 18.3799 6.24439 17.8469 6.82319 17.4933C7.31325 17.1939 7.87479 17.037 8.4451 17.037C8.54835 17.037 8.65189 17.0422 8.75535 17.0525C9.43022 17.1202 10.0645 17.4065 10.5616 17.8679C11.0587 18.3294 11.3914 18.9406 11.5091 19.6086C11.6267 20.2766 11.5228 20.9647 11.2132 21.5682M16.1067 6.66667V8.74074C15.4284 8.74074 14.7687 8.96239 14.2281 9.37194C13.6874 9.78149 13.2954 10.3565 13.1118 11.0094C12.9281 11.6623 12.9629 12.3574 13.2107 12.9887C13.4586 13.6201 13.9059 14.1531 14.4847 14.5067C14.9748 14.8061 15.5363 14.963 16.1067 14.963C16.2099 14.963 16.3134 14.9578 16.4169 14.9475C17.0918 14.8798 17.7261 14.5935 18.2232 14.1321C18.7203 13.6706 19.053 13.0594 19.1706 12.3914C19.2882 11.7234 19.1844 11.0353 18.8748 10.4318M24.0007 13.9259V6.66667M8.4451 13.9259V6.66667M16.1067 18.0741L16.1067 25.3333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="eye-close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M2 10C2 10 5.63636 17.2727 12 17.2727C18.3636 17.2727 22 10 22 10"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M12.0004 17.2727V19.0908M17.4549 15.4545L18.364 17.0291M6.54581 15.4545L5.63672 17.0291"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="transpose-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M10 19V5H8L3 19H10Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M14 19V5H16L21 19H14Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="doc-in-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M16 17H8" stroke="#4C2A9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M16 13H8" stroke="#4C2A9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 9H9H8" stroke="#4C2A9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12M13 2L20 9H13V2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="doc-plus-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M12 18V12" stroke="#4C2A9F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9 15H15" stroke="#4C2A9F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12M13 2L20 9H13V2Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="phone-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M14.997 16C6.46601 16.012 -0.00899062 9.45999 9.37069e-06 1.003C9.37069e-06 0.45 0.448009 0 1.00001 0H3.64001C4.13501 0 4.55601 0.364 4.62901 0.854C4.80311 2.02905 5.14493 3.17304 5.64401 4.251L5.74701 4.473C5.81619 4.62239 5.83108 4.79124 5.78909 4.95043C5.7471 5.10962 5.65087 5.24917 5.51701 5.345C4.69901 5.929 4.38701 7.104 5.02401 8.02C5.82301 9.17 6.83001 10.178 7.98 10.977C8.897 11.613 10.072 11.301 10.655 10.484C10.7507 10.3497 10.8904 10.2531 11.0498 10.211C11.2092 10.1688 11.3784 10.1836 11.528 10.253L11.749 10.355C12.827 10.855 13.971 11.197 15.146 11.371C15.636 11.444 16 11.865 16 12.361V15C16 15.1314 15.9741 15.2615 15.9238 15.3829C15.8735 15.5043 15.7997 15.6146 15.7068 15.7075C15.6138 15.8003 15.5034 15.874 15.382 15.9242C15.2605 15.9744 15.1304 16.0001 14.999 16H14.997Z"/>
+			</g>
+		</symbol>
+		<symbol id="download-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M7 10L12 15M17 10L15 12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M12 15V3" stroke="#4C2A9F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="doc-icon_2" viewBox="0 0 24 24">
+			<g>
+				<path d="M10 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12M13 2L20 9H13V2Z"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="mail-icon" viewBox="0 0 17 16">
+			<g>
+				<path d="M15.1667 6.6665V11.9998C15.1667 12.7332 14.5667 13.3332 13.8333 13.3332H3.16667C2.43333 13.3332 1.83333 12.7332 1.83333 11.9998V6.6665M3.16667 2.6665H13.8333C14.5667 2.6665 15.1667 3.2665 15.1667 3.99984L8.5 8.6665L1.83333 3.99984C1.83333 3.2665 2.43333 2.6665 3.16667 2.6665Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="doc-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M16 17H8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M16 13H8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 9H9H8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12M13 2L20 9H13V2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-right" viewBox="0 0 24 24">
+			<g>
+				<path d="M4 20V13C4 11.9391 4.42143 10.9217 5.17157 10.1716C5.92172 9.42143 6.93913 9 8 9H20L15 14M17 6L15 4"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="dislike-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M8.49154 16.0001L11.1582 22.0001C11.9539 22.0001 12.7169 21.684 13.2795 21.1214C13.8421 20.5588 14.1582 19.7957 14.1582 19.0001V15.0001H19.8182C20.1081 15.0033 20.3953 14.9436 20.6598 14.8248C20.9243 14.7061 21.1598 14.5313 21.3501 14.3125C21.5403 14.0938 21.6807 13.8362 21.7615 13.5578C21.8424 13.2794 21.8617 12.9867 21.8182 12.7001L20.4382 3.70006C20.3659 3.22316 20.1236 2.78845 19.7561 2.47606C19.3886 2.16366 18.9205 1.99461 18.4382 2.00006H7.1582H4.1582C3.62777 2.00006 3.11906 2.21078 2.74399 2.58585C2.36892 2.96092 2.1582 3.46963 2.1582 4.00006V11.0001C2.1582 11.5305 2.36892 12.0392 2.74399 12.4143C3.11906 12.7893 3.62777 13.0001 4.1582 13.0001H7.1582V5.00006" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="like-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M8.49154 8L11.1582 2C11.9539 2 12.7169 2.31607 13.2795 2.87868C13.8421 3.44129 14.1582 4.20435 14.1582 5V9H19.8182C20.1081 8.99672 20.3953 9.0565 20.6598 9.17522C20.9243 9.29393 21.1598 9.46873 21.3501 9.68751C21.5403 9.90629 21.6807 10.1638 21.7615 10.4423C21.8424 10.7207 21.8617 11.0134 21.8182 11.3L20.4382 20.3C20.3659 20.7769 20.1236 21.2116 19.7561 21.524C19.3886 21.8364 18.9205 22.0055 18.4382 22H7.1582H4.1582C3.62777 22 3.11906 21.7893 2.74399 21.4142C2.36892 21.0391 2.1582 20.5304 2.1582 20V13C2.1582 12.4696 2.36892 11.9609 2.74399 11.5858C3.11906 11.2107 3.62777 11 4.1582 11H7.1582V19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="eye-icon" viewBox="0 0 16 17">
+			<g>
+				<path d="M8.00033 3.16667C3.33366 3.16667 0.666992 8.5 0.666992 8.5C0.666992 8.5 1.12738 9.42078 2.00033 10.4971C3.22831 12.0113 5.27268 13.8333 8.00033 13.8333C10.728 13.8333 14.0003 11.5 15.3337 8.5C15.3337 8.5 12.667 3.16667 8.00033 3.16667Z" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10.0004 7.48783C9.77969 7.11177 9.44218 6.81812 9.0392 6.6516C8.63623 6.48508 8.18988 6.45481 7.76812 6.5654C7.34635 6.67599 6.97228 6.92138 6.70287 7.26421C6.43345 7.60704 6.28345 8.02852 6.27571 8.46447C6.26796 8.90042 6.40289 9.32697 6.65996 9.67915C6.91703 10.0313 7.28214 10.2899 7.69971 10.4154C8.11728 10.5409 8.56443 10.5265 8.97306 10.3744C9.38169 10.2223 9.72943 9.9408 9.96331 9.57281" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="view-icon_2" viewBox="0 0 24 24">
+			<g>
+				<path d="M5 5H9V3H5V5ZM9 5V9H11V5H9ZM9 9H5V11H9V9ZM5 9V5H3V9H5ZM5 9H5H3C3 10.1046 3.89543 11 5 11V9ZM9 9V11C10.1046 11 11 10.1046 11 9H9ZM9 5H11C11 3.89543 10.1046 3 9 3V5ZM5 3C3.89543 3 3 3.89543 3 5H5V5V3ZM5 15H9V13H5V15ZM9 15V19H11V15H9ZM9 19H5V21H9V19ZM5 19V15H3V19H5ZM5 19H5H3C3 20.1046 3.89543 21 5 21V19ZM9 19V21C10.1046 21 11 20.1046 11 19H9ZM9 15H11C11 13.8954 10.1046 13 9 13V15ZM5 13C3.89543 13 3 13.8954 3 15H5V13ZM15 5H19V3H15V5ZM19 5V9H21V5H19ZM19 9H15V11H19V9ZM15 9V5H13V9H15ZM15 9H13C13 10.1046 13.8954 11 15 11V9ZM19 9V11C20.1046 11 21 10.1046 21 9H19ZM19 5H21C21 3.89543 20.1046 3 19 3V5ZM15 3C13.8954 3 13 3.89543 13 5H15V5V3ZM15 15H19V13H15V15ZM19 15V19H21V15H19ZM19 19H15V21H19V19ZM15 19V15H13V19H15ZM15 19H13C13 20.1046 13.8954 21 15 21V19ZM19 19V21C20.1046 21 21 20.1046 21 19H19ZM19 15H21C21 13.8954 20.1046 13 19 13V15ZM15 13C13.8954 13 13 13.8954 13 15H15V13Z"/>
+			</g>
+		</symbol>
+		<symbol id="view-icon_1" viewBox="0 0 24 24">
+			<g>
+				<path d="M6 4V5V4ZM4 6H3H4ZM6 20V21V20ZM4 18H5H4ZM18 20V19V20ZM20 18H21H20ZM18 4V3V4ZM20 6H19H20ZM6 5L18 5V3L6 3V5ZM18 19H6V21H18V19ZM19 6V12H21V6H19ZM19 12V18H21V12H19ZM5 18L5 12H3L3 18H5ZM5 12L5 6H3L3 12H5ZM20 11L4 11L4 13L20 13V11ZM6 3C4.34315 3 3 4.34315 3 6H5C5 5.44772 5.44772 5 6 5V3ZM6 19C5.44772 19 5 18.5523 5 18H3C3 19.6569 4.34315 21 6 21V19ZM18 21C19.6569 21 21 19.6569 21 18H19C19 18.5523 18.5523 19 18 19V21ZM18 5C18.5523 5 19 5.44772 19 6H21C21 4.34315 19.6569 3 18 3V5Z"/>
+			</g>
+		</symbol>
+		<symbol id="priority-icon-max" viewBox="0 0 16 17">
+			<g>
+				<path d="M3.33398 13.8333V9.16667" stroke-width="1.2"/>
+				<path d="M13 13.8333V2.5" stroke-width="1.2"/>
+				<path d="M8 13.8333L8 7.16666" stroke-width="1.2"/>
+			</g>
+		</symbol>
+		<symbol id="priority-icon-min" viewBox="0 0 16 17">
+			<g>
+				<path d="M13 13.8333V9.16667" stroke-width="1.2"/>
+				<path d="M3.33398 13.8333V2.5" stroke-width="1.2"/>
+				<path d="M8.33398 13.8333L8.33398 7.16666" stroke-width="1.2"/>
+			</g>
+		</symbol>
+		<symbol id="priority-icon-middle" viewBox="0 0 16 17">
+			<g>
+				<path d="M3.33398 13.8333V9.16666" stroke-width="1.2"/>
+				<path d="M8.00098 13.8333V2.5" stroke-width="1.2"/>
+				<path d="M12.667 13.8333L12.667 7.16666" stroke-width="1.2"/>
+			</g>
+		</symbol>
+		<symbol id="pen-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M7.49994 16.5L7.00965 16.4019C6.97686 16.5659 7.02817 16.7353 7.14638 16.8536C7.26459 16.9718 7.43406 17.0231 7.59799 16.9903L7.49994 16.5ZM15.5501 5.62132L15.1965 5.26777L15.1965 5.26777L15.5501 5.62132ZM11.4637 15.3647L11.1101 15.0111L11.4637 15.3647ZM7.59799 16.9903L10.5397 16.4019L10.3436 15.4214L7.40188 16.0097L7.59799 16.9903ZM20.1463 5.26777L18.732 3.85355L18.0249 4.56066L19.4392 5.97487L20.1463 5.26777ZM7.598 13.4602L7.00965 16.4019L7.99023 16.5981L8.57858 13.6563L7.598 13.4602ZM11.8172 15.7182L18.732 8.8033L18.0249 8.0962L11.1101 15.0111L11.8172 15.7182ZM18.732 8.8033L20.1463 7.38909L19.4392 6.68198L18.0249 8.09619L18.732 8.8033ZM16.6107 3.85355L15.1965 5.26777L15.9036 5.97487L17.3178 4.56066L16.6107 3.85355ZM15.1965 5.26777L8.28167 12.1827L8.98878 12.8898L15.9036 5.97487L15.1965 5.26777ZM18.732 8.09619L15.9036 5.26777L15.1965 5.97487L18.0249 8.8033L18.732 8.09619ZM8.57858 13.6563C8.63665 13.3659 8.77938 13.0992 8.98878 12.8898L8.28167 12.1827C7.93267 12.5317 7.69479 12.9762 7.598 13.4602L8.57858 13.6563ZM18.732 3.85355C18.1463 3.26777 17.1965 3.26777 16.6107 3.85355L17.3178 4.56066C17.5131 4.3654 17.8297 4.3654 18.0249 4.56066L18.732 3.85355ZM19.4392 5.97487C19.6344 6.17014 19.6344 6.48672 19.4392 6.68198L20.1463 7.38909C20.732 6.8033 20.732 5.85355 20.1463 5.26777L19.4392 5.97487ZM10.5397 16.4019C11.0237 16.3051 11.4682 16.0673 11.8172 15.7182L11.1101 15.0111C10.9007 15.2205 10.634 15.3633 10.3436 15.4214L10.5397 16.4019Z"/>
+				<path d="M3 12.4324C6.39121 10.3781 8.39047 10.322 10 11M14 13C16.1912 13.6454 18.5247 13.6748 21.0734 12.8533" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 2"/>
+			</g>
+		</symbol>
+		<symbol id="close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M17 7L12 12L7 17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M17 17L12 12L7 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="notify-icon" viewBox="0 0 25 24">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M18.4997 7.88315C18.4494 7.88563 18.3987 7.88688 18.3477 7.88688C16.6669 7.88688 15.3043 6.52427 15.3043 4.8434C15.3043 4.6771 15.3176 4.51392 15.3433 4.35486C15.1042 4.23832 14.8576 4.13691 14.6049 4.05141C14.3146 3.94921 14.0169 3.86896 13.7143 3.81141C13.5603 3.39839 13.1622 3.10425 12.6955 3.10425C12.6255 3.10425 12.557 3.11088 12.4906 3.12354C12.3523 3.13901 12.2208 3.19151 12.11 3.27527C11.9198 3.39712 11.77 3.57659 11.6854 3.78906C11.3399 3.8474 11.0003 3.93522 10.6703 4.05141C9.62088 4.40637 8.67727 5.03572 7.94261 5.88334C6.95169 7.02663 6.40784 8.48983 6.41147 10.0028V12.8666C6.33887 13.8389 6.07279 14.7869 5.62886 15.655C5.22937 16.2824 4.74782 16.8537 4.19698 17.3535L3.99988 17.5274L3.99991 18.1622H21.2753L21.2752 17.5274L21.0782 17.3535C20.5273 16.8537 20.0458 16.2824 19.6463 15.655C19.2024 14.7869 18.9363 13.8389 18.8637 12.8666V10.0028C18.8654 9.27468 18.7404 8.5581 18.4997 7.88315Z"/>
+				<path d="M18.7448 7.09C20.1504 7.09 21.2898 5.95056 21.2898 4.545C21.2898 3.13944 20.1504 2 18.7448 2C17.3393 2 16.1998 3.13944 16.1998 4.545C16.1998 5.95056 17.3393 7.09 18.7448 7.09Z"/>
+				<path d="M10.222 19.2C10.3287 19.7491 10.6188 20.2471 11.0466 20.611C11.5029 20.9992 12.0846 21.2084 12.6835 21.1997C13.2665 21.1863 13.826 20.9671 14.263 20.581C14.6719 20.2196 14.9489 19.7337 15.0525 19.2H10.222Z"/>
+			</g>
+		</symbol>
+		<symbol id="favorite-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M20.9386 6.25787C20.1848 4.73352 18.0132 3.48632 15.4872 4.21247C14.2801 4.55599 13.227 5.29269 12.4999 6.30221C11.7727 5.29269 10.7196 4.55599 9.51256 4.21247C6.98094 3.49741 4.815 4.73352 4.06113 6.25787C3.00348 8.39195 3.44229 10.7921 5.36633 13.3918C6.87405 15.4261 9.02874 17.4882 12.1567 19.8828C12.2556 19.9587 12.3773 20 12.5027 20C12.6281 20 12.7498 19.9587 12.8487 19.8828C15.971 17.4937 18.1313 15.4483 19.639 13.3918C21.5575 10.7921 21.9963 8.39195 20.9386 6.25787Z"/>
+			</g>
+		</symbol>
+		<symbol id="search-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M20.2926 21.7068C20.6829 22.0975 21.3161 22.0978 21.7068 21.7074C22.0975 21.3171 22.0978 20.6839 21.7074 20.2932L20.2926 21.7068ZM17.3662 15.9481C16.9759 15.5574 16.3427 15.5571 15.952 15.9475C15.5613 16.3378 15.561 16.971 15.9514 17.3617L17.3662 15.9481ZM21.7074 20.2932L17.3662 15.9481L15.9514 17.3617L20.2926 21.7068L21.7074 20.2932Z"/>
+				<circle cx="11.5" cy="11.5" r="7.5"/>
+			</g>
+		</symbol>
+		<symbol id="copyright-icon" viewBox="0 0 11 12">
+			<g>
+				<path d="M4.444 5.00105C4.4715 4.8166 4.532 4.6545 4.609 4.51477C4.686 4.37503 4.796 4.25766 4.9335 4.16823C5.0655 4.08438 5.2305 4.04526 5.434 4.03967C5.5605 4.04526 5.676 4.06762 5.7805 4.11233C5.8905 4.16264 5.9895 4.22971 6.0665 4.31355C6.1435 4.39739 6.204 4.498 6.2535 4.60979C6.303 4.72158 6.325 4.84455 6.3305 4.96751H7.315C7.304 4.70481 7.2545 4.46447 7.161 4.24648C7.0675 4.02849 6.941 3.83845 6.776 3.68195C6.611 3.52544 6.413 3.40248 6.182 3.31305C5.951 3.22362 5.698 3.18449 5.4175 3.18449C5.06 3.18449 4.7465 3.24597 4.4825 3.37453C4.2185 3.50309 3.9985 3.67077 3.8225 3.88876C3.6465 4.10674 3.5145 4.35827 3.432 4.64892C3.3495 4.93956 3.3 5.24139 3.3 5.56558V5.71649C3.3 6.04068 3.344 6.34251 3.4265 6.63316C3.509 6.92381 3.641 7.17533 3.817 7.38773C3.993 7.60013 4.213 7.7734 4.477 7.89637C4.741 8.01933 5.0545 8.0864 5.412 8.0864C5.6705 8.0864 5.9125 8.04169 6.138 7.95785C6.3635 7.87401 6.5615 7.75663 6.732 7.60572C6.9025 7.4548 7.04 7.28153 7.139 7.08031C7.238 6.87909 7.2985 6.66669 7.304 6.43753H6.3195C6.314 6.55491 6.2865 6.6611 6.237 6.76171C6.1875 6.86232 6.1215 6.94616 6.039 7.01883C5.9565 7.09149 5.863 7.14738 5.753 7.18651C5.6485 7.22564 5.5385 7.23681 5.423 7.2424C5.225 7.23681 5.06 7.19769 4.9335 7.11385C4.796 7.02442 4.686 6.90704 4.609 6.7673C4.532 6.62757 4.4715 6.45989 4.444 6.27543C4.4165 6.09098 4.4 5.90094 4.4 5.71649V5.56558C4.4 5.36995 4.4165 5.1855 4.444 5.00105ZM5.5 0.0488281C2.464 0.0488281 0 2.55289 0 5.63824C0 8.7236 2.464 11.2277 5.5 11.2277C8.536 11.2277 11 8.7236 11 5.63824C11 2.55289 8.536 0.0488281 5.5 0.0488281ZM5.5 10.1098C3.0745 10.1098 1.1 8.10317 1.1 5.63824C1.1 3.17331 3.0745 1.16671 5.5 1.16671C7.9255 1.16671 9.9 3.17331 9.9 5.63824C9.9 8.10317 7.9255 10.1098 5.5 10.1098Z"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M17 10L12 15L7 10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="person-icon" viewBox="0 0 22 22">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M12.1716 10.9704C14.3499 10.9704 16.1157 8.9623 16.1157 6.48519C16.1157 4.00809 14.3499 2 12.1716 2C9.99337 2 8.22754 4.00809 8.22754 6.48519C8.22754 8.9623 9.99337 10.9704 12.1716 10.9704ZM20.3701 17.0367C20.3701 14.0466 17.9829 11.4552 14.9729 10.9568C14.2464 11.6545 13.2084 11.9535 12.1705 11.9535C11.0288 11.9535 10.0947 11.6545 9.26435 10.9568C6.2544 11.4552 3.86719 14.0466 3.86719 17.0367V18.0103C7.4999 21.9971 16.7374 21.9971 20.3701 18.0103V17.0367Z"/>
+			</g>
+		</symbol>
+		<symbol id="add-icon" viewBox="0 0 22 22">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C4.925 0 0 4.925 0 11C0 17.075 4.925 22 11 22C17.075 22 22 17.075 22 11C22 4.925 17.075 0 11 0ZM12 15C12 15.2652 11.8946 15.5196 11.7071 15.7071C11.5196 15.8946 11.2652 16 11 16C10.7348 16 10.4804 15.8946 10.2929 15.7071C10.1054 15.5196 10 15.2652 10 15V12H7C6.73478 12 6.48043 11.8946 6.29289 11.7071C6.10536 11.5196 6 11.2652 6 11C6 10.7348 6.10536 10.4804 6.29289 10.2929C6.48043 10.1054 6.73478 10 7 10H10V7C10 6.73478 10.1054 6.48043 10.2929 6.29289C10.4804 6.10536 10.7348 6 11 6C11.2652 6 11.5196 6.10536 11.7071 6.29289C11.8946 6.48043 12 6.73478 12 7V10H15C15.2652 10 15.5196 10.1054 15.7071 10.2929C15.8946 10.4804 16 10.7348 16 11C16 11.2652 15.8946 11.5196 15.7071 11.7071C15.5196 11.8946 15.2652 12 15 12H12V15Z"/>
+			</g>
+		</symbol>
+		<symbol id="logo-eg" viewBox="0 0 45 20">
+			<g>
+				<path d="M2.20433 17.6996C2.20433 19.0798 2.95041 19.6752 4.67996 19.6752H16.0746C17.8042 19.6752 18.5503 19.0798 18.5503 17.6996V13.9648H13.1242V15.0203C13.1242 15.3992 12.8529 15.6157 12.3782 15.6157H9.02079C8.54602 15.6157 8.27471 15.3992 8.27471 15.0203V11.9621H15.1929V7.90257H8.27471V4.3843H11.5643C12.039 4.3843 12.3103 4.60081 12.3103 4.9797V6.03518H17.7364V2.30041C17.7364 0.920163 16.9903 0.324764 15.2607 0.324764H0V4.3843H2.20433V17.6996Z"/>
+				<path d="M20.948 9.82409C20.948 16.4276 26.5775 20 32.6818 20C36.8192 20 39.227 18.3221 39.227 18.3221H39.2948C39.2948 18.3221 39.2609 18.728 39.2609 19.134V19.6752H44.3478V10.7172C44.3478 9.33694 43.6017 8.74154 41.8722 8.74154H36.7514V12.8011H38.2096C38.6844 12.8011 38.9557 13.0176 38.9557 13.3965V14.1272C38.9557 14.1272 37.1244 15.5345 33.9366 15.5345C30.4775 15.5345 27.2558 13.613 27.2558 9.79702C27.2558 6.41407 30.4097 4.41137 33.6314 4.41137C36.8192 4.41137 39.227 5.95399 39.227 5.95399L42.6183 2.51692C42.6183 2.51692 39.7018 0 33.4957 0C26.2723 0 20.948 4.27605 20.948 9.82409Z"/>
+			</g>
+		</symbol>
+		<symbol id="logo-rp" viewBox="0 0 44 20">
+			<g>
+				<path d="M3.16283 19.1305H9.23876V12.9754H10.0534C11.3093 12.9754 11.8185 13.1031 12.2258 13.665L15.0771 17.7769C15.8578 18.9006 16.8082 19.1305 18.5054 19.1305H21.8319V15.2995H21.4246C20.7457 15.2995 20.1347 15.2484 19.7613 14.7121L18.2339 12.5157C17.6908 11.724 16.7403 11.4175 16.7403 11.4175V11.3664C16.7403 11.3664 20.3044 10.2682 20.3044 6.61603C20.3044 2.93831 17.0119 0.869598 12.2937 0.869598H0.956482V4.70055H3.16283V19.1305ZM9.23876 9.14445V4.70055H11.4451C13.1423 4.70055 14.0927 5.4412 14.0927 6.89696C14.0927 8.35272 13.1423 9.14445 11.3433 9.14445H9.23876Z"/>
+				<path d="M26.0841 19.1305H32.1601V13.4862H35.6563C40.3745 13.4862 43.5652 10.8301 43.5652 7.15236C43.5652 3.47465 40.3745 0.869598 35.6563 0.869598H23.8778V4.70055H26.0841V19.1305ZM32.1601 9.65525V4.70055H34.5361C36.403 4.70055 37.3535 5.6966 37.3535 7.15236C37.3535 8.60812 36.403 9.65525 34.4343 9.65525H32.1601Z"/>
+			</g>
+		</symbol>
+	</svg>
+	<svg id="gradient">
+  		<!-- Градиент -->
+  		<linearGradient id="linear-gradient">
+  			<stop stop-color="#4C2A9F"/>
+			<stop offset="1" stop-color="#993D8E"/>
+  		</linearGradient>
+	</svg>
+	<div class="wrapper page page-new-ad pt-80">
+		<header class="header header-color" id="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__row">
+						<a href="/" class="logo">
+							<svg>
+								<use xlink:href="#logo-eg"></use>
+							</svg>
+							<svg>
+								<use xlink:href="#logo-rp"></use>
+							</svg>
+						</a>
+						<nav class="nav">
+							<a href="#" class="nav__item">Ипотека</a>
+							<a href="#" class="nav__item">Риэлторы</a>
+							<a href="#" class="nav__item">Новостройки</a>
+							<a href="#" class="nav__item">Застройщикам</a>
+						</nav>
+					</div>
+					<div class="header-menu">
+						<a href="#" class="header-menu__link">
+							<svg>
+								<use xlink:href="#add-icon"></use>
+							</svg>
+							<span>Добавить объявление</span>
+						</a>
+						<a href="#" class="header-menu__link">
+							<svg>
+								<use xlink:href="#person-icon"></use>
+							</svg>
+							<span>Личный кабинет</span>
+						</a>
+					</div>
+					<div class="burger">
+						<span class="burger__item"></span>
+					</div>
+				</div>
+			</div>
+		</header><!--/header-->
+		<main class="main">
+			<div class="mobile-menu">
+				<a href="#" class="mobile-menu__link">
+					<svg>
+						<use xlink:href="#search-icon"></use>
+					</svg>
+				</a>
+				<a href="#" class="mobile-menu__link">
+					<svg>
+						<use xlink:href="#favorite-icon"></use>
+					</svg>
+				</a>
+				<a href="#" class="mobile-menu__link">
+					<svg>
+						<use xlink:href="#add-icon"></use>
+					</svg>
+				</a>
+				<a href="#" class="mobile-menu__link">
+					<svg>
+						<use xlink:href="#notify-icon"></use>
+					</svg>
+				</a>
+				<a href="#" class="mobile-menu__link">
+					<svg>
+						<use xlink:href="#person-icon"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="page__header page__header_wh">
+				<a href="#" class="back">
+					<img src="assets/images/arrow-down.svg" alt="">
+				</a>
+				<h2 class="page__title title-small">Продать шаг 1 из 2</h2>
+				<div class="burger">
+					<div class="burger__item"></div>
+				</div>
+			</div>
+			<section class="sell section">
+				<div class="container">
+					<div class="page-content-header">
+						<a href="#" class="btn-back">
+							<img src="assets/images/arrow-down.svg" alt="">
+							<span>Назад</span>
+						</a>
+						<h1 class="title title_flex">
+							<span>Продать</span>
+							<span>шаг 1 из 2</span>
+						</h1>
+					</div>
+					<div class="sell-nav">
+							<div class="sell-nav__select">
+								<span>Тип недвижимости</span>
+							</div>
+							<div class="sell-nav__dropdown">
+								<div class="sell-nav__description">Тип недвижимости</div>
+								<div class="sell-nav__inner">
+									<a href="sell-flat.html" class="sell-nav__option selected">
+										<span>Квартира</span>
+									</a>
+									<a href="sell-home.html" class="sell-nav__option">
+										<span>Дом</span>
+									</a>
+									<a href="sell-room.html" class="sell-nav__option">
+										<span>Комната</span>
+									</a>
+								</div>
+							</div>
+					</div>
+						<form action="#" class="sell-info form">
+							<div class="sell-info__block">
+								<div class="filters__blocks">
+									<div class="filters-block center">
+										<div class="filters-block__title">Расположение</div>
+										<div class="filters-block__content">
+											<div class="filters-input pr-60">
+												<input type="text" placeholder="Адрес">
+												<a href="#" class="filters-link">Найти</a>
+											</div>
+										</div>
+									</div><!--/filters-block-->
+									<div class="filters-block">
+										<div class="filters-block__title pt-10">Об объекте</div>
+										<div class="filters-block__content">
+											<div class="filters-block__item max-292">
+												<div class="filters-radiobox">
+													<div class="filters-radio">
+														<input type="radio" id="flat-object-radio" name="object-radio" checked>
+														<label for="flat-object-radio">Квартира</label>
+													</div><!--/filters-radio-->
+													<div class="filters-radio">
+														<input type="radio" id="apartment-object-radio" name="object-radio">
+														<label for="apartment-object-radio">Апартаменты</label>
+													</div><!--/filters-radio-->
+												</div>
+											</div>
+											<div class="filters-block__row">
+												<div class="filters-block__item max-292">
+													<div class="filters-description">Кадастровый номер</div>
+													<div class="form-input form-input-check">
+														<input type="text" placeholder="Кадастровый номер" value="50:58:0100101:21">
+														<img src="assets/images/check-circle-green.svg" alt="">
+													</div><!--/form-input-->
+												</div><!--/filters-block__item-->
+												<div class="filters-block__item max-330">
+													<div class="filters-description">Количество комнат</div>
+													<div class="filters-checkboxes">
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-studio" name="rooms-checkbox">
+															<label for="rooms-checkbox-studio">Студия</label>
+														</div>
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-1" name="rooms-checkbox" checked>
+															<label for="rooms-checkbox-1">1</label>
+														</div>
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-2" name="rooms-checkbox">
+															<label for="rooms-checkbox-2">2</label>
+														</div>
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-3" name="rooms-checkbox">
+															<label for="rooms-checkbox-3">3</label>
+														</div>
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-4" name="rooms-checkbox">
+															<label for="rooms-checkbox-4">4+</label>
+														</div>
+													</div>
+												</div><!--/filters-block__item-->
+											</div>
+										</div>
+									</div><!--/filters-block-->
+									<div class="filters-block">
+										<div class="filters-block__title pt-35">Площадь</div>
+										<div class="filters-block__content">
+											<div class="filters-block__row">
+												<div class="filters-block__item">
+													<div class="filters-description">Общая</div>
+													<div class="filters-input filters-input_description">
+														<input type="text" value="100">
+														<span>Общая</span>
+													</div><!--/form-input-->
+												</div><!--/filters-block__item-->
+												<div class="filters-block__item">
+													<div class="filters-description">Жилая</div>
+													<div class="filters-input filters-input_description">
+														<input type="text" value="40">
+														<span>Жилая</span>
+													</div><!--/form-input-->
+												</div><!--/filters-block__item-->
+												<div class="filters-block__item">
+													<div class="filters-description">Кухня</div>
+													<div class="filters-input filters-input_description">
+														<input type="text" value="40">
+														<span>Кухня</span>
+													</div><!--/form-input-->
+												</div><!--/filters-block__item-->
+											</div>
+										</div>
+									</div><!--/filters-block-->
+									<div class="filters-block">
+										<div class="filters-block__title pt-35">Прочее</div>
+										<div class="filters-block__content">
+											<div class="filters-block__row no-grow">
+												<div class="filters-block__item">
+													<div class="filters-description">Тип комнат</div>
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="type-room-checkbox-1" name="type-room-checkbox" checked>
+															<label for="type-room-checkbox-1">Смежные</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="type-room-checkbox-2" name="type-room-checkbox">
+															<label for="type-room-checkbox-2">Изолированные</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+												<div class="filters-block__item">
+													<div class="filters-description">Балкон/ Лоджия</div>
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="balcony-checkbox-1" name="balcony-checkbox" checked>
+															<label for="balcony-checkbox-1">
+																<span></span>
+																Балкон
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="balcony-checkbox-2" name="balcony-checkbox">
+															<label for="balcony-checkbox-2">
+																<span></span>
+																Лоджия
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="balcony-checkbox-3" name="balcony-checkbox">
+															<label for="balcony-checkbox-3">
+																<span></span>
+																Нет
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+											</div><!--/filters-block__row-->
+											<div class="filters-block__row no-grow">
+												<div class="filters-block__item">
+													<div class="filters-description">Санузел</div>
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="bathroom-checkbox-1" name="bathroom-checkbox" checked>
+															<label for="bathroom-checkbox-1">
+																Совмещенный
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="bathroom-checkbox-2" name="bathroom-checkbox">
+															<label for="bathroom-checkbox-2">
+																Раздельный
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="bathroom-checkbox-3" name="bathroom-checkbox">
+															<label for="bathroom-checkbox-3">
+																Несколько
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+												<div class="filters-block__item">
+													<div class="filters-description">Окна</div>
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="windows-checkbox-1" name="windows-checkbox" checked>
+															<label for="windows-checkbox-1">
+																<span></span>
+																Дерево
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="windows-checkbox-2" name="windows-checkbox" checked>
+															<label for="windows-checkbox-2">
+																<span></span>
+																Пластик
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="radio" id="windows-checkbox-3" name="windows-checkbox" checked>
+															<label for="windows-checkbox-3">
+																<span></span>
+																Смешанные
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+											</div><!--/filters-block__row-->
+											<div class="filters-block__item max-292">
+												<div class="filters-description">Ремонт</div>
+												<div class="selectcheckbox">
+													<div class="selectcheckbox__select">
+														<span>Требует ремонта</span>
+													</div>
+													<div class="selectcheckbox__dropdown">
+														<div class="selectcheckbox__description">Ремонт</div>
+														<div class="selectcheckbox__inner">
+															<div class="selectcheckbox__option">
+																<span>Косметический</span>
+															</div>
+															<div class="selectcheckbox__option">
+																<span>Капитальный</span>
+															</div>
+															<div class="selectcheckbox__option selected">
+																<span>Требует ремонта</span>
+															</div>
+														</div>
+													</div>
+												</div><!--/selectcheckbox-->
+											</div><!--/filters-block__item-->
+										</div>
+									</div><!--/filters-block-->
+									<div class="filters-block">
+										<div class="filters-block__title pt-25">Сведения о доме</div>
+										<div class="filters-block__content">
+											<div class="filters-block__row flex-end three-col">
+												<div class="filters-block__item">
+													<div class="selectcheckbox">
+														<div class="selectcheckbox__select">
+															<span>Тип дома</span>
+														</div>
+														<div class="selectcheckbox__dropdown">
+															<div class="selectcheckbox__description">Тип дома</div>
+															<div class="selectcheckbox__inner">
+																<div class="selectcheckbox__option">
+																	<span>Монолитный</span>
+																</div>
+																<div class="selectcheckbox__option">
+																	<span>Монолитно-кирпичные дома</span>
+																</div>
+																<div class="selectcheckbox__option">
+																	<span>Кирпичный</span>
+																</div>
+																<div class="selectcheckbox__option">
+																	<span>Панельный</span>
+																</div>
+																<div class="selectcheckbox__option">
+																	<span>С деревянными перекрытиями</span>
+																</div>
+															</div>
+														</div>
+													</div><!--/selectcheckbox-->
+												</div><!--/filters-block__item-->
+												<div class="filters-block__item">
+													<div class="filters-description">Этажность</div>
+													<div class="filters-input filters-input_description">
+														<input type="text" value="12">
+														<span> всего этажей</span>
+													</div><!--/form-input-->
+												</div><!--/filters-block__item-->
+												<div class="filters-block__item">
+													<div class="filters-input filters-input_description">
+														<input type="text" value="3">
+														<span> ваш этаж</span>
+													</div><!--/form-input-->
+												</div><!--/filters-block__item-->
+											</div><!--/filters-block__row-->
+											<div class="filters-block__row no-grow flex-end">
+												<div class="filters-block__item">
+													<div class="filters-description">Лифт</div>
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="lift-checkbox-1" name="lift-checkbox" checked>
+															<label for="lift-checkbox-1">
+																<span></span>
+																Есть
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="lift-checkbox-2" name="lift-checkbox">
+															<label for="lift-checkbox-2">
+																<span></span>
+																Есть грузовой
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+												<div class="filters-block__item">
+													<div class="filters-description">Высота потолков</div>
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="ceiling-checkbox-1" name="ceiling-checkbox">
+															<label for="ceiling-checkbox-1">
+																<span></span>
+																2,5 м
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="ceiling-checkbox-2" name="ceiling-checkbox">
+															<label for="ceiling-checkbox-2">
+																<span></span>
+																2,7 м
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="ceiling-checkbox-3" name="ceiling-checkbox">
+															<label for="ceiling-checkbox-3">
+																<span></span>
+																3 м
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="ceiling-checkbox-4" name="ceiling-checkbox">
+															<label for="ceiling-checkbox-4">
+																<span></span>
+																>3 м
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+											</div><!--/filters-block__row-->
+											<div class="filters-block__row no-grow">
+												<div class="filters-block__item">
+													<div class="filters-description">Парковка</div>
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="parking-checkbox-1" name="parking-checkbox" checked>
+															<label for="parking-checkbox-1">
+																<span></span>
+																Наземная
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="parking-checkbox-2" name="parking-checkbox">
+															<label for="parking-checkbox-2">
+																<span></span>
+																Подземная
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="parking-checkbox-3" name="parking-checkbox">
+															<label for="parking-checkbox-3">
+																<span></span>
+																Многоуровневая
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="parking-checkbox-4" name="parking-checkbox">
+															<label for="parking-checkbox-4">
+																<span></span>
+																На крыше
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+											</div><!--/filters-block__row-->
+											<div class="filters-block__row no-grow flex-end">
+												<div class="filters-block__item">
+													<div class="filters-description">Год постройки</div>
+													<div class="filters-input filters-input_description">
+														<input type="text" value="2010">
+														<span> Год постройки</span>
+													</div><!--/form-input-->
+												</div><!--/filters-block__item-->
+												<div class="filters-block__item">
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="year-checkbox-60" name="year-checkbox" checked>
+															<label for="year-checkbox-60">
+																<span></span>
+																60е
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="year-checkbox-70" name="year-checkbox">
+															<label for="year-checkbox-70">
+																<span></span>
+																70е
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="year-checkbox-80" name="year-checkbox">
+															<label for="year-checkbox-80">
+																<span></span>
+																80е
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="year-checkbox-90" name="year-checkbox">
+															<label for="year-checkbox-90">
+																<span></span>
+																90е
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="year-checkbox-00" name="year-checkbox">
+															<label for="year-checkbox-00">
+																<span></span>
+																00е
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="year-checkbox-10" name="year-checkbox">
+															<label for="year-checkbox-10">
+																<span></span>
+																2010
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="year-checkbox-20" name="year-checkbox">
+															<label for="year-checkbox-20">
+																<span></span>
+																2020
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+											</div><!--/filters-block__row-->
+										</div>
+									</div><!--/filters-block-->
+								</div>
+							</div>
+							<div class="filters-block">
+								<div class="filters-block__title pt-10">Фото</div>
+								<div class="filters-block__content">
+									<div class="sell-photo sell-photo_photo">
+										<div class="sell-photo__inner">
+											<div class="sell-photo__item">
+												<img src="assets/images/apartment_4.png" alt="">
+												<a href="#" class="sell-photo__btn">
+													<svg>
+														<use xlink:href="#close-icon"></use>
+													</svg>
+												</a>
+												<div class="sell-check">
+													<span class="sell-check__box"></span>
+													<div class="sell-check__description">Сделать главной</div>
+												</div>
+											</div><!--/sell-photo__item-->
+											<div class="sell-photo__item">
+												<img src="assets/images/apartment_4.png" alt="">
+												<a href="#" class="sell-photo__btn">
+													<svg>
+														<use xlink:href="#close-icon"></use>
+													</svg>
+												</a>
+												<div class="sell-check">
+													<span class="sell-check__box"></span>
+													<div class="sell-check__description">Сделать главной</div>
+												</div>
+											</div><!--/sell-photo__item-->
+											<div class="sell-photo__item">
+												<img src="assets/images/apartment_4.png" alt="">
+												<a href="#" class="sell-photo__btn">
+													<svg>
+														<use xlink:href="#close-icon"></use>
+													</svg>
+												</a>
+												<div class="sell-check">
+													<span class="sell-check__box"></span>
+													<div class="sell-check__description">Сделать главной</div>
+												</div>
+											</div><!--/sell-photo__item-->
+											<div class="sell-photo__item">
+												<img src="assets/images/apartment_4.png" alt="">
+												<a href="#" class="sell-photo__btn">
+													<svg>
+														<use xlink:href="#close-icon"></use>
+													</svg>
+												</a>
+												<div class="sell-check">
+													<span class="sell-check__box"></span>
+													<div class="sell-check__description">Сделать главной</div>
+												</div>
+											</div><!--/sell-photo__item-->
+										</div>
+									</div><!--/sell-photo-->
+									<div class="sell-photo sell-photo_layout sell-open">
+										<div class="sell-photo__inner">
+											<div class="sell-photo__item">
+												<img src="assets/images/apartment-layout.png" alt="">
+												<a href="#" class="sell-photo__btn">
+													<svg>
+														<use xlink:href="#close-icon"></use>
+													</svg>
+												</a>
+												<div class="sell-check">
+													<span class="sell-check__box"></span>
+													<div class="sell-check__description">Сделать главной</div>
+												</div>
+											</div><!--/sell-photo__item-->
+										</div>
+									</div><!--/sell-photo-->
+									<div class="sell-photo sell-photo_panorama">
+										<div class="sell-photo__inner">
+											<div class="sell-photo__item">
+												<img src="assets/images/apartment_4.png" alt="">
+												<a href="#" class="sell-photo__btn">
+													<svg>
+														<use xlink:href="#close-icon"></use>
+													</svg>
+												</a>
+												<div class="sell-check">
+													<span class="sell-check__box"></span>
+													<div class="sell-check__description">Сделать главной</div>
+												</div>
+											</div><!--/sell-photo__item-->
+										</div>
+									</div><!--/sell-photo-->
+									<div class="filters-block__row three-col mt-0">
+										<div class="filters-block__item">
+											<a href="#" class="btn sell-btn" data-sell="sell-photo_photo">Добавить фотографии</a>
+										</div>
+										<div class="filters-block__item">
+											<a href="#" class="btn-transparent sell-btn" data-sell="sell-photo_layout">Добавить планировку</a>
+										</div>
+										<div class="filters-block__item">
+											<a href="#" class="btn-transparent sell-btn" data-sell="sell-photo_panorama">Добавить панораму</a>
+										</div>
+									</div><!--/filters-block__row-->
+								</div>
+							</div><!--/filters-block-->
+							<div class="filters-block">
+								<div class="filters-block__title pt-10">Объявление</div>
+								<div class="filters-block__content">
+									<div class="filters-block__row">
+										<div class="filters-block__item max-330">
+											<div class="filters-input filters-input_blue">
+												<input type="text" value=" 2-комнатная, 33м²">
+												<div class="filters-sub_description">формируется автоматически из заполненных ранее данных</div>
+											</div>
+										</div><!--/filters-block__item-->
+									</div><!--/filters-block__row-->
+									<div class="filters-block__item max-600">
+										<div class="filters-input">
+											<textarea placeholder="Описание объекта"></textarea>
+										</div>
+									</div><!--/filters-block__item-->
+									<div class="filters-block__item max-600">
+										<div class="filters-infobox">
+											<div class="filters-infobox__title">Оценка недвижимости</div>
+											<a href="#" class="filters-infobox__link">Проверьте стоимость  недвижимости</a>
+										</div>
+									</div><!--/filters-block__item-->
+								</div>
+							</div><!--/filters-block-->
+							<div class="filters-block">
+								<div class="filters-block__title">Условия сделки</div>
+								<div class="filters-block__content">
+									<div class="filters-block__row three-col">
+										<div class="filters-block__item">
+											<div class="filters-input filters-input_description d-blue">
+												<input type="text" value="12 000 000">
+												<span>Цена, ₽</span>
+											</div>
+											<div class="form-checkbox">
+												<input type="checkbox" id="checkbox-mortage">
+												<label for="checkbox-mortage">
+													<span></span>
+													<i>Можно в ипотеку</i>
+												</label>
+											</div><!--/form-checkbox-->
+										</div><!--/filters-block__item-->
+										<div class="filter-block__item">
+											<div class="selectcheckbox">
+												<div class="selectcheckbox__select">
+													<span>Тип сделки</span>
+												</div>
+												<div class="selectcheckbox__dropdown">
+													<div class="selectcheckbox__description">Тип сделки</div>
+													<div class="selectcheckbox__inner">
+														<div class="selectcheckbox__option">
+															<span>Прямая</span>
+														</div>
+														<div class="selectcheckbox__option">
+															<span>Альтернативная</span>
+														</div>
+														<div class="selectcheckbox__option">
+															<span>Свободная</span>
+														</div>
+													</div>
+												</div>
+											</div><!--/selectcheckbox-->
+										</div><!--/filters-block__item-->
+										<div class="filter-block__item">
+											<div class="selectcheckbox">
+												<div class="selectcheckbox__select">
+													<span>Бонус агенту</span>
+												</div>
+												<div class="selectcheckbox__dropdown">
+													<div class="selectcheckbox__description">Бонус агенту</div>
+													<div class="selectcheckbox__inner">
+														<div class="selectcheckbox__option">
+															<span>Процент от сделки</span>
+														</div>
+														<div class="selectcheckbox__option">
+															<span>Фиксированная сумма</span>
+														</div>
+													</div>
+												</div>
+											</div><!--/selectcheckbox-->
+										</div><!--/filters-block__item-->
+									</div><!--/filters-block__row-->
+								</div>
+							</div><!--/filters-block-->
+							<div class="filters-block">
+								<div class="filters-block__title pt-10">Контакты</div>
+								<div class="filters-block__content">
+									<div class="filters-block__row three-col">
+										<div class="filters-block__item max-292">
+											<div class="form-input form-input-check white">
+												<input type="text" value="+7 000 000 00 00">
+												<img src="assets/images/check-circle-green.svg" alt="">
+											</div><!--/form-input-->
+											<a href="#" class="form-add">+ Добавить еще один телефон</a>
+										</div><!--/filters-block__item-->
+									</div><!--/filters-block__row-->
+								</div>
+							</div><!--/filters-block-->
+							<div class="filters-block">
+								<div class="filters-block__title"></div>
+								<div class="filters-block__content">
+									<div class="filters-block__item max-292">
+										<a href="#" class="btn">Далее</a>
+									</div>
+								</div>
+							</div><!--/filters-block-->
+						</form>
+				</div>
+			</section><!--/sell-->
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__menu">
+					<div class="footer__contact">
+						<div class="footer__contact-block">
+							<h3 class="title-small">Мы всегда на связи!</h3>
+							<a href="tel:+74954956575" class="footer__phone">+7(495)495- 65 -75</a>
+							<a href="mailto:support@egrp.ru" class="footer__mail">support@egrp.ru</a>
+						</div>
+						<a href="#" class="btn">
+							<img src="assets/images/mail-icon.svg" alt="">
+							<span>Обратная связь</span>
+						</a>
+					</div>
+					<div class="footer__links">
+						<div class="footer__col">
+							<a href="#" class="">Ипотека</a>
+							<a href="#" class="">Риэлторы</a>
+							<a href="#" class="">Новостройки</a>
+							<a href="#" class="">Застройщикам</a>
+						</div>
+						<div class="footer__col">
+							<a href="#" class="">Инструкция пользователя </a>
+							<a href="#" class="">Статьи</a>
+							<a href="#" class="">Политика конфедициальности</a>
+							<a href="#" class="">Пользовательское соглашение</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__foot">
+					<a href="/" class="logo">
+						<svg>
+							<use xlink:href="#logo-eg"></use>
+						</svg>
+						<svg>
+							<use xlink:href="#logo-rp"></use>
+						</svg>
+					</a>
+					<div class="copyright">
+						<svg>
+							<use xlink:href="#copyright-icon"></use>
+						</svg>
+						<span>2014-2022 ООО ЕГРП Недвижимость</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
+	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
