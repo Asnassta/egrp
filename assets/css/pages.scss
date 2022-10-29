@@ -2675,6 +2675,9 @@
 				.btn-transparent {
 					width: 100%;
 				}
+				.btn {
+					padding: 16px 10px;
+				}
 			}
 		}
 		.filters-checkboxes-ellipse {
@@ -2688,7 +2691,7 @@
 				}
 				&_description {
 					input {
-						padding-left: 70px;
+						padding-left: 120px;
 					}
 				}
 				.filters-link {
@@ -3052,6 +3055,9 @@
 			width: calc(33.33333% - 10px);
 			margin-left: 10px;
 		}
+		.btn {
+			width: auto;
+		}
 	}/*===/sell-buttons===*/
 }
 /*=========/sell===========*/
@@ -3194,16 +3200,6 @@
 					&.flex-end {
 						//align-items: flex-start;
 					}
-					&.three-col {
-						//margin-left: 0;
-						>* {
-							width: 100%;
-							//margin-left: 0;
-						}
-					}
-				}
-				&__item {
-					max-width: 100%!important;
 				}
 			}
 			.filters-input {
@@ -3292,6 +3288,9 @@
 							margin-left: 0;
 						}
 					}
+				}
+				&__item {
+					max-width: 100%!important;
 				}
 			}
 		}

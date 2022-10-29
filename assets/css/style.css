@@ -631,6 +631,10 @@
   font-weight: 400;
   color: #6C7F9C;
   line-height: 1.2; }
+  .filters-description.red {
+    color: #FE0B37; }
+  .filters-description.green {
+    color: #3BB965; }
 
 .filters-sub_description {
   margin-top: 5px;
@@ -889,7 +893,7 @@
       -ms-transform: translateY(-50%);
       transform: translateY(-50%); }
   .filters-input_description input {
-    padding-left: 70px;
+    padding-left: 120px;
     text-align: right;
     font-weight: 500; }
   .filters-input_description span {
@@ -1400,11 +1404,16 @@
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         margin-bottom: 20px; }
+      .filters-block__row.no-grow .filters-description {
+        margin-bottom: 10px; }
     .filters-block__row.flex-end {
       -webkit-box-align: end;
       -ms-flex-align: end;
       align-items: flex-end; }
     .filters-block__row.three-col > * {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
       width: calc(33.33333% - 20px); }
     .filters-block__row.mt-0 {
       margin-top: 0 !important; }
@@ -1492,6 +1501,8 @@
         margin-bottom: 20px; }
         .filters-block__row > *:last-child {
           margin-bottom: 0; }
+      .filters-block__row.no-grow {
+        margin-bottom: 0; }
     .filters-block__btn {
       width: 100%; } }
 
@@ -5150,6 +5161,8 @@
           margin-left: 20px; }
       .sell-info .filters-block__item .btn-transparent {
         width: 100%; }
+      .sell-info .filters-block__item .btn {
+        padding: 16px 10px; }
     .sell-info .filters-checkboxes-ellipse {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
@@ -5158,7 +5171,7 @@
       .sell-info .filters-input input {
         padding: 10px; }
       .sell-info .filters-input_description input {
-        padding-left: 70px; }
+        padding-left: 120px; }
       .sell-info .filters-input .filters-link {
         display: block;
         color: #6A56E8; }
@@ -5461,6 +5474,8 @@
     .sell-buttons > * {
       width: calc(33.33333% - 10px);
       margin-left: 10px; }
+    .sell-buttons .btn {
+      width: auto; }
 
 /*=========/sell===========*/
 /*===========Adaptive===========*/
@@ -5561,10 +5576,6 @@
       padding-right: 0;
       margin-bottom: 20px;
       padding-top: 0 !important; }
-    .sell-info .filters-block__row.three-col > * {
-      width: 100%; }
-    .sell-info .filters-block__item {
-      max-width: 100% !important; }
   .sell-info .filters-input {
     max-width: 100%; }
   .sell-view__cards {
@@ -5610,6 +5621,8 @@
     .sell-info .filters-block__row.three-col > * {
       width: 100%;
       margin-left: 0; }
+  .sell-info .filters-block__item {
+    max-width: 100% !important; }
   .new-ad__inner {
     display: block;
     margin-left: 0; }
