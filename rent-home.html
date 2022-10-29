@@ -293,7 +293,7 @@
 				<a href="#" class="back">
 					<img src="assets/images/arrow-down.svg" alt="">
 				</a>
-				<h2 class="page__title title-small">Продать шаг 1 из 2</h2>
+				<h2 class="page__title title-small">Сдать</h2>
 				<div class="burger">
 					<div class="burger__item"></div>
 				</div>
@@ -306,8 +306,7 @@
 							<span>Назад</span>
 						</a>
 						<h1 class="title title_flex">
-							<span>Продать</span>
-							<span>шаг 1 из 2</span>
+							<span>Сдать</span>
 						</h1>
 					</div>
 					<div class="sell-nav">
@@ -317,13 +316,13 @@
 							<div class="sell-nav__dropdown">
 								<div class="sell-nav__description">Тип недвижимости</div>
 								<div class="sell-nav__inner">
-									<a href="sell-flat.html" class="sell-nav__option">
+									<a href="rent-flat.html" class="sell-nav__option">
 										<span>Квартира</span>
 									</a>
-									<a href="sell-home.html" class="sell-nav__option selected">
+									<a href="rent-home.html" class="sell-nav__option selected">
 										<span>Дом</span>
 									</a>
-									<a href="sell-room.html" class="sell-nav__option">
+									<a href="rent-room.html" class="sell-nav__option">
 										<span>Комната</span>
 									</a>
 								</div>
@@ -342,40 +341,35 @@
 										</div>
 									</div><!--/filters-block-->
 									<div class="filters-block">
-										<div class="filters-block__title pt-35">Об объекте</div>
+										<div class="filters-block__title pt-10">Об объекте</div>
 										<div class="filters-block__content">
-											<div class="filters-block__item max-292">
-												<div class="filters-description">Кадастровый номер</div>
-												<div class="form-input form-input-check">
-													<input type="text" placeholder="Кадастровый номер" value="50:58:0100101:21">
-													<img src="assets/images/check-circle-green.svg" alt="">
-												</div><!--/form-input-->
-											</div><!--/filters-block__item-->
-											<div class="filters-block__item max-330">
-												<div class="filters-description">Количество комнат</div>
-												<div class="filters-checkboxes">
-													<div class="filters-checkbox">
-														<input type="radio" id="rooms-checkbox-studio" name="rooms-checkbox">
-														<label for="rooms-checkbox-studio">Студия</label>
+											<div class="filters-block__row">
+												<div class="filters-block__item max-330">
+													<div class="filters-description">Количество комнат</div>
+													<div class="filters-checkboxes">
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-studio" name="rooms-checkbox">
+															<label for="rooms-checkbox-studio">Студия</label>
+														</div>
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-1" name="rooms-checkbox" checked>
+															<label for="rooms-checkbox-1">1</label>
+														</div>
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-2" name="rooms-checkbox">
+															<label for="rooms-checkbox-2">2</label>
+														</div>
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-3" name="rooms-checkbox">
+															<label for="rooms-checkbox-3">3</label>
+														</div>
+														<div class="filters-checkbox">
+															<input type="radio" id="rooms-checkbox-4" name="rooms-checkbox">
+															<label for="rooms-checkbox-4">4+</label>
+														</div>
 													</div>
-													<div class="filters-checkbox">
-														<input type="radio" id="rooms-checkbox-1" name="rooms-checkbox" checked>
-														<label for="rooms-checkbox-1">1</label>
-													</div>
-													<div class="filters-checkbox">
-														<input type="radio" id="rooms-checkbox-2" name="rooms-checkbox">
-														<label for="rooms-checkbox-2">2</label>
-													</div>
-													<div class="filters-checkbox">
-														<input type="radio" id="rooms-checkbox-3" name="rooms-checkbox">
-														<label for="rooms-checkbox-3">3</label>
-													</div>
-													<div class="filters-checkbox">
-														<input type="radio" id="rooms-checkbox-4" name="rooms-checkbox">
-														<label for="rooms-checkbox-4">4+</label>
-													</div>
-												</div>
-											</div><!--/filters-block__item-->
+												</div><!--/filters-block__item-->
+											</div>
 										</div>
 									</div><!--/filters-block-->
 									<div class="filters-block">
@@ -618,113 +612,283 @@
 													</div>
 												</div><!--/filters-block__item-->
 											</div><!--/filters-block__row-->
+										</div>
+									</div><!--/filters-block-->
+									<div class="filters-block">
+										<div class="filters-block__title">Удобства</div>
+										<div class="filters-block__content">
 											<div class="filters-block__row no-grow">
 												<div class="filters-block__item">
-													<div class="filters-description">Удобства</div>
 													<div class="filters-checkboxes-ellipse">
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-1" name="convenience-checkbox" checked>
 															<label for="convenience-checkbox-1">
 																<span></span>
-																Электричество
+																Холодильник
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-2" name="convenience-checkbox">
 															<label for="convenience-checkbox-2">
 																<span></span>
-																Газ
+																Стиральная машина
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-3" name="convenience-checkbox" checked>
 															<label for="convenience-checkbox-3">
 																<span></span>
-																Интернет
+																Посудомочная машина
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-4" name="convenience-checkbox" checked>
 															<label for="convenience-checkbox-4">
 																<span></span>
-																Канализация
+																Кондиционер
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-5" name="convenience-checkbox" checked>
 															<label for="convenience-checkbox-5">
 																<span></span>
-																Водоснабжение
+																Мебель
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-6" name="convenience-checkbox">
 															<label for="convenience-checkbox-6">
 																<span></span>
-																Бассейн
+																Без мебели
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-7" name="convenience-checkbox">
 															<label for="convenience-checkbox-7">
 																<span></span>
-																Телефон
+																Кухонная техника
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-8" name="convenience-checkbox">
 															<label for="convenience-checkbox-8">
 																<span></span>
-																Гараж
+																Сушильная машина
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-9" name="convenience-checkbox">
 															<label for="convenience-checkbox-9">
 																<span></span>
-																Баня
+																Телевизор
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-10" name="convenience-checkbox">
 															<label for="convenience-checkbox-10">
 																<span></span>
-																Мангал
+																WiFi
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-11" name="convenience-checkbox">
 															<label for="convenience-checkbox-11">
 																<span></span>
-																Благоустройство участка
+																Интернет
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-12" name="convenience-checkbox">
 															<label for="convenience-checkbox-12">
 																<span></span>
-																Огород
+																Камин
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-13" name="convenience-checkbox">
 															<label for="convenience-checkbox-13">
 																<span></span>
-																Колодец
+																Бассейн
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-14" name="convenience-checkbox">
 															<label for="convenience-checkbox-14">
 																<span></span>
-																Скважина
+																Баня
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 														<div class="filters-checkbox-ellipse">
 															<input type="checkbox" id="convenience-checkbox-15" name="convenience-checkbox">
 															<label for="convenience-checkbox-15">
 																<span></span>
-																Антенна/тарелка
+																Охраняемый поселок
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="convenience-checkbox-16" name="convenience-checkbox">
+															<label for="convenience-checkbox-16">
+																<span></span>
+																Огороженная территория
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="convenience-checkbox-17" name="convenience-checkbox">
+															<label for="convenience-checkbox-17">
+																<span></span>
+																Канализация
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="convenience-checkbox-18" name="convenience-checkbox">
+															<label for="convenience-checkbox-18">
+																<span></span>
+																Электричество
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="convenience-checkbox-19" name="convenience-checkbox">
+															<label for="convenience-checkbox-19">
+																<span></span>
+																Водоснабжение
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+											</div><!--/filters-block__row-->
+										</div>
+									</div><!--/filters-block-->
+									<div class="filters-block">
+										<div class="filters-block__title">Условия аренды</div>
+										<div class="filters-block__content">
+											<div class="filters-block__row no-grow">
+												<div class="filters-description red">Важно</div>
+												<div class="filters-block__item">
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-important-1" name="conditions-important" checked>
+															<label for="conditions-important-1">
+																<span></span>
+																Нельзя с детьми
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-important-2" name="conditions-important">
+															<label for="conditions-important-2">
+																<span></span>
+																Нельзя с животными
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-important-3" name="conditions-important">
+															<label for="conditions-important-3">
+																<span></span>
+																Не делаю вр. регистрацию
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-important-4" name="conditions-important">
+															<label for="conditions-important-4">
+																<span></span>
+																Нельзя одиноким
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-important-5" name="conditions-important">
+															<label for="conditions-important-5">
+																<span></span>
+																Нельзя без прописки
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-important-6" name="conditions-important">
+															<label for="conditions-important-6">
+																<span></span>
+																Только славяне
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+											</div><!--/filters-block__row-->
+											<div class="filters-block__row no-grow">
+												<div class="filters-description green">Преимущества</div>
+												<div class="filters-block__item">
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-advantage-1" name="conditions-advantage" checked>
+															<label for="conditions-advantage-1">
+																<span></span>
+																Можно с детьми
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-advantage-2" name="conditions-advantage" checked>
+															<label for="conditions-advantage-2">
+																<span></span>
+																Можно с животными
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-advantage-3" name="conditions-advantage">
+															<label for="conditions-advantage-3">
+																<span></span>
+																Можно курить
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-advantage-2" name="conditions-advantage">
+															<label for="conditions-advantage-2">
+																<span></span>
+																Можно перестановку
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-advantage-2" name="conditions-advantage">
+															<label for="conditions-advantage-2">
+																<span></span>
+																Можно ремонт
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-advantage-2" name="conditions-advantage">
+															<label for="conditions-advantage-2">
+																<span></span>
+																Можно студентам
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+													</div>
+												</div><!--/filters-block__item-->
+											</div><!--/filters-block__row-->
+											<div class="filters-block__row no-grow">
+												<div class="filters-description">Дополнительные условия</div>
+												<div class="filters-block__item">
+													<div class="filters-checkboxes-ellipse">
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-additional-1" name="conditions-additional" checked>
+															<label for="conditions-additional-1">
+																<span></span>
+																Временная регистрация
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-additional-2" name="conditions-additional">
+															<label for="conditions-additional-2">
+																<span></span>
+																Договор 11 месяцев
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-additional-3" name="conditions-additional">
+															<label for="conditions-additional-3">
+																<span></span>
+																Оплата по счетчикам
+															</label>
+														</div><!--/filters-checkbox-ellipse-->
+														<div class="filters-checkbox-ellipse">
+															<input type="checkbox" id="conditions-additional-4" name="conditions-additional">
+															<label for="conditions-additional-4">
+																<span></span>
+																Коммунальные включены
 															</label>
 														</div><!--/filters-checkbox-ellipse-->
 													</div>
@@ -1036,55 +1200,29 @@
 									<div class="filters-block__row three-col">
 										<div class="filters-block__item">
 											<div class="filters-input filters-input_description d-blue">
-												<input type="text" value="12 000 000">
-												<span>Цена, ₽</span>
+												<input type="text" value="35 000">
+												<span>Арендная плата, ₽</span>
 											</div>
-											<div class="form-checkbox">
-												<input type="checkbox" id="checkbox-mortage">
-												<label for="checkbox-mortage">
-													<span></span>
-													<i>Можно в ипотеку</i>
-												</label>
-											</div><!--/form-checkbox-->
 										</div><!--/filters-block__item-->
-										<div class="filter-block__item">
-											<div class="selectcheckbox">
-												<div class="selectcheckbox__select">
-													<span>Тип сделки</span>
-												</div>
-												<div class="selectcheckbox__dropdown">
-													<div class="selectcheckbox__description">Тип сделки</div>
-													<div class="selectcheckbox__inner">
-														<div class="selectcheckbox__option">
-															<span>Прямая</span>
-														</div>
-														<div class="selectcheckbox__option">
-															<span>Альтернативная</span>
-														</div>
-														<div class="selectcheckbox__option">
-															<span>Свободная</span>
-														</div>
-													</div>
-												</div>
-											</div><!--/selectcheckbox-->
+										<div class="filters-block__item">
+											<div class="filters-input filters-input_description d-blue">
+												<input type="text" value="11 месяцев">
+												<span>Срок аренды</span>
+											</div>
 										</div><!--/filters-block__item-->
-										<div class="filter-block__item">
-											<div class="selectcheckbox">
-												<div class="selectcheckbox__select">
-													<span>Бонус агенту</span>
-												</div>
-												<div class="selectcheckbox__dropdown">
-													<div class="selectcheckbox__description">Бонус агенту</div>
-													<div class="selectcheckbox__inner">
-														<div class="selectcheckbox__option">
-															<span>Процент от сделки</span>
-														</div>
-														<div class="selectcheckbox__option">
-															<span>Фиксированная сумма</span>
-														</div>
-													</div>
-												</div>
-											</div><!--/selectcheckbox-->
+										<div class="filters-block__item">
+											<div class="filters-input filters-input_description d-blue">
+												<input type="text" value="50%">
+												<span>Бонус агенту</span>
+											</div>
+										</div><!--/filters-block__item-->
+									</div><!--/filters-block__row-->
+									<div class="filters-block__row three-col">
+										<div class="filters-block__item">
+											<div class="filters-input filters-input_description d-blue">
+												<input type="text" value="15 000">
+												<span>Залог, ₽</span>
+											</div>
 										</div><!--/filters-block__item-->
 									</div><!--/filters-block__row-->
 								</div>
@@ -1106,8 +1244,16 @@
 							<div class="filters-block">
 								<div class="filters-block__title"></div>
 								<div class="filters-block__content">
-									<div class="filters-block__item max-292">
-										<a href="#" class="btn">Далее</a>
+									<div class="filters-block__row three-col">
+										<div class="filters-block__item">
+											<a href="#" class="btn-transparent sell-view_show">Предпросмотр объявления</a>
+										</div>
+										<div class="filters-block__item">
+											<a href="#" class="btn-transparent">Сохранить шаблон</a>
+										</div>
+										<div class="filters-block__item">
+											<a href="#" class="btn open-popup" data-popup="popup-confirm">Опубликовать объявление</a>
+										</div>
 									</div>
 								</div>
 							</div><!--/filters-block-->
@@ -1162,6 +1308,27 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="popup popup-confirm">
+			<div class="closex"></div>
+			<div class="popup__inner">
+				<div class="popup__box">
+					<span class="popup__close">
+						<svg>
+							<use xlink:href="#close-icon"></use>
+						</svg>
+					</span>
+					<div class="popup__content">
+						<h3 class="title-small">Объявление находится<br> на модерации</h3>
+						<div class="subtitle">Как только мы проверим ваше объявление, вы получите уведомление</div>
+						<form action="#" class="confirm-form form">
+							<button type="submit" class="btn">В мои объявления </button>
+							<a href="#" class="link">Продвинуть</a>
+						</form>
+					</div>
+    		    </div>
+			</div>
+		</div><!--/popup-confirm-->
 	</div>
 
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
