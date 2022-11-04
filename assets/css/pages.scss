@@ -68,6 +68,14 @@
 	img {
 		transform: rotate(90deg);
 	}
+	&.gray {
+		span {
+			color: $gray3;
+		}
+		img {
+		transform: rotate(0);
+	}
+	}
 }
 
 .search {
@@ -539,6 +547,25 @@
 	&__content {
 		display: none;
 		padding: 20px 0 50px;
+	}
+	&__box  {
+		background-color: $wh;
+		border-radius: 6px;
+		padding: 15px;
+		.info-item {
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+	&-block {
+		display: flex;
+		margin-left: -20px;
+		margin-bottom: 30px;
+		>* {
+			width: calc(50% - 20px);
+			margin-left: 20px;
+		}
 	}
 	&__flex {
 		display: flex;
@@ -1350,6 +1377,20 @@
 	background-color: $wh;
 	padding: 45px 0 100px;
 	border-bottom: 1px solid $lgray;
+	&-block {
+		padding-top: 100px;
+		.offers__inner {
+			margin-top: 40px;
+			.offers-box {
+				width: calc(33.33333% - 20px);
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&-show {
+		display: none;
+	}
 	&__inner {
 		margin-top: 78px;
 		display: flex;
@@ -2807,6 +2848,29 @@
 	}/*===/sell-check===*/
 	&-view {
 		margin-top: 30px;
+		&_package {
+			.sell-card {
+				background: linear-gradient(180deg, #6A56E8 0%, #ED4AE9 100%);
+				border: none;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				position: relative;
+				z-index: 2;
+				&__icon {
+					max-width: 100%;
+				}
+				&__btn {
+					text-transform: none;
+				}
+			}
+			&.checked {
+				.sell-card {
+					background: $wh;
+				}
+			}
+		}
 		&-check {
 			text-align: right;
 			margin-bottom: 10px;
@@ -2860,7 +2924,11 @@
 				margin-left: 20px;
 				margin-bottom: 20px;
 			}
-
+			&_four {
+				.sell-card {
+					padding: 50px 10px 25px;
+				}
+			}
 		}
 		&__card {
 			display: flex;
@@ -2919,6 +2987,9 @@
 					&__btn {
 						background-color: $d-yellow;
 					}
+					&__text {
+						color: $d-blue;
+					}
 				}
 			}
 		}
@@ -2957,6 +3028,16 @@
 		&__result {
 			display: none;
 			padding-top: 60px;
+			&-inner {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		&__btn {
+			margin-top: 60px;
+			.btn {
+				min-width: 250px;
+			}
 		}
 	}/*===/sell-view===*/
 	&-card {
@@ -2965,6 +3046,15 @@
 		border-radius: 6px;
 		padding: 50px 30px 25px;
 		position: relative;
+		&-wrapper {
+			height: 100%;
+			border-radius: 6px;
+			background: linear-gradient(180deg, #6A56E8 0%, #ED4AE9 100%);
+			padding: 3px;
+			.sell-card {
+				height: 100%;
+			}
+		}
 		&__icon {
 			position: absolute;
 			top: 15px;
@@ -2981,6 +3071,14 @@
 			font-weight: 600;
 			color: $wh;
 			line-height: $lh;
+			margin-bottom: 20px;
+		}
+		&__text {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: $lh;
+			color: $gray;
 			margin-bottom: 20px;
 		}
 		&__list {
@@ -3035,7 +3133,7 @@
 			align-items: center;
 			justify-content: center;
 			text-align: center;
-			padding: 16px;
+			padding: 16px 5px;
 			border-radius: 6px;
 			background-color: $yellow;
 			font-family: $ff;
@@ -3062,6 +3160,246 @@
 }
 /*=========/sell===========*/
 
+/*=======Infobox========*/
+.infobox {
+	background-color: $d-yellow;
+	padding: 20px 15px;
+	border-radius: 6px;
+	font-family: $ff;
+	font-size: 16px;
+	font-weight: 600;
+	color: $wh;
+	line-height: $lh;
+	&.pink {
+		background-color: #E54BEA;
+	}
+	&__title {
+		margin-bottom: 10px;
+		font-family: $ff;
+		font-size: 20px;
+		font-weight: 600;
+		color: $wh;
+		line-height: $lh;
+	}
+	&__link {
+		display: inline-block;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 600;
+		color: $wh;
+		line-height: $lh;
+		position: relative;
+		padding-right: 35px;
+		&:after {
+			content: "";
+			width: 24px;
+			height: 24px;
+			background: url("../images/arrow-white.svg") center no-repeat;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			z-index: 1;
+			transform: translateY(-50%);
+			transition: all .2s linear;
+		}
+		&:hover {
+			&:after {
+				right: -3px;
+			}
+		}
+	}
+	&__text {
+		display: inline-block;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 600;
+		color: $wh;
+		line-height: $lh;
+	}
+}
+/*=======/infobox========*/
+
+/*=========Package=========*/
+.package {
+	padding-top: 60px;
+	max-width: 792px;
+	display: none;
+	&__cards {
+		margin-top: 40px;
+	}
+	&-card {
+		border-radius: 6px;
+		background: $wh;
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&__icon {
+			margin-right: 20px;
+			width: 12.5%;
+			img {
+				width: 100%;
+			}
+		}
+		&__title {
+			font-family: $ffm;
+			font-size: 20px;
+			font-weight: 600;
+			color: $d-purple;
+			margin-bottom: 10px;
+		}
+		&__list {
+			li {
+				position: relative;
+				color: $wh;
+				font-family: $ff;
+				font-size: 14px;
+				font-weight: 500;
+				color: $d-blue;
+				line-height: $lh;
+				margin-bottom: 10px;
+				padding-left: 35px;
+				&:before {
+					content: "";
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background-color: $d-blue;
+					position: absolute;
+					top: 5px;
+					left: 20px;
+					z-index: 1;
+
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__info {
+			flex: 1 1 auto;
+			margin-right: 20px;
+		}
+		&__buy {
+			width: 33.5%;
+		}
+		&__price {
+			margin-bottom: 10px;
+			font-family: $ffm;
+			font-size: 32px;
+			font-weight: 600;
+			color: $bl;
+		}
+		&__btn {
+			width: 100%;
+			display: inline-block;
+			text-align: center;
+			padding: 16px 5px;
+			border-radius: 6px;
+			background-color: $yellow;
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 700;
+			color: $purple;
+			line-height: $lh;
+			transition: all .2s linear;
+			span {
+				text-transform: uppercase;
+			}
+			&:hover {
+				background-color: $d-yellow;
+			}
+		}
+	}
+	&-info {
+		background-color: $lpurple;;
+		border-radius: 6px;
+		padding: 30px 40px;
+		.title-small {
+			margin-bottom: 20px;
+		}
+		&__item {
+			margin-top: 20px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		&__title {
+			margin-bottom: 10px;
+			padding-left: 20px;
+			font-family: $ffm;
+			font-size: 20px;
+			font-weight: 600;
+			color: $d-purple;
+			line-height: $lh;
+			position: relative;
+			&:before {
+				content: "";
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				background-color: $d-purple;
+				position: absolute;
+				top: 10px;
+				left: 5px;
+				z-index: 1;
+
+			}
+		}
+		&__description {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: $lh;
+			color: $d-blue;
+		}
+	}
+}
+/*=========/package=========*/
+
+/*=======Make-box====*/
+.make-box {
+	margin: 40px 0;
+	background-color: $purple;
+	border-radius: 6px;
+	padding: 40px 15px;
+	text-align: center;
+	.title-small {
+		color: $wh;
+		margin-bottom: 10px;
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 600;
+		color: $wh;
+		line-height: $lh;
+		margin-bottom: 20px;
+	}
+	&__btn {
+		display: inline-block;
+		text-align: center;
+		padding: 16px;
+		min-width: 33.5%;
+		border-radius: 6px;
+		border: 2px solid $yellow;
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 700;
+		color: $yellow;
+		line-height: $lh;
+		transition: all .2s linear;
+		&:hover {
+			color: $d-yellow;
+			border-color: $d-yellow;
+		}
+	}
+}
+/*=======/make-box====*/
+
 /*===========Adaptive===========*/
 @media(max-width: 1400px) {
 	.drop-menu {
@@ -3086,7 +3424,7 @@
 	.page {
 		padding-top: 65px;
 		&.pt-80 {
-			padding-top: 80px;
+			padding-top: 100px;
 		}
 		&__header {
 			display: flex;
@@ -3097,6 +3435,11 @@
 	}
 	.btn-back {
 		display: none;
+	}
+	.offers {
+		&-block {
+			padding-top: 40px;
+		}
 	}
 	.calc {
 		&-filters {
@@ -3215,6 +3558,18 @@
 					margin-left: 0;
 				}
 			}
+			&_package {
+				.sell-card {
+					&__icon {
+						right: 50%;
+						transform: translateX(50%);
+						min-width: 250px;
+					}
+				}
+			}
+		}
+		&-card {
+			min-height: 360px;
 		}
 	}
 }
@@ -3308,6 +3663,38 @@
 			min-height: auto;
 		}
 	}
+	.info {
+		&-item {
+			&:last-child {
+				border-bottom: 1px solid $gray;
+				margin-bottom: 15px;
+				padding-bottom: 15px!important;
+			}
+		}
+		&-block {
+			display: block;
+			margin-left: 0;
+			background-color: $wh;
+			border-radius: 6px;
+			padding: 15px;
+			>* {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+		&__box {
+			padding: 0;
+			&:last-child {
+				.info-item {
+					&:last-child {
+						margin-bottom: 0;
+						padding-bottom: 0!important;
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
 	.sorting  {
 		&__col {
 			flex-wrap: wrap;
@@ -3338,6 +3725,15 @@
 	}
 	.mortgage-btn {
 		text-align: center;
+	}
+	.offers {
+		&-block {
+			.offers__inner {
+				.offers-box {
+					width: calc(50% - 20px);
+				}
+			}
+		}
 	}
 	.calc {
 		&__inner {
@@ -3601,6 +3997,31 @@
 	}
 }
 @media(max-width: 546px) {
+	.package {
+		&-card {
+			display: block;
+			padding: 30px 15px;
+			&__icon {
+				display: none;
+			}
+			&__info {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+			&__buy {
+				width: 100%;
+			}
+		}
+		&-info {
+			padding: 30px 15px;
+		}
+	}
+
+	.make-box {
+		&__btn {
+			width: 100%;
+		}
+	}
 	.sorting {
 		justify-content: space-between;
 		&__buttons {
@@ -3655,6 +4076,22 @@
 
 	.offers {
 		padding-top: 30px;
+		&-block {
+			display: none;
+			.offers__inner {
+				.offers-box {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}
+		&-show {
+			display: block;
+			margin-top: 40px;
+			.btn {
+				width: 100%;
+			}
+		}
 		&__inner {
 			margin-top: 20px;
 			margin-left: 0;
@@ -3712,6 +4149,13 @@
 				>* {
 					width: 100%;
 					margin-left: 0;
+				}
+			}
+		}
+		&-view {
+			&__btn {
+				.btn {
+					width: 100%;
 				}
 			}
 		}
