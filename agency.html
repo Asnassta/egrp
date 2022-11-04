@@ -11,6 +11,21 @@
 <body>
 	<!--Sprite-->
 	<svg style="display: none;">
+		<symbol id="clip-icon" viewBox="0 0 20 20">
+			<g>
+				<path d="M18 7.34842L8.72101 16.5244C7.18354 18.0449 4.69057 18.0449 3.1531 16.5244C1.61563 15.0039 1.61563 12.539 3.1531 11.0184L11.5046 2.76011C12.5298 1.74663 14.1912 1.74663 15.2164 2.76011C16.2416 3.77357 16.2416 5.41731 15.2164 6.43077L6.86482 14.6891C6.35255 15.1962 5.52156 15.1962 5.00863 14.6891C4.49636 14.1827 4.49636 13.3609 5.00863 12.8538L12.4321 5.51309" stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="send-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M3 9.31372L2.77625 8.59787C2.49018 8.68729 2.28482 8.93843 2.25398 9.23655C2.22314 9.53467 2.37275 9.82253 2.63446 9.96861L3 9.31372ZM20 4L20.7136 4.23087C20.7999 3.96413 20.7302 3.67153 20.533 3.47232C20.3357 3.2731 20.0438 3.20052 19.7762 3.28415L20 4ZM14.5 21L13.8382 21.3529C13.9799 21.6185 14.2665 21.7737 14.5663 21.7471C14.8661 21.7205 15.1209 21.5172 15.2136 21.2309L14.5 21ZM3.22375 10.0296L20.2238 4.71585L19.7762 3.28415L2.77625 8.59787L3.22375 10.0296ZM19.2864 3.76913L13.7864 20.7691L15.2136 21.2309L20.7136 4.23087L19.2864 3.76913ZM15.1618 20.6471L11.1618 13.1471L9.83823 13.8529L13.8382 21.3529L15.1618 20.6471ZM10.8655 12.8451L3.36554 8.65883L2.63446 9.96861L10.1345 14.1549L10.8655 12.8451ZM11.0303 14.0303L20.5303 4.53033L19.4697 3.46967L9.96967 12.9697L11.0303 14.0303Z"/>
+			</g>
+		</symbol>
+		<symbol id="attach-icon" viewBox="0 0 20 20">
+			<g>
+				<path d="M18 7.34842L8.72101 16.5244C7.18354 18.0449 4.69057 18.0449 3.1531 16.5244C1.61563 15.0039 1.61563 12.539 3.1531 11.0184L11.5046 2.76011C12.5298 1.74663 14.1912 1.74663 15.2164 2.76011C16.2416 3.77357 16.2416 5.41731 15.2164 6.43077L6.86482 14.6891C6.35255 15.1962 5.52156 15.1962 5.00863 14.6891C4.49636 14.1827 4.49636 13.3609 5.00863 12.8538L12.4321 5.51309"  stroke-width="1.5"/>
+			</g>
+		</symbol>
 		<symbol id="delete-icon" viewBox="0 0 24 24">
 			<g>
 				<path d="M10 12V17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -67,11 +82,6 @@
 				<path d="M12 18V12" stroke="#4C2A9F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				<path d="M9 15H15" stroke="#4C2A9F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				<path d="M10 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12M13 2L20 9H13V2Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-			</g>
-		</symbol>
-		<symbol id="phone-icon" viewBox="0 0 16 16">
-			<g>
-				<path d="M14.997 16C6.46601 16.012 -0.00899062 9.45999 9.37069e-06 1.003C9.37069e-06 0.45 0.448009 0 1.00001 0H3.64001C4.13501 0 4.55601 0.364 4.62901 0.854C4.80311 2.02905 5.14493 3.17304 5.64401 4.251L5.74701 4.473C5.81619 4.62239 5.83108 4.79124 5.78909 4.95043C5.7471 5.10962 5.65087 5.24917 5.51701 5.345C4.69901 5.929 4.38701 7.104 5.02401 8.02C5.82301 9.17 6.83001 10.178 7.98 10.977C8.897 11.613 10.072 11.301 10.655 10.484C10.7507 10.3497 10.8904 10.2531 11.0498 10.211C11.2092 10.1688 11.3784 10.1836 11.528 10.253L11.749 10.355C12.827 10.855 13.971 11.197 15.146 11.371C15.636 11.444 16 11.865 16 12.361V15C16 15.1314 15.9741 15.2615 15.9238 15.3829C15.8735 15.5043 15.7997 15.6146 15.7068 15.7075C15.6138 15.8003 15.5034 15.874 15.382 15.9242C15.2605 15.9744 15.1304 16.0001 14.999 16H14.997Z"/>
 			</g>
 		</symbol>
 		<symbol id="download-icon" viewBox="0 0 24 24">
@@ -221,7 +231,7 @@
 			<stop offset="1" stop-color="#993D8E"/>
   		</linearGradient>
 	</svg>
-	<div class="wrapper page page-new-ad pt-80">
+	<div class="wrapper page pt-80">
 		<header class="header header-color" id="header">
 			<div class="container">
 				<div class="header__inner">
@@ -293,301 +303,199 @@
 				<a href="#" class="back">
 					<img src="assets/images/arrow-down.svg" alt="">
 				</a>
-				<h2 class="page__title title-small">Продать шаг 2 из 2</h2>
+				<h2 class="page__title title-small">Агенство недвижимости</h2>
 				<div class="burger">
 					<div class="burger__item"></div>
 				</div>
 			</div>
-			<section class="sell section">
+			<div class="account section">
 				<div class="container">
-					<div class="page-content-header">
-						<a href="#" class="btn-back">
-							<img src="assets/images/arrow-down.svg" alt="">
-							<span>Назад</span>
-						</a>
-						<h1 class="title title_flex">
-							<span>Продать</span>
-							<span>шаг 2 из 2</span>
-						</h1>
-					</div>
-					<div class="sell-view">
-						<h2 class="title-small title-small_mus">Внешний вид объявления</h2>
-						<div class="sell-view__cards">
-							<div class="sell-view__card sell-view_top">
-								<div class="sell-view-check">
-									<span></span>
-								</div>
-								<div class="sell-card">
-									<div class="sell-card__icon">
-										<img src="assets/images/top.png" alt="">
-									</div>
-									<div class="sell-card__title"> ТОП в списке</div>
-									<ul class="sell-card__list">
-										<li>Доступ к Заявкам</li>
-										<li>Всегда на главной</li>
-										<li>При выборе 3х объектов скидка</li>
-									</ul>
-									<div class="sell-card__price">
-										<span>1000 ₽</span>
-										<span>от 15 дней</span>
-									</div>
-									<a href="#" class="sell-card__btn">Купить промо- топ в списке</a>
-								</div><!--/sell-card-->
-							</div><!--/sell-view__card-->
-							<div class="sell-view__card sell-view_marker">
-								<div class="sell-view-check">
-									<span></span>
-								</div>
-								<div class="sell-card">
-									<div class="sell-card__icon">
-										<img src="assets/images/notification.png" alt="">
-									</div>
-									<div class="sell-card__title">  Маркер текста</div>
-									<ul class="sell-card__list">
-										<li>Доступ к Заявкам</li>
-										<li>Всегда на главной</li>
-										<li>При выборе 3х объектов скидка</li>
-									</ul>
-									<div class="sell-card__price">
-										<span>1000 ₽</span>
-										<span>от 15 дней</span>
-									</div>
-									<a href="#" class="sell-card__btn">Купить промо- маркер текста</a>
-									<div class="sell-view-show">
-										<div class="sell-view-show__icon">
-											<svg>
-												<use xlink:href="#eye-icon"></use>
-											</svg>
-											<svg>
-												<use xlink:href="#eye-close-icon"></use>
-											</svg>
-										</div>
-										<div class="sell-view-show__description">
-											<span>Показать как будет выглядеть ваше объявление</span>
-											<span>Скрыть как будет выглядеть ваше объявление</span>
-										</div>
-									</div>
-								</div><!--/sell-card-->
-							</div><!--/sell-view__card-->
-							<div class="sell-view__card sell-view_illumination">
-								<div class="sell-view-check">
-									<span></span>
-								</div>
-								<div class="sell-card">
-									<div class="sell-card__icon">
-										<img src="assets/images/star.png" alt="">
-									</div>
-									<div class="sell-card__title">  Подсветка </div>
-									<ul class="sell-card__list">
-										<li>Доступ к Заявкам</li>
-										<li>Всегда на главной</li>
-										<li>При выборе 3х объектов скидка</li>
-									</ul>
-									<div class="sell-card__price">
-										<span>1000 ₽</span>
-										<span>от 15 дней</span>
-									</div>
-									<a href="#" class="sell-card__btn">Купить промо-подсветка</a>
-									<div class="sell-view-show">
-										<div class="sell-view-show__icon">
-											<svg>
-												<use xlink:href="#eye-icon"></use>
-											</svg>
-											<svg>
-												<use xlink:href="#eye-close-icon"></use>
-											</svg>
-										</div>
-										<div class="sell-view-show__description">
-											<span>Показать как будет выглядеть ваше объявление</span>
-											<span>Скрыть как будет выглядеть ваше объявление</span>
-										</div>
-									</div>
-								</div><!--/sell-card-->
-							</div><!--/sell-view__card-->
-						</div>
-						<div class="sell-view__result">
-							<h3 class="title-small title-small_mus">Так будет выглядеть ваше объявление</h3>
-							<div class="filters-infobox">
-								<div class="filters-infobox__title">ПРОМО - Подсветка</div>
-								<div class="filters-infobox__text">Ваше объявление будет выделено обводкой и яркой тенью, что увеличит внимание на ваше предложение среди других.</div>
+					<div class="account__inner">
+						<div class="account-menu none mobile-none">
+							<div class="account-status">
+								<svg>
+									<use xlink:href="#profile-icon"></use>
+								</svg>
+								<span>Проверенный</span>
 							</div>
-							<div class="sell-view__result-inner">
-								<div class="product-card-placeholder">
-									<div class="product-card-placeholder__photo">
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
-									<div class="product-card-placeholder__info">
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
-									<div class="product-card-placeholder__autor">
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
-								</div><!--/product-card-placeholder-->
-								<div class="product-card product-card-big">
-									<div class="product-card__photo">
-										<div class="product-card__images">
-											<a class="product-card__image" href="#">
-												<img src="assets/images/apartment_4.png" alt="">
-											</a>
-											<a class="product-card__image" href="#">
-												<img src="assets/images/apartment_5.png" alt="">
-											</a>
-											<a class="product-card__image" href="#">
-												<img src="assets/images/apartment_3.png" alt="">
-											</a>
-											<a class="product-card__image" href="#">
-												<img src="assets/images/apartment_2.png" alt="">
-											</a>
-											<a class="product-card__image product-card__image_all" href="#">
-												<img src="assets/images/apartment_4.png" alt="">
-												<span>+10</span>
-											</a>
-										</div>
-										<div class="time">12 ч. назад</div>
-										<a href="#" class="favorite">
-											<svg>
-												<use xlink:href="#favorite-icon"></use>
-											</svg>
-										</a>
-										<div class="viewer-qt">
-											<svg>
-												<use xlink:href="#eye-icon"></use>
-											</svg>
-											<span>12</span>
-										</div>
-										<a href="#" class="btn-call">
-											<img src="assets/images/phone-icon.svg" alt="">
-										</a>
-									</div>
-									<div class="product-card__info">
-										<div class="product-card__col">
-											<div class="product-card__header">
-												<a href="#" class="product-card__name">
-													<div class="product-card__price">от 4,7 млн ₽</div>
-													<div class="product-card__data">2-комн.,33м²</div>
-												</a>
-												<div class="estimation">
-													<a href="#" class="estimation-btn estimation-btn-like">
-														<svg>
-															<use xlink:href="#like-icon"></use>
-														</svg>
-													</a>
-													<a href="#" class="estimation-btn estimation-btn-dislike">
-														<svg>
-															<use xlink:href="#dislike-icon"></use>
-														</svg>
-													</a>
-												</div>
-												<div class="product-card-buttons">
-													<a href="#">
-														<svg>
-															<use xlink:href="#arrow-right"></use>
-														</svg>
-													</a>
-													<a href="#" class="favorite">
-														<svg>
-															<use xlink:href="#favorite-icon"></use>
-														</svg>
-													</a>
-													<a href="#">
-														<svg>
-															<use xlink:href="#doc-icon"></use>
-														</svg>
-													</a>
-												</div>
-											</div>
-											<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
-											<div class="product-card__row">
-												<div class="product-card__place">
-													<img src="assets/images/m-icon.svg" alt="">
-													<span>Технологический институт 2</span>
-												</div>
-												<div class="product-card__distance">
-													<img src="assets/images/man-icon.svg" alt="">
-													<span>5 мин</span>
-												</div>
-											</div>
-											<div class="tags">
-												<div class="tag">Стиральная машина</div>
-												<div class="tag">Можно с животными</div>
-												<div class="tag">Посудомойка</div>
-												<div class="tag">Кондиционер</div>
-												<div class="tag">Есть лоджия</div>
-												<div class="tag">Подземная парковка</div>
-												<div class="tag">Раздельный санузел </div>
-												<div class="tag">Можно с животными</div>
-											</div>
-										</div>
-										<div class="product-card__col product-autor mobile-none">
-											<div class="product-autor__name">
-												<div class="product-autor__icon">
-													<img src="assets/images/user-icon.svg" alt="">
-												</div>
-												<span>Частное лицо</span>
-											</div>
-											<div class="product-autor__date">дата публикации: <span>12.07.21</span></div>
-											<div class="product-autor__buttons">
-												<div class="btn-contact">
-													<span class="btn btn-contact-show">Показать контакты</span>
-													<a href="tel:+79258378218" class="btn btn-lblue btn-contact-phone">+7 925 837-82-18</a>
-												</div>
-												<a href="#" class="btn-chat">
-													<svg>
-														<use xlink:href="#mail-icon"></use>
-													</svg>
-													<span>Предложи цену - чат</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div><!--/product-card-->
-								<div class="product-card-placeholder">
-									<div class="product-card-placeholder__photo">
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
-									<div class="product-card-placeholder__info">
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
-									<div class="product-card-placeholder__autor">
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
-								</div><!--/product-card-placeholder-->
-							</div><!--/sell-view__result-inner-->
+							<a href="agent-account-viewing.html" class="view-change">
+								<svg>
+									<use xlink:href="#eye-icon"></use>
+								</svg>
+								<div class="view-change__desc">
+									<div>Как видят мой профиль другие пользователи?</div>
+								</div>
+							</a>
 						</div>
-						<div class="sell-buttons">
-							<a href="#" class="btn-transparent sell-view_show">Предпросмотр объявления</a>
-							<a href="#" class="btn-transparent">Сохранить шаблон</a>
-							<a href="#" class="btn open-popup" data-popup="popup-confirm">Опубликовать объявление</a>
+						<nav class="account-nav">
+							<a href="#" class="account-nav__link active">
+								<svg>
+									<use xlink:href="#transpose-icon"></use>
+								</svg>
+								<span>Главная</span>
+							</a>
+							<a href="#" class="account-nav__link">
+								<svg>
+									<use xlink:href="#transpose-icon"></use>
+								</svg>
+								<span>Сравнение</span>
+							</a>
+							<a href="#" class="account-nav__link">
+								<svg>
+									<use xlink:href="#favorite-icon"></use>
+								</svg>
+								<span>Избранное</span>
+							</a>
+							<a href="#" class="account-nav__link">
+								<svg>
+									<use xlink:href="#search-icon_2"></use>
+								</svg>
+								<span>Сохраненные поиски</span>
+							</a>
+							<a href="#" class="account-nav__link">
+								<svg>
+									<use xlink:href="#eye-close-icon"></use>
+								</svg>
+								<span>Скрытые объявления</span>
+							</a>
+							<a href="#" class="account-nav__link">
+								<svg>
+									<use xlink:href="#settings-icon"></use>
+								</svg>
+								<span>Настройки профиля</span>
+							</a>
+							<a href="agent-account-viewing.html" class="account-nav__link view-change">
+								<svg>
+									<use xlink:href="#eye-icon"></use>
+								</svg>
+								<div class="view-change__desc">
+									<div>Как видят мой профиль другие пользователи?</div>
+								</div>
+							</a>
+						</nav><!--/account-nav-->
+						<div class="account__sidebar mobile-none">
+							<div class="account-box">
+								<div class="account-box__header">
+									<div class="account-status">
+										<svg>
+											<use xlink:href="#profile-icon"></use>
+										</svg>
+										<span>Проверенный</span>
+									</div>
+									<div class="account-online">online</div>
+								</div>
+								<div class="account-box__profile">
+									<div class="account-box__icon">КК</div>
+									<div class="account-box__info">
+										<div class="account-box__name">Константин Константинов</div>
+										<a href="#" class="account-box__link">Редактировать профиль</a>
+										<div class="account-box__stat">Агент</div>
+									</div>
+								</div>
+							</div><!--/account-box-->
+							<a href="#" class="account-btn open-popup" data-popup="popup-confirm">
+								<img src="assets/images/mail.svg" alt="">
+								<span>Подтвердить почту</span>
+							</a>
+							<div class="account-infobox">
+								<div class="account-infobox__header">
+									<div class="account-infobox__row">
+										<div class="account-infobox__title">Мои активные промо:</div>
+									</div>
+									<div class="account-infobox__row right">
+										<div class="account-infobox__description">Срок действия</div>
+									</div>
+								</div>
+								<div class="account-infobox__content">
+									<div class="account-infobox__item">
+										<div class="account-infobox__data">
+											<img src="assets/images/smile.svg" alt="">
+											<span>Топ 43 шт.</span>
+										</div>
+										<div class="account-infobox__data">15 дн.</div>
+									</div>
+									<div class="account-infobox__item">
+										<div class="account-infobox__data">
+											<img src="assets/images/star.svg" alt="">
+											<span>Премиум 4 шт.</span>
+										</div>
+										<div class="account-infobox__data">22 дн.</div>
+									</div>
+									<div class="account-infobox__item">
+										<div class="account-infobox__data">
+											<img src="assets/images/paintbrush.svg" alt="">
+											<span>Цвет 7 шт.</span>
+										</div>
+										<div class="account-infobox__data">17 дн.</div>
+									</div>
+								</div>
+							</div><!--/account-infobox-->
+							<div class="account-infobox wallet-infobox">
+								<div class="account-infobox__header">
+									<div class="account-infobox__row">
+										<div class="account-infobox__title">Кошелек</div>
+										<div class="account-balance">Баланс: <span>0</span>₽ </div>
+									</div>
+									<div class="account-infobox__row">
+										<div class="account-infobox__description">Последние операции:</div>
+									</div>
+								</div>
+								<div class="account-infobox__content">
+									<div class="account-infobox__item">
+										<div class="account-infobox__data">Затраты на рекламу</div>
+										<div class="account-infobox__data">-61 020₽</div>
+									</div>
+									<div class="account-infobox__item">
+										<div class="account-infobox__data">Пополнение кошелька</div>
+										<div class="account-infobox__data">+61 020₽</div>
+									</div>
+									<div class="account-infobox__up">
+										<a href="#">+ Пополнить</a>
+									</div>
+								</div>
+							</div><!--/account-infobox-->
+						</div><!--/account__sidebar-->
+						<div class="account__content">
+							<div class="service max-590">
+								<div class="page-content-header">
+									<a href="#" class="btn-back">
+										<img src="assets/images/arrow-gray.svg" alt="">
+										<span>Назад</span>
+									</a>
+								</div>
+								<h1 class="title">Агенство недвижимости</h1>
+								<div class="description mb-40">Возможности аккаунта - Агенство недвижимости</div>
+								<div class="service-list">
+									<div class="service-list__box">
+										<div class="service-list__title">Доступ к Заявкам</div>
+									</div><!--/service-list__box-->
+									<div class="service-list__box">
+										<div class="service-list__title">Автоматическая выгрузка всех объявлений</div>
+									</div><!--/service-list__box-->
+									<div class="service-list__box">
+										<div class="service-list__title">Доступ к API</div>
+									</div><!--/service-list__box-->
+									<div class="service-list__box">
+										<div class="service-list__title">Персональный менеджер</div>
+									</div><!--/service-list__box-->
+									<div class="service-list__box">
+										<div class="service-list__title">Специальные тарифы на рекламу</div>
+									</div><!--/service-list__box-->
+								</div><!--/service-list-->
+								<div class="service-buy">
+									<div class="service-buy__col">
+										<div class="service-buy__title">Стоимость:</div>
+									</div>
+									<div class="service-buy__col">
+										<div class="service-buy__price">1 500₽</div>
+										<a href="#" class="service-buy__btn">Оплатить</a>
+									</div>
+								</div><!--/service-buy-->
+							</div>
 						</div>
-					</div><!--/sell-view-->
+					</div>
 				</div>
-			</section><!--/sell-->
+			</div><!--/account-->
 		</main>
 		<footer class="footer">
 			<div class="container">
@@ -647,11 +555,15 @@
 						</svg>
 					</span>
 					<div class="popup__content">
-						<h3 class="title-small">Объявление находится<br> на модерации</h3>
-						<div class="subtitle">Как только мы проверим ваше объявление, вы получите уведомление</div>
+						<h3 class="title-small">Подтвердить почту</h3>
+						<div class="subtitle">Чтобы пользоваться всеми услугами личного кабинета подтвердите почту</div>
 						<form action="#" class="confirm-form form">
-							<button type="submit" class="btn">В мои объявления </button>
-							<a href="#" class="link">Продвинуть</a>
+							<div class="form-item">
+								<div class="form-input">
+									<input type="email" placeholder="Email" value="Mail@mail.com">
+								</div><!--/form-input-->
+							</div><!--/form-item-->
+							<button type="submit" class="btn">Отправить </button>
 						</form>
 					</div>
     		    </div>
@@ -664,5 +576,6 @@
 	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
 	<script src="assets/js/script.js"></script>
+
 </body>
 </html>
