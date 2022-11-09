@@ -57,6 +57,9 @@
 		&.half-end {
 			padding-left: 25%;
 		}
+		&.none {
+			display: none;
+		}
 	}
 	&-row {
 		display: flex;
@@ -246,6 +249,54 @@
 				border: 1px solid $red;
 			}
 		}
+		&.error {
+			input {
+				color: $red;
+				border: 1px solid #FE0B37;
+				background-color: #FFD2D2;
+			}
+			.form-password__icon {
+				svg {
+					stroke: $red;
+				}
+			}
+		}
+	}
+	&-password {
+		position: relative;
+		input {
+			padding-right: 35px;
+		}
+		&__icon {
+			display: inline-block;
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			z-index: 1;
+			transform: translateY(-50%);
+			svg {
+				width: 24px;
+				height: 24px;
+				fill: none;
+				stroke: $gray2;
+			}
+			svg {
+				&:nth-child(2) {
+					display: none;
+				}
+			}
+			&.active {
+				svg {
+					&:first-child {
+						display: none;
+					}
+					&:nth-child(2) {
+						display: inline-block;
+					}
+				}
+			}
+		}
 	}
 	&-link {
 		font-family: $ff;
@@ -258,6 +309,10 @@
 		transform: translateY(-50%);
 		right: 12px;
 		z-index: 1;
+		&-static {
+			position: static;
+			transform: translateY(0);
+		}
 	}
 	&-textarea {
 		position: relative;
@@ -649,6 +704,20 @@
 	.btn {
 		width: 100%;
 	}
+	&-error {
+		display: inline-flex;
+		align-items: center;
+		img {
+			margin-right: 10px;
+		}
+		span {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $red;
+			line-height: $lh;
+		}
+	}
 }
 
 .application-form {
@@ -855,6 +924,95 @@
 	}
 }
 /*==========/add=============*/
+
+/*=========Password-level==========*/
+.password-level {
+	&__progressbar {
+		width: 100%;
+		height: 8px;
+		background-color: $lgray;
+		border-radius: 22px;
+		position: relative;
+		span {
+			display: block;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			border-radius: 22px;
+		}
+	}
+	&__description {
+		margin-top: 5px;
+		text-align: right;
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: $lh;
+	}
+	&.bad {
+		.password-level__progressbar {
+			span {
+				width: 25%;
+				background-color: $red;
+				opacity: .5;
+			}
+		}
+		.password-level__description {
+			color: $red;
+			span {
+				&:first-child {
+					display: block;
+				}
+				&:nth-child(2), &:nth-child(3) {
+					display: none;
+				}
+			}
+		}
+	}
+	&.middle {
+		.password-level__progressbar {
+			span {
+				width: 60%;
+				background-color: $yellow;
+				opacity: 1;
+			}
+		}
+		.password-level__description {
+			color: $yellow;
+			span {
+				&:nth-child(2) {
+					display: block;
+				}
+				&:first-child, &:nth-child(3) {
+					display: none;
+				}
+			}
+		}
+	}
+	&.good {
+		.password-level__progressbar {
+			span {
+				width: 100%;
+				background-color: $green;
+				opacity: .5;
+			}
+		}
+		.password-level__description {
+			color: $green;
+			span {
+				&:nth-child(3) {
+					display: block;
+				}
+				&:first-child, &:nth-child(2) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+/*=========/password-level==========*/
 
 /*===============Adaptive===========*/
 @media(max-width: 546px) {

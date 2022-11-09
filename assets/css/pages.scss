@@ -3400,6 +3400,98 @@
 }
 /*=======/make-box====*/
 
+/*==========Error-block==========*/
+.error-block {
+	padding: 40px 0;
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+	&__photo {
+		width: 60%;
+		img {
+			width: 100%;
+		}
+	}
+	&__info {
+		width: 40%;
+		padding-left: 100px;
+		text-align: center;
+		max-width: 430px;
+	}
+	.description {
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+	.btn-yellow {
+		width: 100%;
+	}
+}
+/*==========/error-block==========*/
+
+/*=========Subscribe===========*/
+.subscribe {
+	padding: 40px 0 100px;
+	&__box {
+		background: linear-gradient(180deg, #6E56E9 0.61%, #E44BE9 93.85%);
+		border-radius: 25px;
+		padding: 140px 60px;
+		display: flex;
+		align-items: flex-end;
+		max-width: 800px;
+		margin: 0 auto;
+		position: relative;
+	}
+	&__icons {
+		width: 60%;
+		position: absolute;
+		top: 28px;
+		right: 63px;
+		z-index: 1;
+		img {
+			width: 100%;
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+	}
+	&__col {
+		width: calc(50% - 10px);
+		margin-right: 20px;
+		position: relative;
+		z-index: 2;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__title {
+		font-family: $ff;
+		font-size: 25px;
+		font-weight: 600;
+		color: $yellow;
+		line-height: $lh;
+		margin-bottom: 20px;
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $wh;
+		line-height: $lh;
+		margin-bottom: 40px;
+	}
+	.form-input {
+		input {
+			padding: 15.5px 30px 15.5px 10px;
+		}
+	}
+	.btn-yellow {
+		color: $purple;
+		width: 100%;
+	}
+}
+/*=========//subscribe===========*/
+
 /*===========Adaptive===========*/
 @media(max-width: 1400px) {
 	.drop-menu {
@@ -3435,6 +3527,11 @@
 	}
 	.btn-back {
 		display: none;
+	}
+	.error-block {
+		&__info {
+			padding-left: 30px;
+		}
 	}
 	.offers {
 		&-block {
@@ -3576,6 +3673,25 @@
 
 
 @media(max-width: 860px) {
+	.error-block {
+		&__inner {
+			display: block;
+		}
+		&__photo {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		&__info {
+			width: 100%;
+			margin: 0 auto;
+			padding-left: 0;
+		}
+	}
+	.subscribe {
+		&__box {
+			padding: 140px 16px 240px;
+		}
+	}
 	.offers {
 		&__inner {
 			.offers-best {
@@ -3997,6 +4113,43 @@
 	}
 }
 @media(max-width: 546px) {
+	.subscribe {
+		padding: 40px 0;
+		.container {
+			padding: 0;
+		}
+		&__box {
+			padding: 120px 16px 80px;
+			display: block;
+			text-align: center;
+			border-radius: 0;
+		}
+		&__col {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__description {
+			margin-bottom: 20px;
+		}
+		&__icons {
+			width: 85%;
+			top: 14px;
+			right: 50%;
+			transform: translateX(50%);
+			img {
+				&:first-child {
+					display: none;
+				}
+				&:nth-child(2) {
+					display: block;
+				}
+			}
+		}
+	}
 	.package {
 		&-card {
 			display: block;

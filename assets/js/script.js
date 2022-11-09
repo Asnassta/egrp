@@ -432,6 +432,18 @@ $(document).ready(function() {
   });
   /*========/offers-show========*/
 
+  /*=========Form-password========*/
+  $(".form-password__icon").on("click", function() {
+    $(this).toggleClass("active");
+    if ($(this).hasClass('active')){
+    $(this).parent().find('input').attr('type', 'text');
+
+  } else {
+    $(this).parent().find('input').attr('type', 'password');
+  }  
+  });
+  /*=========/form-password========*/
+
 
 /*===============Popup-photo=================*/
     $(".open-popup-photo").on("click", function (event) {

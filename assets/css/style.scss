@@ -7,6 +7,7 @@
 @import 'pages.scss';
 @import 'account.scss';
 @import 'service.scss';
+@import 'login.scss';
 
 
 /*Reset
@@ -69,6 +70,12 @@ body.hidden {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	&.white {
+		background-color: $wh;
+	}
+	&.center {
+		justify-content: center;
+	}
 }
 
 .section {
@@ -331,6 +338,31 @@ body.hidden {
 	}
 }
 
+.btn-black {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: transparent;
+	border-radius: 6px;
+	padding: 16.5px 10px;
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 700;
+	color: $bl;
+	border: 1px solid $bl;
+	line-height: $lh;
+	transition: all .2s linear;
+	&:hover {
+		border-color: $purple;
+		color: $purple;
+	}
+	&.inactive {
+		border-color: #9B9C9D;
+		color: #9B9C9D;
+	}
+}
+
 .btn-white {
 	display: inline-flex;
 	align-items: center;
@@ -354,6 +386,25 @@ body.hidden {
 		&:last-child {
 			margin-right: 0;
 		}
+	}
+}
+
+.btn-yellow {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: $yellow;
+	border-radius: 6px;
+	padding: 16.5px;
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 700;
+	color: $bl;
+	line-height: $lh;
+	transition: all .2s linear;
+	&:hover {
+		background-color: $d-yellow;
 	}
 }
 
