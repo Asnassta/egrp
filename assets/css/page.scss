@@ -3,7 +3,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 2;
 	width: 100%;
 	padding: 20px 0;
 	&-color {
@@ -109,7 +109,8 @@
 		font-family: $ff;
 		font-size: 16px;
 		font-weight: 600;
-		color: $gray;
+		color: $wh;
+		opacity: 0.8;
 		line-height: $lh;
 		transition: all .2s linear;
 		position: relative;
@@ -130,7 +131,13 @@
 			transition: all .2s linear;
 		}
 		&:hover {
-			color: $wh;
+			opacity: 1;
+			&:after {
+				width: 100%;
+			}
+		}
+		&.active {
+			opacity: 1;
 			&:after {
 				width: 100%;
 			}
@@ -378,12 +385,15 @@
 			display: block;
 			margin-right: 0;
 			margin-bottom: 20px;
-			color: #4C3DAA;
+			color: $d-purple;
 			&:after {
 				display: none;
 			}
 			&:last-child {
 				margin-bottom: 0;
+			}
+			&.active {
+				color: $d-purple;
 			}
 		}
 	}

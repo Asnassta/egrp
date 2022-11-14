@@ -140,6 +140,9 @@
 		&.green {
 			color: $green;
 		}
+		&.mb-10 {
+			margin-bottom: 10px;
+		}
 	}
 	&-sub_description {
 		margin-top: 5px;
@@ -229,6 +232,7 @@
 	}
 	&-checkboxes {
 		display: flex;
+		align-items: center;
 		margin-left: -10px;
 		margin-bottom: -10px;
 		>* {
@@ -484,6 +488,11 @@
 			margin-right: 10px;
 			&:last-child {
 				margin-right: 0;
+			}
+		}
+		&_sb {
+			.filters-input_range input {
+				font-weight: 600;
 			}
 		}
 	}

@@ -444,6 +444,34 @@ $(document).ready(function() {
   });
   /*=========/form-password========*/
 
+  /*=========Disclose========*/
+  $(".product-card__disclose").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass("active");
+    $(this).parent().parent().find('.product-card-complex').slideToggle();  
+  });
+  /*=========/disclose========*/
+
+  /*=========About-block__video========*/
+  $(".about-block__video").on("click", function() {
+    $(".about-block__icon").fadeToggle(111);
+  });
+  /*=========/about-block__video========*/
+
+  /*=========About-block__text========*/
+  $(".about-block__more").on("click", function(event) {
+    event.preventDefault();
+    $(".about-block__text-more").slideToggle();
+  });
+  /*=========/about-block__text========*/
+
+   /*=========Housing-list========*/
+  $(".housing-list__header").on("click", function() {
+    $(this).next().slideToggle();
+    $(this).find(".housing-list__qt").toggleClass('active');
+  });
+  /*=========/housing-list========*/
+
 
 /*===============Popup-photo=================*/
     $(".open-popup-photo").on("click", function (event) {
@@ -482,6 +510,19 @@ $(document).ready(function() {
   /*==============/popup=================*/
 
   /*=================Sliders==========================*/
+  $('.intro-housing__slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $('.intro-housing__qt').html(i + '/' + slick.slideCount);
+  });
+
+  $('.intro-housing__slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.intro-housing__arrow_prev'),
+    nextArrow: $('.intro-housing__arrow_next'),
+  });
   /*===========Slider-product============*/
   $('.buy .product-new .product__inner').slick({
     infinite: true,
@@ -578,6 +619,25 @@ $(document).ready(function() {
     ]
   });
 
+  $('.watched .product-watched_2 .product__inner').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+     {
+       breakpoint: 1230,
+        settings: {
+            infinite: true,
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+        }
+      },
+    ]
+  });
+
   $('.watched .product-other .product__inner').slick({
     infinite: true,
     slidesToShow: 4,
@@ -615,6 +675,7 @@ $(document).ready(function() {
       },
     ]
   });
+
   /*===========/slider-product============*/
 
  
