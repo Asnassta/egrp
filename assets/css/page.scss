@@ -12,6 +12,11 @@
 				fill: $purple;
 			}
 		}
+		.logo-gk {
+			svg {
+				fill: $purple;
+			}
+		}
 		.nav {
 			&__item {
 				color: $bl;
@@ -50,6 +55,9 @@
 		margin-right: 30px;
 	}
 	.logo {
+		margin-right: 50px;
+	}
+	.logo-gk {
 		margin-right: 50px;
 	}
 	&-menu {
@@ -93,6 +101,35 @@
 	svg {
 		width: 45px;
 		height: 20px;
+		fill: $wh;
+		transition: all .2s linear;
+	}
+	&:hover {
+		svg {
+			fill: $yellow;
+		}
+	}
+	&__icon {
+		font-family: $ffm;
+		font-weight: 700;
+		color: $wh;
+		line-height: 21.5px;
+		font-size: 24.34px;
+		margin-right: 5.86px;
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 12.5px;
+		font-weight: 400;
+		color: $wh;
+		line-height: 10.4px;
+	}
+}
+
+.logo-gk {
+	svg {
+		width: 117.63px;
+		height: 21.7px;
 		fill: $wh;
 		transition: all .2s linear;
 	}
@@ -325,6 +362,12 @@
 			fill: #4C3DAA;
 		}
 	}
+	.logo-gk {
+		margin-right: 10px;
+		svg {
+			fill: $purple;
+		}
+	}
 	.copyright {
 		display: inline-flex;
 		align-items: center;
@@ -367,6 +410,25 @@
 			svg {
 				fill: #4C3DAA;
 			}
+			&__icon {
+				margin-right: 8.93px;
+				color: $purple;
+				font-size: 37.24px;
+				line-height: 88.34%;
+				letter-spacing: 0.065em;
+			}
+			&__description {
+				color: $purple;
+				font-size: 19.13px;
+				line-height: 83.34%;
+				letter-spacing: 0.02em;
+			}
+		}
+		.logo-gk {
+			margin-right: 0;
+			svg {
+				fill: $purple;
+			}
 		}
 	}
 	.burger {
@@ -404,6 +466,7 @@
 		display: flex;
 	}
 	.footer {
+		padding-bottom: 60px;
 		.btn {
 			min-width: auto;
 		}
@@ -438,7 +501,8 @@
 			margin-right: 0;
 		}
 		&__contact-block {
-			padding-left: 70px;
+			//padding-left: 70px;
+			padding-top: 40px;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
@@ -468,6 +532,12 @@
 				width: 51px;
 				height: 23px;
 			}
+		}
+		.logo-gk {
+			position: absolute;
+			top: 30px;
+			left: 15px;
+			z-index: 1;
 		}
 	}
 }

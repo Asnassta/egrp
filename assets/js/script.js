@@ -6,6 +6,13 @@ function tabsClients(n)
   $('.clients .tabs-block.tab_'+n).fadeIn(222);
 };
 
+function refresh_number()
+{
+  $( ".calc-copy" ).each(function( index ) {
+    $( this ).find('.title-small span.n-pos').html(index+1) ;
+  });
+}
+
 
 $(document).ready(function() {
 
@@ -161,9 +168,46 @@ $(document).ready(function() {
   /*==========/product-menu=========*/
 
   /*======Calc-early-add=============*/
+  $('body').on( "click", ".calc-early__close", function(event) {
+    event.preventDefault();
+   
+    total_calc = parseInt($('#calc-box-insert').attr('attr-now-calc'));
+    $('#calc-box-insert').attr('attr-now-calc', total_calc-1)
+    
+    if(total_calc != 1)
+    {
+      b = $(this)
+      b.parent().parent().slideUp(333)
+      setTimeout(function() {
+        b.parent().parent().remove();
+        refresh_number();
+      }, 333);
+
+      
+    }
+    else
+    {
+      $('#calc-box-insert').slideUp(333);
+      refresh_number();
+    }
+});  
+
   $(".calc-early-add").on("click", function(event) {
     event.preventDefault();
-    $(".calc-early").slideToggle();
+    total_calc = parseInt($('#calc-box-insert').attr('attr-now-calc'));
+    $('#calc-box-insert').slideDown(333);
+    if(total_calc != 0)
+    {
+      data = $(".calc-copy").html();
+      id_calc = total_calc+1
+      $('#calc-box-insert').append('<div style="display:none;" class="calc-copy c_'+id_calc+'">'+data+'</div>');
+ 
+      
+      $('.c_'+id_calc).slideDown(333)
+      refresh_number();
+    }
+    total_calc = $('#calc-box-insert').attr('attr-now-calc', total_calc+1)
+    refresh_number();
   });
   /*==========/calc-early-add=========*/
 
@@ -327,13 +371,26 @@ $(document).ready(function() {
     $(".sell-view__result").slideDown();
   });
 
+  $(".sell-view-check").not(".sell-view_package .sell-view-check").on("click", function(event) {
+    event.preventDefault();
+    if($(window).width() <= 992)
+      {
+        $(".bg-popup").fadeIn();
+        $('body').addClass("hidden");
+      };
+  });
+
+  
   $(".sell-view_marker .sell-view-check").on("click", function(event) {
     event.preventDefault();
     $(".package").hide();
     $(".product-card").toggleClass('marker');
     $(".product-card").removeClass('top');
     $(".product-card").removeClass('illumination');
+    $(".filters-infobox.marker").show();
+    $(".filters-infobox").not(".filters-infobox.marker").hide();
   });
+
 
   $(".sell-view_illumination .sell-view-check").on("click", function(event) {
     event.preventDefault();
@@ -341,6 +398,8 @@ $(document).ready(function() {
     $(".product-card").toggleClass('illumination');
     $(".product-card").removeClass('marker');
     $(".product-card").removeClass('top');
+    $(".filters-infobox.illumination").show();
+    $(".filters-infobox").not(".filters-infobox.illumination").hide();
   });
 
   $(".sell-view_top .sell-view-check").on("click", function(event) {
@@ -349,6 +408,17 @@ $(document).ready(function() {
     $(".product-card").removeClass('illumination');
     $(".product-card").removeClass('marker');
     $(".package").hide();
+    $(".filters-infobox.top").show();
+    $(".filters-infobox").not(".filters-infobox.top").hide();
+  });
+
+  $(".sell-view_free .sell-view-check").on("click", function(event) {
+    event.preventDefault();
+    $(".product-card").removeClass('top');
+    $(".product-card").removeClass('illumination');
+    $(".product-card").removeClass('marker');
+    $(".package").hide();
+    $(".filters-infobox").hide();
   });
 
   $(".sell-view_package .sell-view-check").on("click", function(event) {
@@ -360,6 +430,16 @@ $(document).ready(function() {
   $(".sell-view_show").on("click", function(event) {
     event.preventDefault();
     $(".sell-view__result").slideToggle();
+  });
+
+  $(".sell-view__result-close, .bg-popup, .sell-view__result-btn").on("click", function(event) {
+    event.preventDefault();
+    $(".sell-view__result").slideUp();
+    if($(window).width() <= 992)
+      {
+        $(".bg-popup").fadeOut();
+        $('body').removeClass("hidden");
+      };
   });
   /*==========/sell-check=========*/
 

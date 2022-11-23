@@ -82,6 +82,17 @@ body.hidden {
 	margin-bottom: 100px;
 }
 
+.bg-popup {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
 .block {
 	margin-bottom: 60px;
 	&__header {
@@ -996,10 +1007,12 @@ body.hidden {
 	&__info {
 		flex: 1 1 auto;
 		padding-right: 30px;
-		display: flex;
 		.logo {
 			display: none;
 			flex-direction: column;
+		}
+		.logo-gk {
+			display: none;
 		}
 	}
 	&__filters {
@@ -2692,7 +2705,7 @@ body.hidden {
 
 @media(max-width: 860px) {
 	.intro {
-		padding: 70px 0 0;
+		padding: 20px 0 0;
 		background: $lgray;
 		min-height: auto;
 		&__inner {
@@ -2716,6 +2729,16 @@ body.hidden {
 				width: 50px;
 				height: 23px;
 				fill: $purple;
+			}
+		}
+		.logo-gk {
+			display: block;
+			margin-right: 0;
+			margin-bottom: 12px;
+			svg {
+				fill: $purple;
+				width: 180px;
+				height: 34.08px;
 			}
 		}
 		.title-main {

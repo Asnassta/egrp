@@ -4,6 +4,7 @@
 		position: absolute;
 		top: 20px;
 		left: 0;
+		z-index: 150;
 		width: 	100%;
 		display: none;
 		align-items: center;
@@ -1057,6 +1058,9 @@
 
 /*==========Calc============*/
 .calc {
+	&-copy {
+    	margin-top: 20px;
+    }
 	&__inner {
 		margin-top: 20px;
 		display: flex;
@@ -1256,8 +1260,26 @@
 		}
 	}/*===/calc-result===*/
 	&-early {
-		display: none;
+		position: relative;
+		&__close {
+			cursor: pointer;
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			z-index: 1;
+			svg {
+				width: 24px;
+				height: 24px;
+				stroke: $wh;
+			}
+		}
 	}
+}
+
+
+#calc-box-insert {
+  display: none;
+  position: relative; 
 }
 /*==========/calc============*/
 
@@ -2873,6 +2895,26 @@
 				}
 			}
 		}
+		&_free {
+			.sell-card {
+				background: linear-gradient(180deg, #6A56E8 0%, #ED4AE9 100%);
+				border: none;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				position: relative;
+				z-index: 2;
+				&__btn {
+					margin-top: 60px;
+				}
+			}
+			&.checked {
+				.sell-card {
+					background: $wh;
+				}
+			}
+		}
 		&-check {
 			text-align: right;
 			margin-bottom: 10px;
@@ -2939,6 +2981,16 @@
 				flex: 1 1 auto;
 			}
 			&.checked {
+				/*.sell-card__btn {
+					span {
+						&:first-child {
+							display: none;
+						}
+						&:nth-child(2) {
+							display: block;
+						}
+					}
+				}*/
 				.sell-view-show {
 					svg {
 						stroke: $purple;
@@ -2987,7 +3039,7 @@
 						}
 					}
 					&__btn {
-						background-color: $d-yellow;
+						background-color: $yellow;
 					}
 					&__text {
 						color: $d-blue;
@@ -3034,6 +3086,32 @@
 				display: flex;
 				flex-direction: column;
 			}
+			&-close {
+				display: none;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				z-index: 1;
+				svg {
+					width: 24px;
+					height: 24px;
+					stroke: $bl;
+				}
+			}
+			&-btn {
+				display: none;
+				width: 100%;
+				padding: 16.5px;
+				background-color: $lgray;
+				border: 1px solid $purple;
+				border-radius: 6px;
+				font-family: $ff;
+				font-size: 14px;
+				font-weight: 700;
+				color: $purple;
+				line-height: $lh;
+				text-align: center;
+			}
 		}
 		&__btn {
 			margin-top: 60px;
@@ -3041,12 +3119,15 @@
 				min-width: 250px;
 			}
 		}
+		.filters-infobox {
+			display: none;
+		}
 	}/*===/sell-view===*/
 	&-card {
 		background-color: $purple;
 		border: 3px solid $purple;
 		border-radius: 6px;
-		padding: 50px 30px 25px;
+		padding: 50px 10px 25px;
 		position: relative;
 		&-wrapper {
 			height: 100%;
@@ -3143,7 +3224,11 @@
 			font-weight: 700;
 			color: $purple;
 			line-height: $lh;
-			text-transform: uppercase;
+			span {
+				&:nth-child(2) {
+					display: none;
+				}
+			}
 		}
 	}/*===/sell-card===*/
 	&-buttons {
@@ -4556,6 +4641,12 @@
 				padding: 20px 15px;
 			}
 		}
+		&-early {
+			&__close {
+				top: 20px;
+				right: 15px;
+			}
+		}
 	}
 	.payment-schedule {
 		&__content {
@@ -4654,9 +4745,41 @@
 					}
 				}
 			}
+			&_free {
+				.sell-card {
+					&__btn {
+						margin-top: 20px;
+					}
+				}
+			}
+			&__result {
+				background-color: $wh;
+				width: calc(100% - 20px);
+				position: fixed;
+				top: 90px;
+				left: 50%;
+				z-index: 1000;
+				transform: translateX(-50%);
+				height: calc(100vh - 180px);
+				overflow: auto;
+				padding: 35px 20px;
+				border-radius: 6px;
+				.product-card-placeholder {
+					display: none;
+				}
+				&-close {
+					display: inline-block;
+				}
+				&-btn {
+					display: block;
+				}
+			}
 		}
 		&-card {
-			min-height: 360px;
+			min-height: 250px;
+			&__price {
+				margin-bottom: 15px;
+			}
 		}
 	}
 }
@@ -4722,6 +4845,9 @@
 				&:last-child {
 					margin-bottom: 0;
 				}
+			}
+			.btn {
+				width: 100%;
 			}
 		}
 	}
@@ -5069,7 +5195,7 @@
 				}
 				.calc-early {
 					border: 1px dashed $wh;
-					padding: 20px 15px;
+					padding: 40px 15px 20px;
 				}
 				.btn-dashed {
 					border-color: $wh;
@@ -5082,6 +5208,11 @@
 					width: 100%;
 					border: 1px dashed $wh;
 				}
+			}
+		}
+		&-early {
+			&__close {
+				top: 15px;
 			}
 		}
 	}
@@ -5566,6 +5697,14 @@
 }
 
 @media(max-width: 414px) {
+	.box-filters {
+		&__row {
+			>* {
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+	}
 	.sell {
 		&-photo {
 			&__inner {
