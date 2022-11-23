@@ -431,8 +431,21 @@
 							</div><!--/sell-view__card-->
 						</div>
 						<div class="sell-view__result">
+							<div class="sell-view__result-close">
+								<svg>
+									<use xlink:href="#close-icon"></use>
+								</svg>
+							</div>
 							<h3 class="title-small title-small_mus">Так будет выглядеть ваше объявление</h3>
-							<div class="filters-infobox">
+							<div class="filters-infobox top">
+								<div class="filters-infobox__title">ПРОМО -  ТОП в списке</div>
+								<div class="filters-infobox__text">Ваше объявление будет выделено обводкой и яркой тенью, что увеличит внимание на ваше предложение среди других.</div>
+							</div>
+							<div class="filters-infobox marker">
+								<div class="filters-infobox__title">ПРОМО -  Маркер текста</div>
+								<div class="filters-infobox__text">Ваше объявление будет выделено обводкой и яркой тенью, что увеличит внимание на ваше предложение среди других.</div>
+							</div>
+							<div class="filters-infobox illumination">
 								<div class="filters-infobox__title">ПРОМО - Подсветка</div>
 								<div class="filters-infobox__text">Ваше объявление будет выделено обводкой и яркой тенью, что увеличит внимание на ваше предложение среди других.</div>
 							</div>
@@ -534,7 +547,7 @@
 													</a>
 												</div>
 											</div>
-											<a href="#" class="product-card__description">ул. Технологическая 26/1</a>
+											<a href="#" class="product-card__description">Ленинский проспект, 35</a>
 											<div class="product-card__row">
 												<div class="product-card__place">
 													<img src="assets/images/m-icon.svg" alt="">
@@ -561,7 +574,10 @@
 												<div class="product-autor__icon">
 													<img src="assets/images/user-icon.svg" alt="">
 												</div>
-												<span>Частное лицо</span>
+												<span>Риелтор</span>
+												<div class="product-autor__org">
+													<a href="#">Алексей</a>
+												</div>
 											</div>
 											<div class="product-autor__date">дата публикации: <span>12.07.21</span></div>
 											<div class="product-autor__buttons">
@@ -604,9 +620,7 @@
 									</div>
 								</div><!--/product-card-placeholder-->
 							</div><!--/sell-view__result-inner-->
-							<div class="sell-view__btn">
-								<a href="#" class="btn">Оформить</a>
-							</div>
+							<a href="#" class="sell-view__result-btn">Понятно</a>
 						</div>
 						<div class="package">
 							<h3 class="title-small title-small_mus">Пакетное размещение</h3>
@@ -739,6 +753,7 @@
 				</div>
 			</div>
 		</footer>
+		<div class="bg-popup"></div>
 	</div>
 
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
