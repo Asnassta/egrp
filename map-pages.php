@@ -18,7 +18,7 @@
     }
     sort($htmls,SORT_STRING | SORT_FLAG_CASE);
     foreach ($htmls as $html) {
-        echo "<li><a href='/{$html}' target='_blank'>{$html}</a></li>";
+        echo "<li><a href='{$html}' target='_blank'>{$html}</a></li>";
     }
 ?>
     </ol>

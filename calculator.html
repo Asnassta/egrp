@@ -261,30 +261,39 @@
 							<div class="calc-filters__item">
 								<div class="filters-radiobox">
 									<div class="filters-radio">
-										<input type="radio" id="calc-radio-price" name="calc-radio" checked>
+										<input type="radio" id="calc-radio-price" name="calc-radio" checked value="price">
 										<label for="calc-radio-price">По стоимости недвижимости</label>
 									</div><!--/filters-radio-->
 									<div class="filters-radio">
-										<input type="radio" id="calc-radio-payment" name="calc-radio">
+										<input type="radio" id="calc-radio-payment" name="calc-radio" value="payment">
 										<label for="calc-radio-payment">По размеру платежа</label>
 									</div><!--/filters-radio-->
 								</div>
 							</div><!--/calc-filters__item-->
 							<div class="calc-filters__variant">
-								<div class="calc-filters__item">
+								<div class="calc-filters__item" id="calc-cost-realty-container">
 									<div class="filters-inputbox">
 										<label for="" class="filters-description">Стоимость недвижимости</label>
 										<div class="filters-inputbox__row">
-											<input type="text" value="5 600 000">
+											<input type="text" value="26 000 000" id="calc-cost-realty" class="calc-range">
+											<span  class="filters-inputbox__supp">₽</span>
+										</div>
+									</div>
+								</div><!--/calc-filters__item-->
+								<div class="calc-filters__item" id="calc-monthly-payment-container" style="display: none;">
+									<div class="filters-inputbox">
+										<label for="" class="filters-description">Ежемесячный платеж</label>
+										<div class="filters-inputbox__row">
+											<input type="text" value="5 600 000" id="calc-monthly-payment" class="calc-range">
 											<span  class="filters-inputbox__supp">₽</span>
 										</div>
 									</div>
 								</div><!--/calc-filters__item-->
 								<div class="calc-filters__item mb-50">
 									<div class="filters-inputbox">
-										<label for="calc-price" class="filters-description">Стоимость недвижимости</label>
+										<label for="calc-price" class="filters-description">Первоначальный взнос</label>
 										<div class="filters-inputbox__row">
-											<input type="text" value="5 600 000" id="calc-price">
+											<input type="text" value="5 600 000" id="calc-price" class="calc-range">
 											<span  class="filters-inputbox__supp">30%</span>
 										</div>
 									</div>
@@ -302,7 +311,7 @@
 									<div class="filters-inputbox filters-inputbox_small">
 										<label for="calc-period" class="filters-description">Срок</label>
 										<div class="filters-inputbox__row">
-											<input type="text" value="12" id="calc-period">
+											<input type="text" value="12" id="calc-period" class="calc-range">
 											<div class="filters-inputbox__unit">лет</div>
 											<span  class="filters-inputbox__supp">30%</span>
 										</div>
@@ -321,19 +330,19 @@
 									<div class="filters-description">Быстрый выбор процентной ставки</div>
 									<div class="filters-radiotags">
 										<div class="filters-radiotag">
-											<input type="radio" name="calc-rate" id="calc-rate_5" checked>
+											<input type="radio" name="calc-rate" id="calc-rate_5" checked value="5.6">
 											<label for="calc-rate_5">Для семей с детьми 5.6%</label>
 										</div><!--/filters-radiotag-->
 										<div class="filters-radiotag">
-											<input type="radio" name="calc-rate" id="calc-rate_9">
+											<input type="radio" name="calc-rate" id="calc-rate_9" value="9">
 											<label for="calc-rate_9">Льготная  новостройки 9%</label>
 										</div><!--/filters-radiotag-->
 										<div class="filters-radiotag">
-											<input type="radio" name="calc-rate" id="calc-rate_12">
+											<input type="radio" name="calc-rate" id="calc-rate_12" value="12">
 											<label for="calc-rate_12">Новостройки 12%</label>
 										</div><!--/filters-radiotag-->
 										<div class="filters-radiotag">
-											<input type="radio" name="calc-rate" id="calc-rate_15">
+											<input type="radio" name="calc-rate" id="calc-rate_15" value="15">
 											<label for="calc-rate_15">Вторичка 15%</label>
 										</div><!--/filters-radiotag-->
 									</div>
@@ -407,75 +416,90 @@
 									<div class="calc-result__header">
 										<div class="calc-result__col">
 											<div class="calc-result__description">Ежемесячный платеж</div>
-											<div class="calc-result__data">48 800 ₽/мес </div>
+											<div class="calc-result__data" id="monthly-payment"><span>48 800</span> ₽/мес </div>
 										</div>
 										<div class="calc-result__col">
 											<div class="calc-result__description">Ставка</div>
-											<div class="calc-result__data">8,85%</div>
+											<div class="calc-result__data"><span id="percent-monthly">8,85</span>%</div>
 										</div>
 									</div>
 									<div class="calc-result__item">
 										<div class="calc-result__description">Кредит</div>
 										<div class="calc-result__data">
-											<span>98 377 389 ₽</span>
+											<span id="calc-credit">98 377 389</span> ₽
 										</div>
 									</div><!--/calc-result__item-->
 									<div class="calc-result__item">
 										<div class="calc-result__description">Проценты</div>
 										<div class="calc-result__data">
-											<span>221 377 389 ₽</span>
-											<span>-699 938 ₽</span>
+											<span id="calc-percents">221 377 389</span> ₽
 										</div>
 									</div><!--/calc-result__item-->
 									<div class="calc-result__item">
 										<div class="calc-result__description">Проценты + Кредит</div>
 										<div class="calc-result__data">
-											<span>786 377 389 ₽</span>
+											<span id="calc-total">786 377 389</span> ₽
 										</div>
 									</div><!--/calc-result__item-->
 									<div class="calc-result__item calc-result__income">
 										<div class="calc-result__description">Необходимый доход</div>
 										<div class="calc-result__data">
-											<span>90 389 ₽</span>
+											<span><span id="calc-income">90 389 </span> ₽</span>
 										</div>
 									</div><!--/calc-result__item-->
 								</div><!--/calc-result__box-->
-								<div class="calc-result__box calc-early">
-									<h3 class="title-small">Досрочный платеж 1</h3>
-									<form action="#" class="calc-result__form filters">
-										<div class="calc-result__itembox">
-											<div class="calc-result__description">Дата платежа</div>
-											<div class="filters-input filters-input-icon">
-												<input type="text" value="22.12.1999">
-												<img src="assets/images/calendar-icon.svg" alt="">
-											</div>
-										</div><!--/calc-result__itembox-->
-										<div class="calc-result__itembox">
-											<div class="calc-result__description">Периодичность платежей</div>
-											<div class="filters-select">
-												<select>
-													<option value="0" selected>Единовременно </option>
-													<option value="1">Единовременно </option>
-												</select>
-											</div>
-										</div><!--/calc-result__itembox-->
-										<div class="calc-result__itembox">
-											<div class="calc-result__description">Что уменьшить</div>
-											<div class="filters-select">
-												<select>
-													<option value="0" selected>Платеж </option>
-													<option value="1">Срок</option>
-												</select>
-											</div>
-										</div><!--/calc-result__itembox-->
-										<div class="calc-result__itembox">
-											<div class="calc-result__description">Сумма</div>
-											<div class="filters-input">
-												<input type="text" value="10 000 ₽">
-											</div>
-										</div><!--/calc-result__itembox-->
-									</form>
-								</div><!--/calc-result__box-->
+								<div attr-now-calc="0" id="calc-box-insert">
+
+
+
+									<div class="calc-copy">
+										<div class="calc-result__box calc-early ">
+											<div class="calc-early__close">
+												<svg>
+													<use xlink:href="#close-icon"></use>
+												</svg>
+											</div>	
+											<h3 class="title-small">Досрочный платеж <span class="n-pos"></span></h3>
+											<form action="#" class="calc-result__form filters">
+												<div class="calc-result__itembox">
+													<div class="calc-result__description">Дата платежа</div>
+													<div class="filters-input filters-input-icon">
+														<input type="text" value="22.12.1999">
+														<img src="assets/images/calendar-icon.svg" alt="">
+													</div>
+												</div><!--/calc-result__itembox-->
+												<div class="calc-result__itembox">
+													<div class="calc-result__description">Периодичность платежей</div>
+													<div class="filters-select">
+														<select>
+															<option value="0" selected>Единовременно </option>
+															<option value="1">Единовременно </option>
+														</select>
+													</div>
+												</div><!--/calc-result__itembox-->
+												<div class="calc-result__itembox">
+													<div class="calc-result__description">Что уменьшить</div>
+													<div class="filters-select">
+														<select>
+															<option value="0" selected>Платеж </option>
+															<option value="1">Срок</option>
+														</select>
+													</div>
+												</div><!--/calc-result__itembox-->
+												<div class="calc-result__itembox">
+													<div class="calc-result__description">Сумма</div>
+													<div class="filters-input">
+														<input type="text" value="10 000 ₽">
+													</div>
+												</div><!--/calc-result__itembox-->
+											</form>
+										</div><!--/calc-result__box-->
+									</div>
+
+
+									
+
+								</div>
 								<div class="calc-result__buttons">
 									<a href="#" class="btn-dashed calc-early-add">+ Погашение досрочно</a>
 									<a href="#" class="calc-result__link open-popup" data-popup="popup-payment">Смотреть график платежей</a>
@@ -795,7 +819,8 @@
 											<div class="payment-schedule__item">73 851 ₽</div>
 											<div class="payment-schedule__item">23 851 ₽</div>
 											<div class="payment-schedule__item">100 851 ₽</div>
-										</div><!--/payment-schedule__row--><div class="payment-schedule__row">
+										</div><!--/payment-schedule__row-->
+										<div class="payment-schedule__row">
 											<div class="payment-schedule__item">16</div>
 											<div class="payment-schedule__item">01.05.22</div>
 											<div class="payment-schedule__item">З12 603 851 ₽</div>
@@ -1124,6 +1149,7 @@
 	<script src="assets/js/slick.min.js"></script>
 	<script src="assets/js/swipe.js"></script>
 	<script src="assets/js/script.js"></script>
+	<script src="assets/js/calc.js"></script>
 
 </body>
 </html>
