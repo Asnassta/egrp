@@ -759,6 +759,28 @@ body.hidden {
 	}
 }
 
+.list-dots {
+	li {
+		padding-left: 20px;
+		position: relative;
+		margin-bottom: 25px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:before {
+			content: "";
+			width: 5px;
+			height: 5px;
+			background-color: $bl;
+			border-radius: 50%;
+			position: absolute;
+			left: 7.5px;
+			top: 9px;
+			z-index: 1;
+		}
+	}
+}
+
 .favorite {
 	width: 24px;
 	height: 24px;
