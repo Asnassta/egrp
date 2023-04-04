@@ -35,7 +35,19 @@ $(document).ready(function() {
     event.preventDefault();
     $(this).toggleClass('active');
   });
+
+  $(".sorting-save").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+  });
   /*==========/favorite=========*/
+
+   /*======Balloon=============*/
+  $(".search-balloon").on("click", function() {
+    $(this).toggleClass('active');
+    $(".search-balloon").not(this).removeClass('active');
+  });
+  /*==========/balloon=========*/
 
   /*===============Popup=================*/
     $(".open-popup").on("click", function (event) {
